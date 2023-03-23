@@ -8,7 +8,7 @@ class LoginPage extends StatelessWidget {
         child: Text( "LOGIN PAGE",
           style: TextStyle(
             fontSize: 20,
-            color: Colors.blue,
+            color: Colors.deepPurple,
             fontWeight: FontWeight.bold
           ),
         ),
