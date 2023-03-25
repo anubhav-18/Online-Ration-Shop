@@ -41,6 +41,16 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10)
               ),
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 9),
+            child: Container(
+              height: 155,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 126, 237, 130),
+                borderRadius: BorderRadius.circular(10)
+              ),
+            ),
           )
         ],
       ),
