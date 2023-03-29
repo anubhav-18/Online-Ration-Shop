@@ -5,10 +5,10 @@ class Titlewithbtn extends StatelessWidget {
   const Titlewithbtn({
     super.key, 
     required this.title, 
-    this.buttonName,
+    required this.buttonName,
   });
 
-  final title, buttonName ;
+  final String title, buttonName ;
 
   @override
   Widget build(BuildContext context) {
