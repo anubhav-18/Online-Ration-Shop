@@ -12,19 +12,19 @@ class Bestseller extends StatelessWidget {
       child: Row(
         children: <Widget>[
           cardCreation(
-            image: 'assets/imgs/potato2.jpg',
+            image: 'assets/images/potato2.jpg',
             title: 'Potato',
             quantity: 1,
             price: 50,
           ),
           cardCreation(
-            image: 'assets/imgs/potato2.jpg',
+            image: 'assets/images/potato2.jpg',
             title: 'Potato',
             quantity: 1,
             price: 50,
           ),
           cardCreation(
-            image: 'assets/imgs/potato2.jpg',
+            image: 'assets/images/potato2.jpg',
             title: 'Potato',
             quantity: 1,
             price: 50,
@@ -55,7 +55,10 @@ class cardCreation extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(10),
+              topRight: Radius.circular(10)
+            ),
             child: Image.asset(image),
           ),
           // Image.asset(image,width: 150),
