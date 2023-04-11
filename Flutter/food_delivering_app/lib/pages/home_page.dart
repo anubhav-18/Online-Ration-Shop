@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'DrawerPage/MyDrawerList.dart';
-import 'DrawerPage/MyHeaderDrawer.dart';
-import 'body.dart';
+import 'package:food_delivering_app/pages/DrawerPage/About_Us.dart';
+import 'package:food_delivering_app/pages/DrawerPage/Contact_Us.dart';
+import 'package:food_delivering_app/pages/DrawerPage/FAQs.dart';
+import 'package:food_delivering_app/pages/DrawerPage/My_Notifications.dart';
+import 'package:food_delivering_app/pages/DrawerPage/My_List.dart';
+import 'package:food_delivering_app/pages/HomePage/Body.dart';
+import 'package:food_delivering_app/pages/HomePage/My_Cart.dart';
+import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
+import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
+import 'package:food_delivering_app/pages/DrawerPage/MyHeaderDrawer.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  var currentPage = drawerSections.Home;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,20 +38,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          elevation: 0,
-          currentIndex: 0,
-          selectedItemColor: Color(0xff0378AD),
-          unselectedItemColor: Colors.grey.withOpacity(0.5),
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.category), label: 'Categories'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.shop_two), label: 'My Order'),
-          ]),
     );
   }
 
@@ -64,16 +55,82 @@ class _HomePageState extends State<HomePage> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: CircleAvatar(
-              radius: 15,
-              backgroundColor: Colors.white,
-              child: Icon(
-                Icons.shopping_cart,
-                size: 17,
-                color: Colors.black,
-              )),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => My_Cart()));
+            },
+            child: CircleAvatar(
+                radius: 15,
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.shopping_cart,
+                  size: 17,
+                  color: Colors.black,
+                )),
+          ),
         )
       ],
     );
   }
+
+  Widget MyDrawerList() {
+    return Container(
+      padding: const EdgeInsets.only(top: 8),
+      child: Column(
+        children: [
+          heading('Home'),
+          menuList('Home', Icons.home, HomePage()),
+          menuList('Shop by Category', Icons.category, Categories()),
+          heading('Accounts'),
+          menuList('My Orders', Icons.shop_two, My_Order()),
+          menuList('My Notifications', Icons.notification_add, My_Notifications()),
+          menuList('My List', Icons.format_list_bulleted, My_List()),
+          heading('Help & Support'),
+          menuList('Contact Us', Icons.support_agent, Contact_Us()),
+          menuList('FAQs', Icons.contact_support, FAQs()),
+          menuList('About us', Icons.people, About_Us()),
+        ],
+      ),
+    );
+  }
+
+  Widget heading(String Title) {
+    return Material(
+        child: Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 15),
+          child: Text(
+            Title,
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ],
+    ));
+  }
+
+  Widget menuList(String Title, IconData icon , Widget title ) {
+    return Material(
+      child: ListTile(
+        leading: Icon(
+          icon,
+          size: 20,
+          color: Color(0xff0378AD),
+        ),
+        title: Text(
+          Title,
+          style: TextStyle(fontSize: 16),
+        ),
+        selectedTileColor: Colors.grey,
+        minLeadingWidth: 15,
+        minVerticalPadding: 10,
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => title ) );
+        },
+      ),
+    );
+  }
+
 }

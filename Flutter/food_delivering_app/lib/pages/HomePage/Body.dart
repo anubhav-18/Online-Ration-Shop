@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'BestSeller.dart';
+import 'Title_Btn.dart';
 
-import 'HomePage/BestSeller.dart';
-import 'HomePage/titleWithBtn.dart';
+class Body extends StatefulWidget {
+    
+  @override
+  State<Body> createState() => _BodyState();
+}
 
-class Body extends StatelessWidget {
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

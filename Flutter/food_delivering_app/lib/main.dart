@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
+import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
+import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
+import 'package:food_delivering_app/pages/HomePage/My_Cart.dart';
+
+import 'pages/Home_Page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +16,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/home' :(context) => HomePage() ,
+        '/categories' :(context) => Categories(),
+        '/order' :(context) => My_Order(),
+        '/cart_page' :(context) => My_Cart(),
+      
+      },
     );
   }
 }
