@@ -56,60 +56,61 @@ class _EditProfileState extends State<EditProfile> {
           },
           child: ListView(
             children: [
-              Center(
-                child: Stack(
-                  children: [
-                    Container(
-                      width: 130,
-                      height: 130,
-                      decoration: BoxDecoration(
-                          border: Border.all(width: 4,color: Colors.yellowAccent),
-                          boxShadow: [
-                            BoxShadow(
-                                spreadRadius: 2,
-                                blurRadius: 10,
-                                color: Colors.black.withOpacity(0.1)
-                            ),
-                          ],
-                          shape: BoxShape.circle,
-                          image: const DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage(
-                                  "Assets/imgs/grocerslogo.png"
-                              )
-                          )
-                      ),
-                    ),
-                    Positioned(
-                        bottom: 0,
-                        right: 0,
-
-                        child: Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                  width: 4,
-                                  color: Colors.white
-                              ),
-                              color: Colors.yellow
-                          ),
-                          child: Icon(
-                            Icons.edit,
-                            color: Colors.white,
-                          ),
-                        )
-                    )
-                  ],
-                ),
-              ),
+              // Center(
+                // child: Stack(
+                //   children: [
+                //     Container(
+                //       width: 130,
+                //       height: 130,
+                //       decoration: BoxDecoration(
+                //           border: Border.all(width: 4,color: Colors.yellowAccent),
+                //           boxShadow: [
+                //             BoxShadow(
+                //                 spreadRadius: 2,
+                //                 blurRadius: 10,
+                //                 color: Colors.black.withOpacity(0.1)
+                //             ),
+                //           ],
+                //           // shape: BoxShape.circle,
+                //           // image: const DecorationImage(
+                //           //     fit: BoxFit.cover,
+                //           //     image: AssetImage(
+                //           //         "Assets/imgs/grocerslogo.png"
+                //           //     )
+                //           // )
+                //       ),
+                //     ),
+                //     Positioned(
+                //         bottom: 0,
+                //         right: 0,
+                //
+                //         child: Container(
+                //           height: 40,
+                //           width: 40,
+                //           decoration: BoxDecoration(
+                //               shape: BoxShape.circle,
+                //               border: Border.all(
+                //                   width: 4,
+                //                   color: Colors.white
+                //               ),
+                //               color: Colors.yellow
+                //           ),
+                //           child: Icon(
+                //             Icons.edit,
+                //             color: Colors.white,
+                //           ),
+                //         )
+                //     )
+                //   ],
+                // ),
+              // ),
               SizedBox(height: 30),
               buildTextField("Full Name","",false),
               buildTextField("Email","",false),
               buildTextField("Phone No.","",false),
               buildTextField("DOB","",false),
               buildTextField("Password","*******",true),
+              // buildTextField("Confirm Password","*******",true),
               buildTextField("Address","",false),
               SizedBox(height: 30),
               Row(
