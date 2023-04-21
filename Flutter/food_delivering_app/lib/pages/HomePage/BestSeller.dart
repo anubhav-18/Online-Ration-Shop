@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivering_app/pages/constants.dart';
 
 class Bestseller extends StatelessWidget {
   const Bestseller({
@@ -11,6 +12,18 @@ class Bestseller extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: <Widget>[
+          cardCreation(
+            image: 'assets/images/potato2.jpg',
+            title: 'Potato',
+            quantity: 1,
+            price: 50,
+          ),
+          cardCreation(
+            image: 'assets/images/potato2.jpg',
+            title: 'Potato',
+            quantity: 1,
+            price: 50,
+          ),
           cardCreation(
             image: 'assets/images/potato2.jpg',
             title: 'Potato',
@@ -97,7 +110,7 @@ class cardCreation extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       '      ADD',
-                      style: TextStyle(color: Color(0xff0c9869)),
+                      style: TextStyle(color: bckGrndColor),
                     ))
               ],
             ),

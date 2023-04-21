@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivering_app/pages/constants.dart';
 
 import 'My_Profile.dart';
 
@@ -13,7 +14,7 @@ class MyHeaderDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Color(0xff0378AD),
+        color: bckGrndColor,
         width: double.infinity,
         height: 200,
         padding: EdgeInsets.only(top: 20),
@@ -26,20 +27,12 @@ class MyHeaderDrawer extends StatelessWidget {
                 width: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  // border: Border.all(
-                  //   width: 2,
-                  //   color: Colors.black
-                  // ),
                   color: Colors.white ,
-                  // image: DecorationImage(
-                  //   image: NetworkImage(image),
-                  //   fit: BoxFit.cover
-                  // )
                 ),
                 child: Icon(
                   Icons.person,
                   size: 55,
-                  color: Color(0xff0378AD).withOpacity(0.5)),
+                  color: bckGrndColor.withOpacity(0.5)),
               ),
               Positioned(
                 bottom: 12,

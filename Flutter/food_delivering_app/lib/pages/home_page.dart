@@ -10,6 +10,7 @@ import 'package:food_delivering_app/pages/HomePage/My_Cart.dart';
 import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
 import 'package:food_delivering_app/pages/DrawerPage/MyHeaderDrawer.dart';
+import 'package:food_delivering_app/pages/constants.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
   AppBar buildApp() {
     return AppBar(
       iconTheme: IconThemeData(color: Colors.white),
-      backgroundColor: Color(0xff0378AD),
+      backgroundColor: bckGrndColor,
       title:
           Text("Grofers", style: TextStyle(color: Colors.white, fontSize: 20)),
       actions: [

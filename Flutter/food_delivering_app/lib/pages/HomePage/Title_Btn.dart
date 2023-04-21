@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-
+import 'package:food_delivering_app/pages/HomePage/See_All.dart';
+import 'package:food_delivering_app/pages/constants.dart';
 
 class Titlewithbtn extends StatelessWidget {
   const Titlewithbtn({
-    super.key, 
-    required this.title, 
+    super.key,
+    required this.title,
     required this.buttonName,
   });
 
-  final String title, buttonName ;
+  final String title, buttonName;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +23,12 @@ class Titlewithbtn extends StatelessWidget {
         ),
         Spacer(),
         TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, (MaterialPageRoute(builder: (context) => See_All())));
+            },
             child: Text(
               buttonName,
-              style: TextStyle(color: Color(0xff0c9869)),
+              style: TextStyle(color: bckGrndColor),
             ))
       ]),
     );
