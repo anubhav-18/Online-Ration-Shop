@@ -29,10 +29,7 @@ class _HomePageState extends State<HomePage> {
           child: Container(
             child: Column(
               children: [
-                MyHeaderDrawer(
-                  image:
-                      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/2048px-Solid_white.svg.png',
-                ),
+                MyHeaderDrawer(),
                 MyDrawerList(),
               ],
             ),
@@ -46,14 +43,54 @@ class _HomePageState extends State<HomePage> {
     return AppBar(
       iconTheme: IconThemeData(color: Colors.white),
       backgroundColor: bckGrndColor,
-      title:
-          Text("Grofers", style: TextStyle(color: Colors.white, fontSize: 20)),
       actions: [
-        CircleAvatar(
-          radius: 15,
-          backgroundColor: Colors.white,
-          child: Icon(Icons.search, size: 19, color: Colors.black),
+        // SEARCH BAR WITH MIC
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10 , horizontal: 10),
+          child: Container(
+            margin: EdgeInsets.all(1),
+            width: 295,
+            decoration: BoxDecoration(
+              color: Colors.white,  
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0, 10),
+                  blurRadius: 50,
+                  color: bckGrndColor.withOpacity(0.23)
+                )
+              ]
+            ),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      icon: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Icon(Icons.search , color: bckGrndColor,),
+                      ),
+                      contentPadding: EdgeInsets.symmetric(vertical: 11 ,),
+                      hintText: 'Search Grofers ', 
+                      hintStyle: TextStyle(
+                        color: Colors.black.withOpacity(0.8),
+                      )
+                      
+                    ),
+                  ),
+                ),
+                // Mic
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Icon(Icons.mic , color: bckGrndColor,)),
+                )
+              ],
+            ),
+          ),
         ),
+        // CART PAGE/ ICON 
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: InkWell(
@@ -63,11 +100,11 @@ class _HomePageState extends State<HomePage> {
             },
             child: CircleAvatar(
                 radius: 15,
-                backgroundColor: Colors.white,
+                backgroundColor: bckGrndColor,
                 child: Icon(
                   Icons.shopping_cart,
-                  size: 17,
-                  color: Colors.black,
+                  
+                  color: Colors.white,
                 )),
           ),
         )
@@ -84,13 +121,13 @@ class _HomePageState extends State<HomePage> {
           menuList('Home', Icons.home, HomePage()),
           menuList('Shop by Category', Icons.category, Categories()),
           heading('Accounts'),
-          menuList('My Orders', Icons.shop_two, My_Order()),
+          menuList('My Orders', Icons.shopping_bag, My_Order()),
           menuList('My Notifications', Icons.notification_add, My_Notifications()),
           menuList('My List', Icons.format_list_bulleted, My_List()),
           heading('Help & Support'),
-          menuList('Contact Us', Icons.support_agent, Contact_Us()),
-          menuList('FAQs', Icons.contact_support, FAQs()),
-          menuList('About us', Icons.people, About_Us()),
+          menuList('Contact Us', Icons.contact_support, Contact_Us()),
+          menuList('FAQs', Icons.help, FAQs()),
+          menuList('About us', Icons.group, About_Us()),
         ],
       ),
     );
@@ -117,8 +154,13 @@ class _HomePageState extends State<HomePage> {
         leading: Icon(
           icon,
           size: 20,
-          color: Color(0xff0378AD),
+          color: bckGrndColor,
         ),
+        // leading: Icon(
+        //   icon,
+        //   size: 20,
+        //   color: Color(0xff0378AD),
+        // ),
         title: Text(
           Title,
           style: TextStyle(fontSize: 16),

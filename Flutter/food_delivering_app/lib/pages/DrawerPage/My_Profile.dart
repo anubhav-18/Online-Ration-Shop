@@ -62,7 +62,8 @@ class _My_ProfileState extends State<My_Profile> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
                     },
                     child: Text("Save",
                         style: TextStyle(
