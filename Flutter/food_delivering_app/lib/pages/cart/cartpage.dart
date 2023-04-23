@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/src/material/icons.dart';
 import 'package:food_delivering_app/pages/cart/cartRepo.dart';
 import 'package:food_delivering_app/pages/cart/cartcard.dart';
 import 'package:food_delivering_app/pages/cart/items.dart';
 import 'package:food_delivering_app/pages/cart/pricedetail.dart';
+import 'package:food_delivering_app/pages/constants.dart';
 
 
 class CartPage extends StatefulWidget {
@@ -22,7 +22,7 @@ class _CartPageState extends State<CartPage> {
       appBar: AppBar(
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        backgroundColor: Color.fromARGB(255, 55, 112, 245),
+        backgroundColor: bckGrndColor,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);

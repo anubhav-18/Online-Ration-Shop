@@ -14,10 +14,7 @@ class _My_ListState extends State<My_List> {
       appBar: AppBar(
         title: Text('My List Page'),
         leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+          icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.white),
           onPressed: () {
             Navigator.pop(context);
           },

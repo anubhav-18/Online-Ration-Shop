@@ -14,10 +14,7 @@ class _About_UsState extends State<About_Us> {
       appBar: AppBar(
         title: Text('About Us Page'),
         leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+          icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.white),
           onPressed: () {
             Navigator.pop(context);
           },

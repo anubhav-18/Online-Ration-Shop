@@ -18,7 +18,7 @@ class _My_ProfileState extends State<My_Profile> {
         title: const Text('Edit Profile'),
         leading: IconButton(
           icon: Icon(
-            Icons.arrow_back,
+            Icons.arrow_back_ios_new,
             color: Colors.white,
           ),
           onPressed: () {

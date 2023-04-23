@@ -6,10 +6,10 @@ import 'package:food_delivering_app/pages/DrawerPage/FAQs.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Notifications.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_List.dart';
 import 'package:food_delivering_app/pages/HomePage/Body.dart';
-import 'package:food_delivering_app/pages/HomePage/My_Cart.dart';
 import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
 import 'package:food_delivering_app/pages/DrawerPage/MyHeaderDrawer.dart';
+import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
           child: InkWell(
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => My_Cart()));
+                  context, MaterialPageRoute(builder: (context) => CartPage()));
             },
             child: CircleAvatar(
                 radius: 15,

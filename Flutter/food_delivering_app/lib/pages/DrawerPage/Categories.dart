@@ -12,10 +12,7 @@ class _CategoriesState extends State<Categories> {
       appBar: AppBar(
         title: Text('Categories Page'),
         leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+          icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.white),
           onPressed: () {
             Navigator.pop(context);
           },

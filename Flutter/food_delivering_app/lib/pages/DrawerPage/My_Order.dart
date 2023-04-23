@@ -12,10 +12,7 @@ class _My_OrderState extends State<My_Order> {
       appBar: AppBar(
         title: Text('My Order Page'),
         leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+          icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.white),
           onPressed: () {
             Navigator.pop(context);
           },

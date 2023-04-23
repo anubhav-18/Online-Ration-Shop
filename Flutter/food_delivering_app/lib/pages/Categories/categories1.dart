@@ -10,7 +10,7 @@ class Categories1 extends StatelessWidget {
         title: Text('Categories 1'),
         leading: IconButton(
           icon: Icon(
-            Icons.arrow_back,
+            Icons.arrow_back_ios,
             color: Colors.white,
           ),
           onPressed: () {
