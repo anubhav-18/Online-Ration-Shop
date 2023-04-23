@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/src/material/icons.dart';
-import 'package:learnpath/cart/component/cartcard.dart';
-import 'package:learnpath/cart/repo/cartRepo.dart';
-import 'package:learnpath/cart/models/items.dart';
-import 'package:learnpath/cart/component/pricedetail.dart';
+import 'package:food_delivering_app/pages/cart/cartRepo.dart';
+import 'package:food_delivering_app/pages/cart/cartcard.dart';
+import 'package:food_delivering_app/pages/cart/items.dart';
+import 'package:food_delivering_app/pages/cart/pricedetail.dart';
+
 
 class CartPage extends StatefulWidget {
   @override
