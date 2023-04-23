@@ -16,6 +16,11 @@ class HomePage extends StatefulWidget {
   HomePage({super.key});
   @override
   State<HomePage> createState() => _HomePageState();
+  // _btmNavState createState()
+  // {
+  //   return _btmNavState();
+  // }
+
 }
 
 class _HomePageState extends State<HomePage> {
@@ -46,51 +51,55 @@ class _HomePageState extends State<HomePage> {
       actions: [
         // SEARCH BAR WITH MIC
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10 , horizontal: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Container(
             margin: EdgeInsets.all(1),
             width: 295,
             decoration: BoxDecoration(
-              color: Colors.white,  
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  offset: Offset(0, 10),
-                  blurRadius: 50,
-                  color: bckGrndColor.withOpacity(0.23)
-                )
-              ]
-            ),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                      offset: Offset(0, 10),
+                      blurRadius: 50,
+                      color: bckGrndColor.withOpacity(0.23))
+                ]),
             child: Row(
               children: <Widget>[
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-                      icon: Padding(
-                        padding: const EdgeInsets.only(left: 10),
-                        child: Icon(Icons.search , color: bckGrndColor,),
-                      ),
-                      contentPadding: EdgeInsets.symmetric(vertical: 11 ,),
-                      hintText: 'Search Grofers ', 
-                      hintStyle: TextStyle(
-                        color: Colors.black.withOpacity(0.8),
-                      )
-                      
-                    ),
+                        icon: Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Icon(
+                            Icons.search,
+                            color: bckGrndColor,
+                          ),
+                        ),
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: 11,
+                        ),
+                        hintText: 'Search Grofers ',
+                        hintStyle: TextStyle(
+                          color: Colors.black.withOpacity(0.8),
+                        )),
                   ),
                 ),
                 // Mic
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: InkWell(
-                    onTap: () {},
-                    child: Icon(Icons.mic , color: bckGrndColor,)),
+                      onTap: () {},
+                      child: Icon(
+                        Icons.mic,
+                        color: bckGrndColor,
+                      )),
                 )
               ],
             ),
           ),
         ),
-        // CART PAGE/ ICON 
+        // CART PAGE/ ICON
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: InkWell(
@@ -103,7 +112,6 @@ class _HomePageState extends State<HomePage> {
                 backgroundColor: bckGrndColor,
                 child: Icon(
                   Icons.shopping_cart,
-                  
                   color: Colors.white,
                 )),
           ),
@@ -122,7 +130,8 @@ class _HomePageState extends State<HomePage> {
           menuList('Shop by Category', Icons.category, Categories()),
           heading('Accounts'),
           menuList('My Orders', Icons.shopping_bag, My_Order()),
-          menuList('My Notifications', Icons.notification_add, My_Notifications()),
+          menuList(
+              'My Notifications', Icons.notification_add, My_Notifications()),
           menuList('My List', Icons.format_list_bulleted, My_List()),
           heading('Help & Support'),
           menuList('Contact Us', Icons.contact_support, Contact_Us()),
@@ -148,7 +157,7 @@ class _HomePageState extends State<HomePage> {
     ));
   }
 
-  Widget menuList(String Title, IconData icon , Widget title ) {
+  Widget menuList(String Title, IconData icon, Widget title) {
     return Material(
       child: ListTile(
         leading: Icon(
@@ -170,10 +179,35 @@ class _HomePageState extends State<HomePage> {
         minVerticalPadding: 10,
         onTap: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => title ) );
+              context, MaterialPageRoute(builder: (context) => title));
         },
       ),
     );
   }
-
 }
+
+// class _btmNavState extends State<HomePage> {
+//   int selectedIndex = 0 ; 
+//   var PagesData = [HomePage() , My_Profile() , CartPage()] ;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: PagesData[selectedIndex],
+//       bottomNavigationBar: BottomNavigationBar(
+//           currentIndex: selectedIndex,
+//           onTap: (value) {
+//             setState(() {
+//               selectedIndex = value;
+//             });
+//           },
+//           showSelectedLabels: false,
+//           showUnselectedLabels: false,
+//           items: [
+//             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+//             BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Account'),
+//             BottomNavigationBarItem(
+//                 icon: Icon(Icons.shopping_cart), label: 'Cart'),
+//           ]),
+//     );
+//   }
+// }

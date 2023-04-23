@@ -14,15 +14,12 @@ class _See_AllState extends State<See_All> {
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(
-          child: Icon(
-            Icons.arrow_back,
-            // size: 16,
-          ),
+          child: Icon(Icons.arrow_back_ios, size: 20, color: Colors.white),
           onTap: () {
             Navigator.pop(context);
           },
         ),
-        
+        centerTitle: true,
         title: Text(
           'BestSeller',
           style: TextStyle(fontWeight: FontWeight.bold),
