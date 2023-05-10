@@ -17,7 +17,7 @@ class FirstPage extends StatefulWidget {
 
 class _FirstPageState extends State<FirstPage> {
   int selectedIndex = 0 ; 
-  var PagesData = [HomePage() ,Categories(), Account() , My_List(), My_Order()] ;
+  var PagesData = [HomePage() ,CategoriesPage(), Account() , My_List(), My_Order()] ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

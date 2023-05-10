@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
       appBar: buildApp(),
       body: Body(),
       drawer: Drawer(
+        // width: double.maxFinite,
         child: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -127,7 +128,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           heading('Home'),
           menuList('Home', Icons.home, HomePage()),
-          menuList('Shop by Category', Icons.category, Categories()),
+          menuList('Shop by Category', Icons.category, CategoriesPage()),
           heading('Accounts'),
           menuList('My Orders', Icons.shopping_bag, My_Order()),
           menuList(
@@ -165,11 +166,6 @@ class _HomePageState extends State<HomePage> {
           size: 20,
           color: bckGrndColor,
         ),
-        // leading: Icon(
-        //   icon,
-        //   size: 20,
-        //   color: Color(0xff0378AD),
-        // ),
         title: Text(
           Title,
           style: TextStyle(fontSize: 16),
@@ -185,29 +181,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-// class _btmNavState extends State<HomePage> {
-//   int selectedIndex = 0 ; 
-//   var PagesData = [HomePage() , My_Profile() , CartPage()] ;
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: PagesData[selectedIndex],
-//       bottomNavigationBar: BottomNavigationBar(
-//           currentIndex: selectedIndex,
-//           onTap: (value) {
-//             setState(() {
-//               selectedIndex = value;
-//             });
-//           },
-//           showSelectedLabels: false,
-//           showUnselectedLabels: false,
-//           items: [
-//             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-//             BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Account'),
-//             BottomNavigationBarItem(
-//                 icon: Icon(Icons.shopping_cart), label: 'Cart'),
-//           ]),
-//     );
-//   }
-// }
