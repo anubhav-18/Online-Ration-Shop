@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "627905383308",
+    "project_id": "rationshop-aeea7",
+    "storage_bucket": "rationshop-aeea7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627905383308:android:35dfbdfa16f0ee63d224a9",
+        "android_client_info": {
+          "package_name": "com.example.food_delivering_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627905383308-73i4j20tej4i11cgamhqnm4up4kft3j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoPSEWJSRPMyupjcpJbhcujFojH5C8MNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627905383308-73i4j20tej4i11cgamhqnm4up4kft3j8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
