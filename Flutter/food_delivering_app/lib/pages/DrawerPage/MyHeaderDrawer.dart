@@ -6,10 +6,7 @@ import 'My_Profile.dart';
 class MyHeaderDrawer extends StatelessWidget {
   const MyHeaderDrawer({
     super.key,
-    // required this.image,
   });
-
-  // final String image;
 
   @override
   Widget build(BuildContext context) {

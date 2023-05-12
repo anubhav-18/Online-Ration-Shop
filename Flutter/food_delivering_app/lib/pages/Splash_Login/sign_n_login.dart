@@ -49,7 +49,7 @@ class signNlog extends StatelessWidget {
                 height: 250,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/imgs/grocerslogo.png")),
+                      image: AssetImage("assets/images/grocerslogo.png")),
                 ),
               ),
               Column(

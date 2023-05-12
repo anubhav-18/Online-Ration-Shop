@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivering_app/pages/HomePage/Add_New_Address.dart';
 import 'package:food_delivering_app/pages/constants.dart';
 
 class Address extends StatelessWidget {
@@ -88,7 +89,9 @@ class Address extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(15),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Add_New_Address()));
+              },
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(25)),
@@ -120,3 +123,5 @@ class Address extends StatelessWidget {
     );
   }
 }
+
+
