@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/Splash_Login/sign_n_login.dart';
+import 'package:food_delivering_app/pages/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -29,8 +30,8 @@ class _SplashScreenState extends State<SplashScreen> {
             begin: Alignment.topRight,
             end: Alignment.bottomRight,
             colors: [
-              Color.fromRGBO(156, 204, 101, 1),
-              Color.fromRGBO(156, 204, 101, 1)
+              bckGrndColor,
+              bckGrndColor,
             ],
           ),
         ),
@@ -47,12 +48,14 @@ class _SplashScreenState extends State<SplashScreen> {
               "A Whole Ration Shop\n At Your Fingertips",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.yellow,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 18.0,
               ),
             ),
-            CircularProgressIndicator(),
+            CircularProgressIndicator(
+              color: Colors.white,
+            ),
           ],
         ),
       ),

@@ -4,6 +4,8 @@ import 'package:food_delivering_app/pages/Home_Page.dart';
 import 'package:food_delivering_app/pages/Splash_Login/sign_n_login.dart';
 import 'package:food_delivering_app/pages/Splash_Login/signup.dart';
 import 'package:food_delivering_app/pages/Splash_Login/square_tile.dart';
+import 'package:food_delivering_app/pages/services/google_sign.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -17,8 +19,8 @@ class LoginPage extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            Navigator.push(context,
-              MaterialPageRoute( builder: (context) => signNlog()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => signNlog()));
           },
           icon: Icon(Icons.arrow_back_ios, size: 20, color: Colors.black),
         ),
@@ -58,22 +60,21 @@ class LoginPage extends StatelessWidget {
                       children: <Widget>[
                         inputFile(label: "Username/Email/Mobile No."),
                         inputFile(label: "Password", obscureText: true)
-
                       ],
                     ),
                   ),
                   Padding(
-                    padding:const EdgeInsets.symmetric(horizontal: 40.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text(
                           'Forgot Password',
-                          style: TextStyle(
-                            color: Colors.grey[600]),
+                          style: TextStyle(color: Colors.grey[600]),
                         ),
                       ],
-                    ),),
+                    ),
+                  ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Container(
@@ -90,8 +91,10 @@ class LoginPage extends StatelessWidget {
                         minWidth: double.infinity,
                         height: 60,
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute( builder: (context) => HomePage()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()));
                         },
                         color: Colors.amber[400],
                         elevation: 0,
@@ -108,38 +111,63 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    ),
+                  ),
 
-                    SizedBox(height: 10.0,),
+                  SizedBox(
+                    height: 10.0,
+                  ),
 
-                    Row(
-                      children: [
-                        Expanded(child: Divider(
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Divider(
                           thickness: 0.5,
                           color: Colors.grey[400],
-                        ),),
-                        Text("Or Continue With"),
-                        Expanded(child: Divider(
+                        ),
+                      ),
+                      Text("Or Continue With"),
+                      Expanded(
+                        child: Divider(
                           thickness: 0.5,
                           color: Colors.grey[400],
-                        ),),
-                      ],
-                    ),
+                        ),
+                      ),
+                    ],
+                  ),
 
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // google button
-                        SquareTile(imagePath:'assets/images/google.png'),
-                        SizedBox(width: 20.0),
-                        // twitter button
-                        SquareTile(imagePath: 'assets/images/twitter.png'),
-                        SizedBox(width: 20.0),
-                        // apple button
-                        SquareTile(imagePath: 'assets/images/apple.png')
-                      ],
-                    ),
-                  
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // google button
+                      SquareTile(
+                        imagePath: 'assets/images/google.png',
+                        onTap: () async {
+                          await GoogleSignInProvider().googleLogin();
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()));
+                          // final provider = Provider.of<GoogleSignInProvider>(
+                          //     context,
+                          //     listen: false);
+                          // provider.googleLogin();
+                        },
+                      ),
+                      SizedBox(width: 20.0),
+                      // twitter button
+                      SquareTile(
+                        imagePath: 'assets/images/twitter.png',
+                        onTap: () {},
+                      ),
+                      SizedBox(width: 20.0),
+                      // apple button
+                      SquareTile(
+                        imagePath: 'assets/images/apple.png',
+                        onTap: () {},
+                      )
+                    ],
+                  ),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -198,11 +226,11 @@ Widget inputFile({label, obscureText = false}) {
               borderSide: BorderSide(color: Colors.black),
             ),
             border: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black)
-            )
-            ),
+                borderSide: BorderSide(color: Colors.black))),
       ),
-      SizedBox(height: 10,)
+      SizedBox(
+        height: 10,
+      )
     ],
   );
 }

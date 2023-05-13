@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>627905383308-1r9h3d32jmdvkegnrc5fe8gdbmb8mqch.apps.googleusercontent.com</string>
+	<string>50296254327-jjnupiikbg2mf55g2vg78db4ejqj8gj7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.627905383308-1r9h3d32jmdvkegnrc5fe8gdbmb8mqch</string>
+	<string>com.googleusercontent.apps.50296254327-jjnupiikbg2mf55g2vg78db4ejqj8gj7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAcO9SFQUqGEnnst3Wxn2g50QRctKPdHGk</string>
+	<string>AIzaSyCUVdBEs4EsPjWIU3RgXN2xSRalhs4dYB4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>627905383308</string>
+	<string>50296254327</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.foodDeliveringApp</string>
 	<key>PROJECT_ID</key>
-	<string>rationshop-aeea7</string>
+	<string>online-ration-shop</string>
 	<key>STORAGE_BUCKET</key>
-	<string>rationshop-aeea7.appspot.com</string>
+	<string>online-ration-shop.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:627905383308:ios:502f87521ade3790d224a9</string>
+	<string>1:50296254327:ios:b169bc22c6605fb2283b72</string>
 </dict>
 </plist>

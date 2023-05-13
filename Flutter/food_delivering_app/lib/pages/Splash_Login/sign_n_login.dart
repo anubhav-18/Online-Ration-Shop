@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivering_app/pages/constants.dart';
 
 import 'login_page.dart';
 import 'signup.dart';
@@ -13,7 +14,8 @@ class signNlog extends StatelessWidget {
       body: SafeArea(
         child: Container(
           width: double.infinity,
-          color: Color.fromRGBO(156, 204, 101, 1),
+          color: bckGrndColor,
+          // Color.fromRGBO(156, 204, 101, 1),
           height: MediaQuery.of(context).size.height,
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
           child: Column(
@@ -27,7 +29,7 @@ class signNlog extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -38,7 +40,7 @@ class signNlog extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 15,
                     ),
                   )
@@ -49,7 +51,7 @@ class signNlog extends StatelessWidget {
                 height: 250,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage("assets/imgs/grocerslogo.png")),
+                      image: AssetImage("assets/images/grocerslogo.png")),
                 ),
               ),
               Column(
@@ -66,7 +68,7 @@ class signNlog extends StatelessWidget {
                         side: BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(50)),
                     child: Text(
-                      "Create An User Account",
+                      "Sign Up",
                       style:
                           TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
                     ),
@@ -86,7 +88,7 @@ class signNlog extends StatelessWidget {
                         side: BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(50)),
                     child: Text(
-                      "Create A Business Account",
+                      "Login",
                       style:
                           TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
                     ),

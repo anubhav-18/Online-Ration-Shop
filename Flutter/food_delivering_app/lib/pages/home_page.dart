@@ -9,8 +9,11 @@ import 'package:food_delivering_app/pages/HomePage/Body.dart';
 import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
 import 'package:food_delivering_app/pages/DrawerPage/MyHeaderDrawer.dart';
+import 'package:food_delivering_app/pages/Splash_Login/sign_n_login.dart';
 import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/constants.dart';
+import 'package:food_delivering_app/pages/services/google_sign.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -20,7 +23,6 @@ class HomePage extends StatefulWidget {
   // {
   //   return _btmNavState();
   // }
-
 }
 
 class _HomePageState extends State<HomePage> {
@@ -124,22 +126,42 @@ class _HomePageState extends State<HomePage> {
   Widget MyDrawerList() {
     return Container(
       padding: const EdgeInsets.only(top: 8),
-      child: Column(
-        children: [
-          heading('Home'),
-          menuList('Home', Icons.home, HomePage()),
-          menuList('Shop by Category', Icons.category, CategoriesPage()),
-          heading('Accounts'),
-          menuList('My Orders', Icons.shopping_bag, My_Order()),
-          menuList(
-              'My Notifications', Icons.notification_add, My_Notifications()),
-          menuList('My List', Icons.format_list_bulleted, My_List()),
-          heading('Help & Support'),
-          menuList('Contact Us', Icons.contact_support, Contact_Us()),
-          menuList('FAQs', Icons.help, FAQs()),
-          menuList('About us', Icons.group, About_Us()),
-        ],
-      ),
+      child: Column(children: [
+        heading('Home'),
+        menuList('Home', Icons.home, HomePage()),
+        menuList('Shop by Category', Icons.category, CategoriesPage()),
+        heading('Accounts'),
+        menuList('My Orders', Icons.shopping_bag, My_Order()),
+        menuList(
+            'My Notifications', Icons.notification_add, My_Notifications()),
+        menuList('My List', Icons.format_list_bulleted, My_List()),
+        heading('Help & Support'),
+        menuList('Contact Us', Icons.contact_support, Contact_Us()),
+        menuList('FAQs', Icons.help, FAQs()),
+        menuList('About us', Icons.group, About_Us()),
+        ListTile(
+          leading: Icon(
+            Icons.logout,
+            size: 20,
+            color: bckGrndColor,
+          ),
+          title: Text(
+            'LogOut',
+            style: TextStyle(fontSize: 16),
+          ),
+          selectedTileColor: Colors.grey,
+          minLeadingWidth: 15,
+          minVerticalPadding: 10,
+          onTap: () async {
+            await GoogleSignInProvider().googleLogout();
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => signNlog()));
+            // final provider =
+            //     Provider.of<GoogleSignInProvider>(context, listen: false);
+            // provider.googleLogout();
+          },
+        )
+      ]),
     );
   }
 
@@ -148,7 +170,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 15),
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 15),
           child: Text(
             Title,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -172,7 +194,7 @@ class _HomePageState extends State<HomePage> {
         ),
         selectedTileColor: Colors.grey,
         minLeadingWidth: 15,
-        minVerticalPadding: 10,
+        minVerticalPadding: .8,
         onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => title));

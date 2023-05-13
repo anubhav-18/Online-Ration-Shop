@@ -44,40 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBXafvCk4VVVF-IFBbZCOtjoUi-rIri-bk',
-    appId: '1:627905383308:web:c16e641cc173ff26d224a9',
-    messagingSenderId: '627905383308',
-    projectId: 'rationshop-aeea7',
-    authDomain: 'rationshop-aeea7.firebaseapp.com',
-    storageBucket: 'rationshop-aeea7.appspot.com',
-    measurementId: 'G-8W023KGJ6X',
+    apiKey: 'AIzaSyDA34f52xU7y-BmommUzNkTRNJn6GaKUbQ',
+    appId: '1:50296254327:web:a51209095b1dbf7c283b72',
+    messagingSenderId: '50296254327',
+    projectId: 'online-ration-shop',
+    authDomain: 'online-ration-shop.firebaseapp.com',
+    storageBucket: 'online-ration-shop.appspot.com',
+    measurementId: 'G-3NWHY9EC7E',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCoPSEWJSRPMyupjcpJbhcujFojH5C8MNA',
-    appId: '1:627905383308:android:35dfbdfa16f0ee63d224a9',
-    messagingSenderId: '627905383308',
-    projectId: 'rationshop-aeea7',
-    storageBucket: 'rationshop-aeea7.appspot.com',
+    apiKey: 'AIzaSyAlk1npeUXzqYi9jX8u287Ufp_rlj7m_eM',
+    appId: '1:50296254327:android:a75538853fbf143e283b72',
+    messagingSenderId: '50296254327',
+    projectId: 'online-ration-shop',
+    storageBucket: 'online-ration-shop.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAcO9SFQUqGEnnst3Wxn2g50QRctKPdHGk',
-    appId: '1:627905383308:ios:502f87521ade3790d224a9',
-    messagingSenderId: '627905383308',
-    projectId: 'rationshop-aeea7',
-    storageBucket: 'rationshop-aeea7.appspot.com',
-    iosClientId: '627905383308-1r9h3d32jmdvkegnrc5fe8gdbmb8mqch.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCUVdBEs4EsPjWIU3RgXN2xSRalhs4dYB4',
+    appId: '1:50296254327:ios:b169bc22c6605fb2283b72',
+    messagingSenderId: '50296254327',
+    projectId: 'online-ration-shop',
+    storageBucket: 'online-ration-shop.appspot.com',
+    iosClientId: '50296254327-jjnupiikbg2mf55g2vg78db4ejqj8gj7.apps.googleusercontent.com',
     iosBundleId: 'com.example.foodDeliveringApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAcO9SFQUqGEnnst3Wxn2g50QRctKPdHGk',
-    appId: '1:627905383308:ios:502f87521ade3790d224a9',
-    messagingSenderId: '627905383308',
-    projectId: 'rationshop-aeea7',
-    storageBucket: 'rationshop-aeea7.appspot.com',
-    iosClientId: '627905383308-1r9h3d32jmdvkegnrc5fe8gdbmb8mqch.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCUVdBEs4EsPjWIU3RgXN2xSRalhs4dYB4',
+    appId: '1:50296254327:ios:b169bc22c6605fb2283b72',
+    messagingSenderId: '50296254327',
+    projectId: 'online-ration-shop',
+    storageBucket: 'online-ration-shop.appspot.com',
+    iosClientId: '50296254327-jjnupiikbg2mf55g2vg78db4ejqj8gj7.apps.googleusercontent.com',
     iosBundleId: 'com.example.foodDeliveringApp',
   );
 }
