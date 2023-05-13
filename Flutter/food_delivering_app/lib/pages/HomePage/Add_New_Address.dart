@@ -16,7 +16,9 @@ class Add_New_Address extends StatelessWidget {
             Icons.arrow_back_ios,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
       body: Container(
@@ -41,35 +43,34 @@ class Add_New_Address extends StatelessWidget {
                 children: [
                   OutlinedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
                     },
                     child: Text("Cancel",
                         style: TextStyle(
                             fontSize: 15,
                             letterSpacing: 2,
-                            color: Colors.black
-                        )),
+                            color: Colors.black)),
                     style: OutlinedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 50),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30))
-                    ),
+                            borderRadius: BorderRadius.circular(30))),
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
                     },
-                    child: Text("Save", style: TextStyle(
-                        fontSize: 15,
-                        letterSpacing: 2,
-                        color: Colors.white
-                    )),
+                    child: Text("Save",
+                        style: TextStyle(
+                            fontSize: 15,
+                            letterSpacing: 2,
+                            color: Colors.white)),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: bckGrndColor,
                         padding: EdgeInsets.symmetric(horizontal: 50),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20))
-                    ),
+                            borderRadius: BorderRadius.circular(20))),
                   )
                 ],
               )
@@ -81,30 +82,28 @@ class Add_New_Address extends StatelessWidget {
   }
 }
 
-Widget buildTextField(String labelText, String placeholder,
-      bool isPasswordTextField) {
-    return Padding(
-      padding: EdgeInsets.only(bottom: 30),
-      child: TextField(
-        // obscureText: isPasswordTextField ? true : false,
-        // obscureText: isObscurePassword,
-        decoration: InputDecoration(
-            suffixIcon: isPasswordTextField ?
-            IconButton(
-                icon: Icon(Icons.remove_red_eye, color: Colors.grey),
-                onPressed: () {}
-            ) : null,
-            contentPadding: EdgeInsets.only(bottom: 5),
-            labelText: labelText,
-            floatingLabelBehavior: FloatingLabelBehavior.always,
-            hintText: placeholder,
-            hintStyle: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.grey,
-            )
-
-        ),
-      ),
-    );
+Widget buildTextField(
+    String labelText, String placeholder, bool isPasswordTextField) {
+  return Padding(
+    padding: EdgeInsets.only(bottom: 30),
+    child: TextField(
+      // obscureText: isPasswordTextField ? true : false,
+      // obscureText: isObscurePassword,
+      decoration: InputDecoration(
+          suffixIcon: isPasswordTextField
+              ? IconButton(
+                  icon: Icon(Icons.remove_red_eye, color: Colors.grey),
+                  onPressed: () {})
+              : null,
+          contentPadding: EdgeInsets.only(bottom: 5),
+          labelText: labelText,
+          floatingLabelBehavior: FloatingLabelBehavior.always,
+          hintText: placeholder,
+          hintStyle: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.grey,
+          )),
+    ),
+  );
 }

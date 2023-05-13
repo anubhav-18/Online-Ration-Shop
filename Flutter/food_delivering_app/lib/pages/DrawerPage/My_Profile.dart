@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/DrawerPage/About_Us.dart';
 import 'package:food_delivering_app/pages/Home_Page.dart';
@@ -15,6 +16,8 @@ class _My_ProfileState extends State<My_Profile> {
   bool isObscurePassword = false;
   @override
   Widget build(BuildContext context) {
+    // final user =  FirebaseAuth.instance.currentUser!;
+    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: bckGrndColor,
