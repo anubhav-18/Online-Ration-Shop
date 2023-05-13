@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivering_app/pages/Categories/categories1.dart';
-import 'package:food_delivering_app/pages/Categories/categories2.dart';
-import 'package:food_delivering_app/pages/Categories/categories3.dart';
+import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelect.dart';
+import 'package:food_delivering_app/pages/Categories/Dal&Pulses/2.dart';
+// import 'package:food_delivering_app/pages/Categories/Spices/3.dart';
 import 'package:food_delivering_app/pages/HomePage/See_All.dart';
 import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
 import 'package:food_delivering_app/pages/constants.dart';
@@ -83,49 +83,49 @@ class _BodyState extends State<Body> {
               children: [
                 gridBorder(
                   image: 'assets/images/categoriesimg/atta&flourOut.jpg',
-                  category: Categories1(),),
+                  category: AashirvaadSelect(),),
                 gridBorder(
                     image: 'assets/images/categoriesimg/staplesOut.jpg',
-                    category: Categories2()),
+                    category: Pulses()),
                 gridBorder(
                   image: 'assets/images/categoriesimg/spicesOut.jpg',
-                  category: Categories1(),),
+                  category: Pulses(),),
                 gridBorder(
                     image: 'assets/images/categoriesimg/dryfruitOut.jpg',
-                    category: Categories2()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/edibleoilOut.jpg',
-                    category: Categories3()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/saltsugarOut.jpg',
-                    category: Categories3()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/beveragesOut.jpg',
-                    category: Categories1()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/snacksOut.jpg',
-                    category: Categories3()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/noodles&pastaOut.jpg',
-                    category: Categories1()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/teacoffeeOut.jpg',
-                    category: Categories2()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/chocolatesOut.jpg',
-                    category: Categories3()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/momnbabyOut.jpg',
-                    category: Categories1()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/beautyOut.jpg',
-                    category: Categories1()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/petcareOut.jpg',
-                    category: Categories2()),
+                    category: AashirvaadSelect()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/cleaningOut.jpg',
-                    category: Categories3()),
+                    category: AashirvaadSelect()),
               ],
             ),
           ),
@@ -284,34 +284,39 @@ class Bestseller extends StatelessWidget {
       child: Row(
         children: <Widget>[
           cardCreation(
-            image: 'assets/images/potato2.jpg',
-            title: 'Potato',
-            quantity: 1,
-            price: 50,
+            image: 'assets/images/productimages/select1.jpeg',
+            title: 'Aashi',
+            quantity: '5 Kg',
+            price: 269,
+            page: AashirvaadSelect(),
           ),
           cardCreation(
-            image: 'assets/images/potato2.jpg',
-            title: 'Potato',
-            quantity: 1,
-            price: 50,
+            image: 'assets/images/productimages/amulbutter1.jpeg',
+            title: 'Amul',
+            quantity: '100 g',
+            price: 54,
+            page: AashirvaadSelect(),
           ),
           cardCreation(
-            image: 'assets/images/potato2.jpg',
-            title: 'Potato',
-            quantity: 1,
-            price: 50,
+            image: 'assets/images/productimages/b1.jpeg',
+            title: 'Bourbon',
+            quantity: '150 g',
+            price: 30,
+            page: AashirvaadSelect(),
           ),
           cardCreation(
-            image: 'assets/images/potato2.jpg',
-            title: 'Potato',
-            quantity: 1,
-            price: 50,
+            image: 'assets/images/productimages/pepsi1.jpeg',
+            title: 'Pepsi',
+            quantity: '2.25 L',
+            price: 64,
+            page: AashirvaadSelect(),
           ),
           cardCreation(
-            image: 'assets/images/potato2.jpg',
-            title: 'Potato',
-            quantity: 1,
-            price: 50,
+            image: 'assets/images/productimages/cl1.jpeg',
+            title: 'Choclairs',
+            quantity: '605 g',
+            price: 160,
+            page: AashirvaadSelect(),
           ),
         ],
       ),
@@ -326,65 +331,73 @@ class cardCreation extends StatelessWidget {
     required this.title,
     required this.quantity,
     required this.price,
+    required this.page,
   });
 
-  final String image, title;
-  final int quantity, price;
+  final String image, title, quantity;
+  final int  price;
+  final Widget page;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(left: 10, bottom: 20, right: 10),
-      width: 150,
-      child: Column(
-        children: <Widget>[
-          ClipRRect(
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-            child: Image.asset(image),
-          ),
-          // Image.asset(image,width: 150),
-          Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10)),
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Colors.green.withOpacity(0.23))
-                ]),
-            child: Row(
-              children: <Widget>[
-                RichText(
-                    text: TextSpan(children: [
-                  TextSpan(
-                    text: "$title\n",
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
-                  TextSpan(
-                    text: "$quantity Kg\n",
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
-                  TextSpan(
-                    text: "\u{20B9}${price}",
-                    style: Theme.of(context).textTheme.labelLarge,
-                  )
-                ])),
-                Spacer(),
-                TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      '      ADD',
-                      style: TextStyle(color: bckGrndColor),
-                    ))
-              ],
+    return InkWell(
+      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => page )),
+      child: Container(
+        margin: EdgeInsets.only(left: 10, bottom: 20, right: 10),
+        width: 150,
+        child: Column(
+          children: <Widget>[
+            ClipRRect(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+              child: Image.asset(image),
             ),
-          )
-        ],
+            // Image.asset(image,width: 150),
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10)),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 50,
+                        color: Colors.green.withOpacity(0.23))
+                  ]),
+              child: Row(
+                children: <Widget>[
+                  RichText(
+                    softWrap: true,
+                    overflow:TextOverflow.clip,
+    
+                      text: TextSpan(children: [
+                    TextSpan(
+                      text: "$title\n",
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                    TextSpan(
+                      text: "$quantity \n",
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                    TextSpan(
+                      text: "\u{20B9}${price}",
+                      style: Theme.of(context).textTheme.labelLarge,
+                    )
+                  ])),
+                  Spacer(),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '      ADD',
+                        style: TextStyle(color: bckGrndColor),
+                      ))
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

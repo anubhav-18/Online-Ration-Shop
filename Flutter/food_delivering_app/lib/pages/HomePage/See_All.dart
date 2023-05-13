@@ -67,175 +67,168 @@ class _See_AllState extends State<See_All> {
         child: Column(
           children: [
             Address_widget(),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-              height: 1630,
-              width: MediaQuery.of(context).size.width,
-              child: GridView.count(
-                physics: NeverScrollableScrollPhysics(),
-                crossAxisCount: 2,
-                childAspectRatio: (1/1.37),
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 1,
-                children: [ 
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: '', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    CardCreate(
-                      // image: 'assets\images\icons\profile.jpg', 
-                      title: 'Poatat0', 
-                      quantity: 1, 
-                      price: 50
-                    ),
-                    
-                ],
-              ),
+            SizedBox(height: 5,),
+            ProductListTile(
+              img: 'assets/images/productimages/select1.jpeg',
+              old_price: 199,
+              new_price: 109,
+              text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/select1.jpeg',
+              old_price: 199,
+              new_price: 109,
+              text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/select1.jpeg',
+              old_price: 199,
+              new_price: 109,
+              text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/select1.jpeg',
+              old_price: 199,
+              new_price: 109,
+              text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/select1.jpeg',
+              old_price: 199,
+              new_price: 109,
+              text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
             ),
           ],
         ),
-      )
-
+      ),
     );
   }
 }
 
-
-class CardCreate extends StatelessWidget {
-  const CardCreate({
-    super.key, 
-    // required this.image, 
-    required this.title, 
-    required this.quantity, 
-    required this.price,
+class ProductListTile extends StatelessWidget {
+  const ProductListTile({
+    super.key,
+    required this.img,
+    required this.new_price,
+    required this.old_price,
+    required this.text,
   });
 
-  final String title ;
-  final int quantity, price ;
+  final String img, text;
+  final int new_price, old_price;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(15),
-      width: 200,
-      // height: 300,
-      child: Column(
-        children: <Widget>[
-          Container(
-            height: 170,
-            color: Colors.grey,
-          ),
-          // ClipRRect(
-          //   borderRadius: BorderRadius.only(
-          //     topLeft: Radius.circular(10),
-          //     topRight: Radius.circular(10)
-          //   ),
-          //   // child: Image.asset(image , fit: BoxFit.cover,) ,
-          // ),
-          Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10)),
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: Colors.green.withOpacity(0.23))
-                ]),
-            child: Row(
-              children: <Widget>[
-                RichText(
-                    text: TextSpan(children: [
-                  TextSpan(
-                    text: "$title\n",
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
-                  TextSpan(
-                    text: "$quantity Kg\n",
-                    style: Theme.of(context).textTheme.labelLarge,
-                  ),
-                  TextSpan(
-                    text: "\u{20B9}${price}",
-                    style: Theme.of(context).textTheme.labelLarge,
-                  )
-                ])),
-                Spacer(),
-                TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      '      ADD',
-                      style: TextStyle(color: bckGrndColor),
-                    ))
-              ],
+      margin: EdgeInsets.all(5),
+      height: 150,
+      child: Card(
+        color: Colors.white,
+        child: Row(
+          children: [
+            Expanded(
+              flex: 33,
+              child: Image.asset(
+                img,
+              ),
             ),
-          )
-        ],
+            Expanded(
+              flex: 66,
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 50,
+                    child: Center(
+                        child: RichText(
+                      softWrap: true,
+                      textAlign: TextAlign.start,
+                      overflow: TextOverflow.clip,
+                      textDirection: TextDirection.ltr,
+                      maxLines: 3,
+                      text: TextSpan(
+                          text: text,
+                          style:
+                              TextStyle(color: Colors.black, fontSize: 15.5)),
+                    )),
+                  ),
+                  Expanded(
+                      flex: 20,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            '\u{20B9}$new_price',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.w600),
+                          ),
+                          // Container(height: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 7),
+                            child: Text(
+                              '\u{20B9}$old_price',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  decoration: TextDecoration.lineThrough),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 7),
+                            padding: EdgeInsets.only(
+                                left: 4, top: 3, bottom: 3, right: 4),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                color: Colors.lightGreen.withOpacity(0.5)),
+                            child: Discount(old_price, new_price),
+                          )
+                        ],
+                      )),
+                  Expanded(
+                      flex: 30,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 10, bottom: 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.white,
+                                    side: BorderSide(
+                                        color: Colors.grey, width: 1),
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30))),
+                                onPressed: () {},
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      'Add',
+                                      style: TextStyle(color: bckGrndColor),
+                                    ),
+                                    Icon(
+                                      Icons.add,
+                                      color: bckGrndColor,
+                                    )
+                                  ],
+                                )),
+                          ],
+                        ),
+                      )),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
+}
+
+Text Discount(int prod_old_price, int prod_price) {
+  double discount = (prod_old_price - prod_price) / prod_old_price * 100;
+  var dis = discount.round();
+  return Text(
+    '$dis % OFF',
+    style: TextStyle(fontSize: 15, color: Colors.green[900]),
+  );
 }

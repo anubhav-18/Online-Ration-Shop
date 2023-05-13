@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_delivering_app/pages/Splash_Login/login_page.dart';
 import 'package:food_delivering_app/pages/Splash_Login/signup.dart';
-import 'package:email_validator/email_validator.dart';
+// import 'package:email_validator/email_validator.dart';
 
 class ForgotPassword extends StatelessWidget {
   TextEditingController _emailTextController = TextEditingController();
@@ -71,10 +71,10 @@ class ForgotPassword extends StatelessWidget {
                         labelText: 'Enter Email Address',
                       ),
                       autovalidateMode: AutovalidateMode.onUserInteraction,
-                      validator: (email) =>
-                          email != null && !EmailValidator.validate(email)
-                              ? 'Enter a valid email'
-                              : null,
+                      // validator: (email) =>
+                      //     email != null && !EmailValidator.validate(email)
+                      //         ? 'Enter a valid email'
+                      //         : null,
                     )
                     // inputTextField('Enter Email Address',
                     //     Icons.person_outline, false, _emailTextController),
