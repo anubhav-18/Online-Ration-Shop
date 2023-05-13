@@ -41,12 +41,10 @@ dependencies:
   firebase_core: ^2.11.0
   flutter_layout_grid: ^1.0.3
   carousel_slider: ^4.2.1
-<<<<<<< HEAD
   firebase_auth: ^4.6.0
   google_sign_in: ^6.1.0
   provider: ^6.0.5
-=======
->>>>>>> parent of 909ef88 (Merge branch 'master' of https://github.com/anubhav-18/PROGRAM)
+  email_validator: '^2.1.16'
   
 dev_dependencies:
   flutter_test:

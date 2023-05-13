@@ -2,14 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_delivering_app/pages/Splash_Login/login_page.dart';
 import 'package:food_delivering_app/pages/Splash_Login/signup.dart';
+import 'package:email_validator/email_validator.dart';
 
 class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+  TextEditingController _emailTextController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+
+  @override
+  void dispose() {
+    _emailTextController.dispose();
+
+    // super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController _emailTextController = TextEditingController();
-
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -55,10 +62,23 @@ class ForgotPassword extends StatelessWidget {
                   height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
-                  child: inputTextField('Enter Email Address',
-                      Icons.person_outline, false, _emailTextController),
-                ),
+                    padding: const EdgeInsets.symmetric(horizontal: 40),
+                    child: TextFormField(
+                      controller: _emailTextController,
+                      cursorColor: Colors.white,
+                      textInputAction: TextInputAction.done,
+                      decoration: InputDecoration(
+                        labelText: 'Enter Email Address',
+                      ),
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      validator: (email) =>
+                          email != null && !EmailValidator.validate(email)
+                              ? 'Enter a valid email'
+                              : null,
+                    )
+                    // inputTextField('Enter Email Address',
+                    //     Icons.person_outline, false, _emailTextController),
+                    ),
                 SizedBox(
                   height: 40,
                 ),
@@ -77,7 +97,7 @@ class ForgotPassword extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     child: Text(
-                      "Forgot Password",
+                      "Reset Password",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
