@@ -18,27 +18,25 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) 
-  // {
-  => ChangeNotifierProvider(
-    create: (context) => GoogleSignInProvider(),
-    child: 
-      // return 
-      MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        minimum: EdgeInsets.all(5),
-        child: sign_route_info()
-      ),
-      initialRoute: '/',
-      routes: {
-        '/home': (context) => HomePage(),
-        '/categories': (context) => CategoriesPage(),
-        '/order': (context) => My_Order(),
-        '/cart_page': (context) => CartPage(),
-      },
-    // );
-   )
-  );
+  Widget build(BuildContext context)
+      // {
+      =>
+      ChangeNotifierProvider(
+          create: (context) => GoogleSignInProvider(),
+          child:
+              // return
+              MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home:
+                SafeArea(minimum: EdgeInsets.all(5), child: sign_route_info()),
+            initialRoute: '/',
+            routes: {
+              '/home': (context) => HomePage(),
+              '/categories': (context) => CategoriesPage(),
+              '/order': (context) => My_Order(),
+              '/cart_page': (context) => CartPage(),
+            },
+            // );
+          ));
 }
 // }
