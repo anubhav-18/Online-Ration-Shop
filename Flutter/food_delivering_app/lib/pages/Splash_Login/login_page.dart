@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_delivering_app/pages/Home_Page.dart';
+import 'package:food_delivering_app/pages/Splash_Login/forgot_password.dart';
 import 'package:food_delivering_app/pages/Splash_Login/sign_n_login.dart';
 import 'package:food_delivering_app/pages/Splash_Login/signup.dart';
 import 'package:food_delivering_app/pages/Splash_Login/square_tile.dart';
@@ -10,6 +12,8 @@ import 'package:provider/provider.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    TextEditingController _passwordTextController = TextEditingController();
+    TextEditingController _emailTextController = TextEditingController();
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -55,22 +59,59 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 40),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        inputFile(label: "Username/Email/Mobile No."),
-                        inputFile(label: "Password", obscureText: true)
+                        Text(
+                          'Username/Email/Mobile No.',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black87),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        inputTextField('', Icons.person_outline, false,
+                            _emailTextController),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Password',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black87),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        inputTextField('', Icons.lock_outline, false,
+                            _passwordTextController),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 30.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          'Forgot Password',
-                          style: TextStyle(color: Colors.grey[600]),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ForgotPassword()));
+                          },
+                          child: Text(
+                            'Forgot Password ',
+                            style:
+                                TextStyle(color: Colors.black.withOpacity(0.7)),
+                          ),
+                          // 'Forgot Password',
+                          // style: TextStyle(color: Colors.grey[600]),
                         ),
                       ],
                     ),
@@ -91,10 +132,37 @@ class LoginPage extends StatelessWidget {
                         minWidth: double.infinity,
                         height: 60,
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomePage()));
+                          FirebaseAuth.instance
+                              .signInWithEmailAndPassword(
+                                  email: _emailTextController.text,
+                                  password: _passwordTextController.text)
+                              .then((value) {
+                            print('Login Succesfully');
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                          })
+                          .onError((error, stackTrace) {
+                            print('Error ${error.toString()}');
+                          });
+                          //.catch((error) => {
+                          //   switch (error.code) {
+                          //       case "auth/invalid-email":
+                          //       case "auth/wrong-password":
+                          //       case "auth/user-not-found":
+                          //         {
+                          //           this.accountErrorMessage = "Wrong email address or password.";
+                          //           break;
+                          //         }
+                          //       case "auth/user-disabled":
+                          //       case "user-disabled":
+                          //         {
+                          //           this.accountErrorMessage = "This account is disabled";
+                          //           break;
+                          //         }
+                          //     }
+                          // });
                         },
                         color: Colors.amber[400],
                         elevation: 0,
@@ -112,11 +180,9 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   SizedBox(
                     height: 10.0,
                   ),
-
                   Row(
                     children: [
                       Expanded(
@@ -134,7 +200,6 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -147,10 +212,6 @@ class LoginPage extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => HomePage()));
-                          // final provider = Provider.of<GoogleSignInProvider>(
-                          //     context,
-                          //     listen: false);
-                          // provider.googleLogin();
                         },
                       ),
                       SizedBox(width: 20.0),
@@ -167,7 +228,6 @@ class LoginPage extends StatelessWidget {
                       )
                     ],
                   ),
-
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -232,5 +292,35 @@ Widget inputFile({label, obscureText = false}) {
         height: 10,
       )
     ],
+  );
+}
+
+TextField inputTextField(String label, IconData icon, bool isPasswordType,
+    TextEditingController Controller) {
+  return TextField(
+    controller: Controller,
+    obscureText: isPasswordType,
+    enableSuggestions: !isPasswordType,
+    autocorrect: !isPasswordType,
+    cursorColor: Colors.white,
+    decoration: InputDecoration(
+      contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+      enabledBorder: OutlineInputBorder(
+        // borderRadius: BorderRadius.circular(30),
+        borderSide: BorderSide(color: Colors.black),
+      ),
+      border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+      prefixIcon: Icon(
+        icon,
+        color: Colors.black,
+      ),
+      labelText: label,
+      filled: true,
+      floatingLabelBehavior: FloatingLabelBehavior.never,
+      fillColor: Colors.white70,
+    ),
+    keyboardType: isPasswordType
+        ? TextInputType.visiblePassword
+        : TextInputType.emailAddress,
   );
 }

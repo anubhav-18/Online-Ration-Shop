@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_delivering_app/pages/Home_Page.dart';
@@ -7,7 +8,16 @@ import 'package:food_delivering_app/pages/Splash_Login/square_tile.dart';
 import 'package:food_delivering_app/pages/services/google_sign.dart';
 import 'package:provider/provider.dart';
 
-class SignupPage extends StatelessWidget {
+class SignupPage extends StatefulWidget {
+  @override
+  State<SignupPage> createState() => _SignupPageState();
+}
+
+class _SignupPageState extends State<SignupPage> {
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
+  TextEditingController _userNameTextController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,10 +67,56 @@ class SignupPage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 40),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
+                        Text(
+                          'Username',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black87),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        inputTextField(
+                            Icons.account_circle_outlined, false, _userNameTextController),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Email/Mobile No.',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black87),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        inputTextField(
+                            Icons.person_outline, false, _emailTextController),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          'Password',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.black87),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        inputTextField(
+                            Icons.lock_outline, false, _passwordTextController),
+                        SizedBox(
+                          height: 10,
+                        ),
                         // inputFile(label: "Username"),
-                        inputFile(label: "Email/Mobile No."),
-                        inputFile(label: "Password", obscureText: true),
+                        // inputFile(label: "Email/Mobile No."),
+                        // inputFile(label: "Password", obscureText: true),
                         // inputFile(label: "Confirm Password", obscureText: true)
                       ],
                     ),
@@ -81,10 +137,19 @@ class SignupPage extends StatelessWidget {
                         minWidth: double.infinity,
                         height: 60,
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomePage()));
+                          FirebaseAuth.instance
+                              .createUserWithEmailAndPassword(
+                                  email: _emailTextController.text,
+                                  password: _passwordTextController.text)
+                              .then((value) {
+                            print("Account Created Succesfullyy");
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                          }).onError((error, stackTrace) {
+                            print('Error ${error.toString()}');
+                          });
                         },
                         color: Colors.amber[400],
                         elevation: 0,
@@ -183,32 +248,56 @@ class SignupPage extends StatelessWidget {
   }
 }
 
-Widget inputFile({label, obscureText = false}) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: <Widget>[
-      Text(
-        label,
-        style: TextStyle(
-            fontSize: 15, fontWeight: FontWeight.w400, color: Colors.black87),
+// Widget inputFile({
+//   label,
+//   obscureText = false,
+// }) {
+//   return Column(
+//     crossAxisAlignment: CrossAxisAlignment.start,
+//     children: <Widget>[
+//       Text(
+//         label,
+//         style: TextStyle(
+//             fontSize: 15, fontWeight: FontWeight.w400, color: Colors.black87),
+//       ),
+//       SizedBox(
+//         height: 5,
+//       ),
+//       TextField(
+//         obscureText: obscureText,
+//         decoration: InputDecoration(
+//             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+//             enabledBorder: OutlineInputBorder(
+//               borderSide: BorderSide(color: Colors.black),
+//             ),
+//             border: OutlineInputBorder(
+//                 borderSide: BorderSide(color: Colors.black))),
+//       ),
+//       SizedBox(
+//         height: 10,
+//       )
+//     ],
+//   );
+// }
+
+TextField inputTextField(
+    IconData icon, bool isPasswordType, TextEditingController Controller) {
+  return TextField(
+    controller: Controller,
+    obscureText: isPasswordType,
+    enableSuggestions: !isPasswordType,
+    autocorrect: !isPasswordType,
+    cursorColor: Colors.white,
+    decoration: InputDecoration(
+      contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.black),
       ),
-      SizedBox(
-        height: 5,
-      ),
-      TextField(
-        obscureText: obscureText,
-        decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.black),
-            ),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.black))),
-      ),
-      SizedBox(
-        height: 10,
-      )
-    ],
+      border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+      prefixIcon: Icon(icon, color: Colors.black,),
+    ),
+    keyboardType: isPasswordType
+        ? TextInputType.visiblePassword
+        : TextInputType.emailAddress,
   );
 }
-

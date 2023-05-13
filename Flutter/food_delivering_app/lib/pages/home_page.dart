@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:food_delivering_app/pages/DrawerPage/About_Us.dart';
@@ -154,11 +155,13 @@ class _HomePageState extends State<HomePage> {
           minVerticalPadding: 10,
           onTap: () async {
             await GoogleSignInProvider().googleLogout();
+            FirebaseAuth.instance.signOut().then((value) {
+              print('SignOut Succesfully');
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => signNlog()));
+            });
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => signNlog()));
-            // final provider =
-            //     Provider.of<GoogleSignInProvider>(context, listen: false);
-            // provider.googleLogout();
           },
         )
       ]),
