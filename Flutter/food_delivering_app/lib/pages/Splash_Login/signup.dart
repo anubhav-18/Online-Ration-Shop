@@ -110,7 +110,7 @@ class _SignupPageState extends State<SignupPage> {
                           height: 5,
                         ),
                         inputTextField(
-                            Icons.lock_outline, false, _passwordTextController),
+                            Icons.lock_outline, true, _passwordTextController),
                         SizedBox(
                           height: 10,
                         ),
@@ -189,6 +189,7 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    // crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       // google button
                       SquareTile(
@@ -205,18 +206,18 @@ class _SignupPageState extends State<SignupPage> {
                           //   provider.googleLogin();
                         },
                       ),
-                      SizedBox(width: 20.0),
+                      // SizedBox(width: 20.0),
                       // twitter button
-                      SquareTile(
-                        imagePath: 'assets/images/twitter.png',
-                        onTap: () {},
-                      ),
-                      SizedBox(width: 20.0),
+                      // SquareTile(
+                      //   imagePath: 'assets/images/twitter.png',
+                      //   onTap: () {},
+                      // ),
+                      // SizedBox(width: 20.0),
                       // apple button
-                      SquareTile(
-                        imagePath: 'assets/images/apple.png',
-                        onTap: () {},
-                      )
+                      // SquareTile(
+                      //   imagePath: 'assets/images/apple.png',
+                      //   onTap: () {},
+                      // )
                     ],
                   ),
                   Row(
@@ -295,6 +296,7 @@ TextField inputTextField(
       ),
       border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
       prefixIcon: Icon(icon, color: Colors.black,),
+      // suffixIcon: isPasswordType ? IconButton(onPressed: () { }, icon: Icon(Icons.remove_red_eye)) : null 
     ),
     keyboardType: isPasswordType
         ? TextInputType.visiblePassword

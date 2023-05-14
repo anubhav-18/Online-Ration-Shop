@@ -10,10 +10,9 @@ import 'package:food_delivering_app/pages/HomePage/Body.dart';
 import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
 import 'package:food_delivering_app/pages/DrawerPage/MyHeaderDrawer.dart';
-import 'package:food_delivering_app/pages/Splash_Login/sign_n_login.dart';
+import 'package:food_delivering_app/pages/btm_nav.dart';
 import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/constants.dart';
-import 'package:food_delivering_app/pages/services/google_sign.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -23,9 +22,17 @@ class HomePage extends StatefulWidget {
   // {
   //   return _btmNavState();
   // }
+  
 }
 
 class _HomePageState extends State<HomePage> {
+  int current_index = 0;
+  final screen = [
+    HomePage(),
+    CategoriesPage(),
+    About_Us(),
+    My_Order()
+  ] ;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +51,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      
     );
   }
 
@@ -208,30 +216,32 @@ class _HomePageState extends State<HomePage> {
         menuList('Contact Us', Icons.contact_support, Contact_Us()),
         menuList('FAQs', Icons.help, FAQs()),
         menuList('About us', Icons.group, About_Us()),
-        ListTile(
-          leading: Icon(
-            Icons.logout,
-            size: 20,
-            color: bckGrndColor,
-          ),
-          title: Text(
-            'LogOut',
-            style: TextStyle(fontSize: 16),
-          ),
-          selectedTileColor: Colors.grey,
-          minLeadingWidth: 15,
-          minVerticalPadding: 10,
-          onTap: () async {
-            await GoogleSignInProvider().googleLogout();
-            FirebaseAuth.instance.signOut().then((value) {
-              print('SignOut Succesfully');
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => signNlog()));
-            });
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => signNlog()));
-          },
-        )
+        //   ListTile(
+        //     leading: Icon(
+        //       Icons.logout,
+        //       size: 20,
+        //       color: bckGrndColor,
+        //     ),
+        //     title: Text(
+        //       'LogOut',
+        //       style: TextStyle(fontSize: 16),
+        //     ),
+        //     selectedTileColor: Colors.grey,
+        //     minLeadingWidth: 15,
+        //     minVerticalPadding: 10,
+        //     onTap: () async {
+        //       await GoogleSignInProvider().googleLogout();
+        //       // FirebaseAuth.instance.signOut();
+        //       // .then((value) {
+        //       //   print('SignOut Succesfully');
+        //         // Navigator.push(
+        //         //     context, MaterialPageRoute(builder: (context) => signNlog()));
+        //       // }
+        //       // );
+        //       Navigator.push(
+        //           context, MaterialPageRoute(builder: (context) => signNlog()));
+        //     },
+        //   )
       ]),
     );
   }

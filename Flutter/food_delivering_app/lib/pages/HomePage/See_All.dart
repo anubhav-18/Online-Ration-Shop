@@ -70,15 +70,45 @@ class _See_AllState extends State<See_All> {
             SizedBox(height: 5,),
             ProductListTile(
               img: 'assets/images/productimages/select1.jpeg',
-              old_price: 199,
-              new_price: 109,
+              old_price: 331,
+              new_price: 269,
               text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
             ),
             ProductListTile(
-              img: 'assets/images/productimages/select1.jpeg',
-              old_price: 199,
-              new_price: 109,
-              text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
+              img: 'assets/images/productimages/amulbutter1.jpeg',
+              old_price: 56,
+              new_price: 54,
+              text: 'Amul Butter 100 g (Carton)                  ',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/b1.jpeg',
+              old_price: 40,
+              new_price: 35,
+              text: 'Britannia Bourbon The Original Cream Biscuits 150 g',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/pepsi1.jpeg',
+              old_price: 95,
+              new_price: 87,
+              text: 'Pepsi 2.25 L                                             ',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/cl1.jpeg',
+              old_price: 200,
+              new_price: 160,
+              text: 'Cadbury Gold Choclairs 605 g (Pack of 110)',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/surf1.jpeg',
+              old_price: 1375,
+              new_price: 1031,
+              text: 'Surf Excel Matic Top Load Detergent Powder 6 kg',
+            ),
+            ProductListTile(
+              img: 'assets/images/productimages/chana1.jpeg',
+              old_price: 64,
+              new_price: 60,
+              text: 'Tata Sampann Unpolished Chana Dal 500 g',
             ),
             ProductListTile(
               img: 'assets/images/productimages/select1.jpeg',
@@ -135,6 +165,8 @@ class ProductListTile extends StatelessWidget {
             Expanded(
               flex: 66,
               child: Column(
+                // crossAxisAlignment: CrossAxisAlignment.stretch,
+                // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Expanded(
                     flex: 50,
@@ -145,6 +177,7 @@ class ProductListTile extends StatelessWidget {
                       overflow: TextOverflow.clip,
                       textDirection: TextDirection.ltr,
                       maxLines: 3,
+                      textScaleFactor: 1,
                       text: TextSpan(
                           text: text,
                           style:

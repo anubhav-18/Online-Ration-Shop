@@ -12,7 +12,7 @@ class MyHeaderDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final user = FirebaseAuth.instance.currentUser! ;
+    final user = FirebaseAuth.instance.currentUser! ;
 
     return Container(
         color: bckGrndColor,
@@ -32,7 +32,11 @@ class MyHeaderDrawer extends StatelessWidget {
               child: 
               CircleAvatar(
                 radius: 15,
-                backgroundImage: NetworkImage(FirebaseAuth.instance.currentUser!.photoURL!)),
+                // child: Icon(Icons.person),
+                backgroundImage: 
+                NetworkImage('https://www.bradcypert.com/pexels-pixabay-349758_hu3d03a01dcc18bc5be0e67db3d8d209a6_295907_0x600_resize_q75_h2_box.webp'
+                  // FirebaseAuth.instance.currentUser!.photoURL!
+                  )),
               // Icon(Icons.person,
               //     size: 55, color: bckGrndColor.withOpacity(0.5)),
             ),
@@ -61,13 +65,13 @@ class MyHeaderDrawer extends StatelessWidget {
                 ))
           ]),
           Text(
-            '${FirebaseAuth.instance.currentUser!.displayName}',
-            // 'Anubhahv0',
+            // '${FirebaseAuth.instance.currentUser!.displayName}',
+            'Anubhahv0',
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           Text(
-            '${FirebaseAuth.instance.currentUser!.email}',
-            // 'email',
+            // '${FirebaseAuth.instance.currentUser!.email}',
+            'email',
             style: TextStyle(color: Colors.grey[200], fontSize: 14),
           ),
         ]));

@@ -7,13 +7,20 @@ import 'package:food_delivering_app/pages/Splash_Login/sign_n_login.dart';
 import 'package:food_delivering_app/pages/Splash_Login/signup.dart';
 import 'package:food_delivering_app/pages/Splash_Login/square_tile.dart';
 import 'package:food_delivering_app/pages/services/google_sign.dart';
-import 'package:provider/provider.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool isObscurePassword = false;
+  TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _emailTextController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    TextEditingController _passwordTextController = TextEditingController();
-    TextEditingController _emailTextController = TextEditingController();
+     
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
@@ -88,7 +95,7 @@ class LoginPage extends StatelessWidget {
                         SizedBox(
                           height: 5,
                         ),
-                        inputTextField('', Icons.lock_outline, false,
+                        inputTextField('', Icons.lock_outline, true,
                             _passwordTextController),
                       ],
                     ),
@@ -214,18 +221,18 @@ class LoginPage extends StatelessWidget {
                                   builder: (context) => HomePage()));
                         },
                       ),
-                      SizedBox(width: 20.0),
-                      // twitter button
-                      SquareTile(
-                        imagePath: 'assets/images/twitter.png',
-                        onTap: () {},
-                      ),
-                      SizedBox(width: 20.0),
-                      // apple button
-                      SquareTile(
-                        imagePath: 'assets/images/apple.png',
-                        onTap: () {},
-                      )
+                      // SizedBox(width: 20.0),
+                      // // twitter button
+                      // SquareTile(
+                      //   imagePath: 'assets/images/twitter.png',
+                      //   onTap: () {},
+                      // ),
+                      // SizedBox(width: 20.0),
+                      // // apple button
+                      // SquareTile(
+                      //   imagePath: 'assets/images/apple.png',
+                      //   onTap: () {},
+                      // )
                     ],
                   ),
                   Row(
@@ -258,6 +265,7 @@ class LoginPage extends StatelessWidget {
                   //         fit: BoxFit.contain),
                   //   ),
                   // )
+
                 ],
               ))
             ]),
@@ -299,7 +307,7 @@ TextField inputTextField(String label, IconData icon, bool isPasswordType,
     TextEditingController Controller) {
   return TextField(
     controller: Controller,
-    obscureText: isPasswordType,
+    obscureText: isPasswordType ,
     enableSuggestions: !isPasswordType,
     autocorrect: !isPasswordType,
     cursorColor: Colors.white,
@@ -314,6 +322,11 @@ TextField inputTextField(String label, IconData icon, bool isPasswordType,
         icon,
         color: Colors.black,
       ),
+      // suffixIcon: isPasswordType ? 
+      //   IconButton(onPressed: () {
+          
+      //   }, icon: Icon(Icons.remove_red_eye)) 
+      //   : null ,
       labelText: label,
       filled: true,
       floatingLabelBehavior: FloatingLabelBehavior.never,
@@ -324,3 +337,5 @@ TextField inputTextField(String label, IconData icon, bool isPasswordType,
         : TextInputType.emailAddress,
   );
 }
+
+
