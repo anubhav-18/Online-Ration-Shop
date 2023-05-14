@@ -6,7 +6,9 @@ import 'package:food_delivering_app/pages/Splash_Login/login_page.dart';
 import 'package:food_delivering_app/pages/Splash_Login/sign_n_login.dart';
 import 'package:food_delivering_app/pages/Splash_Login/square_tile.dart';
 import 'package:food_delivering_app/pages/services/google_sign.dart';
+import 'package:food_delivering_app/pages/services/user_details.dart';
 import 'package:provider/provider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -79,8 +81,8 @@ class _SignupPageState extends State<SignupPage> {
                         SizedBox(
                           height: 5,
                         ),
-                        inputTextField(
-                            Icons.account_circle_outlined, false, _userNameTextController),
+                        inputTextField(Icons.account_circle_outlined, false,
+                            _userNameTextController),
                         SizedBox(
                           height: 10,
                         ),
@@ -150,6 +152,9 @@ class _SignupPageState extends State<SignupPage> {
                           }).onError((error, stackTrace) {
                             print('Error ${error.toString()}');
                           });
+
+                          addUserDetails(_userNameTextController.text,
+                              _emailTextController.text);
                         },
                         color: Colors.amber[400],
                         elevation: 0,

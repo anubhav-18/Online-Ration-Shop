@@ -1,13 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:food_delivering_app/pages/Splash_Login/login_page.dart';
 import 'package:food_delivering_app/pages/Splash_Login/signup.dart';
+
 // import 'package:email_validator/email_validator.dart';
 
 class ForgotPassword extends StatelessWidget {
   TextEditingController _emailTextController = TextEditingController();
   final formKey = GlobalKey<FormState>();
-
   @override
   void dispose() {
     _emailTextController.dispose();
@@ -93,8 +94,14 @@ class ForgotPassword extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                     ),
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LoginPage()));
+                      FirebaseAuth.instance
+                          .sendPasswordResetEmail(
+                              email: _emailTextController.text)
+                          .then((value) => Navigator.of(context).pop())
+                          .onError((error, stackTrace) {
+                        print('Error ${error.toString()}');
+                      });
+                      ;
                     },
                     child: Text(
                       "Reset Password",
