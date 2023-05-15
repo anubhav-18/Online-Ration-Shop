@@ -28,9 +28,9 @@ class _OilList extends State<OilList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Edible Oil',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,9 +71,6 @@ class _OilList extends State<OilList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/fortune1.jpeg',
               old_price: 71,

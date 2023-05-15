@@ -28,9 +28,9 @@ class _CleanList extends State<CleanList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Cleaning Essentials',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,9 +71,6 @@ class _CleanList extends State<CleanList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/lizol1.jpeg',
               old_price: 211,

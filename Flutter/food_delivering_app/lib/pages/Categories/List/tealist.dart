@@ -28,9 +28,9 @@ class _TeaList extends State<TeaList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Tea & Coffee',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,9 +71,6 @@ class _TeaList extends State<TeaList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/bru1.jpeg',
               old_price: 111,

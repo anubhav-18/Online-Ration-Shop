@@ -28,9 +28,9 @@ class _DrinkList extends State<DrinkList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Cold Drinks & Juices',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,9 +71,6 @@ class _DrinkList extends State<DrinkList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/fanta1.jpeg',
               old_price: 97,
