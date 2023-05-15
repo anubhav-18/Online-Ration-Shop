@@ -19,10 +19,10 @@ class Cleaner extends StatelessWidget {
           m_email: 'IndiaHelp@rb.com',
           m_website: 'www.rb.com',
           net_quantity: '2 L',
-          img1: 'assets/images/lizol1.jpeg',
-          img2: 'assets/images/lizol2.jpeg',
-          img3: 'assets/images/lizol3.jpeg',
-          img4: 'assets/images/lizol4.jpeg',
+          img1: 'assets/images/productimages/lizol1.jpeg',
+          img2: 'assets/images/productimages/lizol2.jpeg',
+          img3: 'assets/images/productimages/lizol3.jpeg',
+          img4: 'assets/images/productimages/lizol4.jpeg',
           price: 399),
     );
   }
