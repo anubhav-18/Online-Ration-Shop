@@ -19,10 +19,10 @@ class AmulCheese extends StatelessWidget {
           m_email: 'customercare@amul.coop',
           m_website: 'www.amul.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/amulcheese1.jpeg',
-          img2: 'assets/images/amulcheese2.jpeg',
-          img3: 'assets/images/amulcheese3.jpeg',
-          img4: 'assets/images/amulcheese4.jpeg',
+          img1: 'assets/images/productimages/amulcheese1.jpeg',
+          img2: 'assets/images/productimages/amulcheese2.jpeg',
+          img3: 'assets/images/productimages/amulcheese3.jpeg',
+          img4: 'assets/images/productimages/amulcheese4.jpeg',
           price: 530),
     );
   }

@@ -19,10 +19,10 @@ class CereGrow extends StatelessWidget {
           m_email: 'wecare@in.nestle.com',
           m_website: 'www.nestle.in',
           net_quantity: '300 g',
-          img1: 'assets/images/cg1.jpeg',
-          img2: 'assets/images/cg2.jpeg',
-          img3: 'assets/images/cg3.jpeg',
-          img4: 'assets/images/cg4.jpeg',
+          img1: 'assets/images/productimages/cg1.jpeg',
+          img2: 'assets/images/productimages/cg2.jpeg',
+          img3: 'assets/images/productimages/cg3.jpeg',
+          img4: 'assets/images/productimages/cg4.jpeg',
           price: 316),
     );
   }

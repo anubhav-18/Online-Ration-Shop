@@ -19,10 +19,10 @@ class Frooti extends StatelessWidget {
           m_email: 'info@parleagro.com',
           m_website: 'www.parleagro.com',
           net_quantity: '2 L',
-          img1: 'assets/images/frooti1.jpeg',
-          img2: 'assets/images/frooti2.jpeg',
-          img3: 'assets/images/frooti3.jpeg',
-          img4: 'assets/images/frooti4.jpeg',
+          img1: 'assets/images/productimages/frooti1.jpeg',
+          img2: 'assets/images/productimages/frooti2.jpeg',
+          img3: 'assets/images/productimages/frooti3.jpeg',
+          img4: 'assets/images/productimages/frooti4.jpeg',
           price: 91),
     );
   }

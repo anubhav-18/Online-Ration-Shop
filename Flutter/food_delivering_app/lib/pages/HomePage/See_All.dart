@@ -6,10 +6,12 @@ import 'package:food_delivering_app/pages/Categories/Cold%20drinks%20and%20juice
 import 'package:food_delivering_app/pages/Categories/Dal&Pulses/ChanaDal.dart';
 import 'package:food_delivering_app/pages/Categories/Diary%20product/AmulButter.dart';
 import 'package:food_delivering_app/pages/Categories/biscuits%20and%20snacks/bourbon.dart';
+import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelect.dart';
 import 'package:food_delivering_app/pages/DrawerPage/About_Us.dart';
 import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
 import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/constants.dart';
+import 'package:food_delivering_app/pages/Categories/List/flourlist.dart';
 
 class See_All extends StatefulWidget {
   const See_All({super.key});
@@ -81,6 +83,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/select1.jpeg',
               old_price: 331,
               new_price: 269,
+              nxt_page: AashirvaadSelect(),
               text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
               nxt_page: AashirvaadSelect(),
             ),
@@ -88,6 +91,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/amulbutter1.jpeg',
               old_price: 56,
               new_price: 54,
+              nxt_page: AashirvaadSelect(),
               text: 'Amul Butter 100 g (Carton)                  ',
               nxt_page: AmulButter(),
             ),
@@ -95,6 +99,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/b1.jpeg',
               old_price: 40,
               new_price: 35,
+              nxt_page: AashirvaadSelect(),
               text: 'Britannia Bourbon The Original Cream Biscuits 150 g',
               nxt_page: Bourbon(),
             ),
@@ -102,6 +107,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/pepsi1.jpeg',
               old_price: 95,
               new_price: 87,
+              nxt_page: AashirvaadSelect(),
               text: 'Pepsi 2.25 L                                             ',
               nxt_page: Pepsi(),
             ),
@@ -109,6 +115,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/cl1.jpeg',
               old_price: 200,
               new_price: 160,
+              nxt_page: AashirvaadSelect(),
               text: 'Cadbury Gold Choclairs 605 g (Pack of 110)',
               nxt_page: Choclairs(),
             ),
@@ -116,6 +123,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/surf1.jpeg',
               old_price: 1375,
               new_price: 1031,
+              nxt_page: AashirvaadSelect(),
               text: 'Surf Excel Matic Top Load Detergent Powder 6 kg',
               nxt_page: Surf(),
             ),
@@ -123,6 +131,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/chana1.jpeg',
               old_price: 64,
               new_price: 60,
+              nxt_page: AashirvaadSelect(),
               text: 'Tata Sampann Unpolished Chana Dal 500 g',
               nxt_page: ChanaDal(),
             ),
@@ -130,6 +139,7 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/select1.jpeg',
               old_price: 199,
               new_price: 109,
+              nxt_page: AashirvaadSelect(),
               text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
               nxt_page: AashirvaadSelect(),
             ),
@@ -137,12 +147,14 @@ class _See_AllState extends State<See_All> {
               img: 'assets/images/productimages/select1.jpeg',
               old_price: 199,
               new_price: 109,
+              nxt_page: AashirvaadSelect(),
               text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
               nxt_page: AashirvaadSelect(),
             ),
             ProductListTile(
               img: 'assets/images/productimages/select1.jpeg',
               old_price: 199,
+              nxt_page: AashirvaadSelect(),
               new_price: 109,
               text: 'Aashirvaad Select Sharbati Whole Wheat Atta 5 kg ',
               nxt_page: AashirvaadSelect(),
@@ -167,6 +179,7 @@ class ProductListTile extends StatelessWidget {
   final String img, text;
   final Widget nxt_page;
   final int new_price, old_price;
+  final Widget nxt_page;
 
   @override
   Widget build(BuildContext context) {

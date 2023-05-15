@@ -19,10 +19,10 @@ class Salt extends StatelessWidget {
           m_email: 'care@tataconsumer.com',
           m_website: 'www.tatasalt.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/ts1.jpeg',
-          img2: 'assets/images/ts2.jpeg',
-          img3: 'assets/images/ts3.jpeg',
-          img4: 'assets/images/ts4.jpeg',
+          img1: 'assets/images/productimages/ts1.jpeg',
+          img2: 'assets/images/productimages/ts2.jpeg',
+          img3: 'assets/images/productimages/ts3.jpeg',
+          img4: 'assets/images/productimages/ts4.jpeg',
           price: 25),
     );
   }

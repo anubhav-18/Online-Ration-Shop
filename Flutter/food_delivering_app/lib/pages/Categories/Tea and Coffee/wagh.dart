@@ -18,10 +18,10 @@ class Wagh extends StatelessWidget {
           m_email: 'nishantyaddla@gmail.com',
           m_website: 'https://www.waghbakritea.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/wb1.jpeg',
-          img2: 'assets/images/wb2.jpeg',
-          img3: 'assets/images/wb3.jpeg',
-          img4: 'assets/images/wb4.jpeg',
+          img1: 'assets/images/productimages/wb1.jpeg',
+          img2: 'assets/images/productimages/wb2.jpeg',
+          img3: 'assets/images/productimages/wb3.jpeg',
+          img4: 'assets/images/productimages/wb4.jpeg',
           price: 475),
     );
   }

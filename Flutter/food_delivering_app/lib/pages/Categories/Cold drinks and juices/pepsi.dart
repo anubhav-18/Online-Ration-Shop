@@ -19,10 +19,10 @@ class Pepsi extends StatelessWidget {
           m_email: 'customer.feedback@pepsico.com',
           m_website: 'https://varunpepsi.com/',
           net_quantity: '2.25 L',
-          img1: 'assets/images/pepsi1.jpeg',
-          img2: 'assets/images/pepsi2.jpeg',
-          img3: 'assets/images/pepsi3.jpeg',
-          img4: 'assets/images/pepsi4.jpeg',
+          img1: 'assets/images/productimages/pepsi1.jpeg',
+          img2: 'assets/images/productimages/pepsi2.jpeg',
+          img3: 'assets/images/productimages/pepsi3.jpeg',
+          img4: 'assets/images/productimages/pepsi4.jpeg',
           price: 64),
     );
   }

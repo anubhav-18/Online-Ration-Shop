@@ -19,10 +19,10 @@ class InfantMilk extends StatelessWidget {
           m_email: 'customercare@amul.coop',
           m_website: 'www.amul.com',
           net_quantity: '500 g',
-          img1: 'assets/images/im1.jpeg',
-          img2: 'assets/images/im2.jpeg',
-          img3: 'assets/images/im3.jpeg',
-          img4: 'assets/images/im4.jpeg',
+          img1: 'assets/images/productimages/im1.jpeg',
+          img2: 'assets/images/productimages/im2.jpeg',
+          img3: 'assets/images/productimages/im3.jpeg',
+          img4: 'assets/images/productimages/im4.jpeg',
           price: 230),
     );
   }

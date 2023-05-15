@@ -19,10 +19,10 @@ class KitKat extends StatelessWidget {
           m_email: 'wecare@in.nestle.com',
           m_website: 'www.nestle.in',
           net_quantity: '123.2 g',
-          img1: 'assets/images/kk1.jpeg',
-          img2: 'assets/images/kk2.jpeg',
-          img3: 'assets/images/kk3.jpeg',
-          img4: 'assets/images/kk4.jpeg',
+          img1: 'assets/images/productimages/kk1.jpeg',
+          img2: 'assets/images/productimages/kk2.jpeg',
+          img3: 'assets/images/productimages/kk3.jpeg',
+          img4: 'assets/images/productimages/kk4.jpeg',
           price: 99),
     );
   }

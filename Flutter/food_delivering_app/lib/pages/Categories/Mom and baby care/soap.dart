@@ -19,10 +19,10 @@ class Soap extends StatelessWidget {
           m_email: 'care@himalayawellness.com',
           m_website: 'https://www.himalayawellness.com/',
           net_quantity: '75 g',
-          img1: 'assets/images/hs1.jpeg',
-          img2: 'assets/images/hs2.jpeg',
-          img3: 'assets/images/hs3.jpeg',
-          img4: 'assets/images/hs4.jpeg',
+          img1: 'assets/images/productimages/hs1.jpeg',
+          img2: 'assets/images/productimages/hs2.jpeg',
+          img3: 'assets/images/productimages/hs3.jpeg',
+          img4: 'assets/images/productimages/hs4.jpeg',
           price: 162),
     );
   }

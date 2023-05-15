@@ -19,10 +19,10 @@ class AmulMasti extends StatelessWidget {
           m_email: 'customercare@amul.coop',
           m_website: 'www.amul.com',
           net_quantity: '1 L',
-          img1: 'assets/images/amulmasti1.jpeg',
-          img2: 'assets/images/amulmasti2.jpeg',
-          img3: 'assets/images/amulmasti3.jpeg',
-          img4: 'assets/images/amulmasti4.jpeg',
+          img1: 'assets/images/productimages/amulmasti1.jpeg',
+          img2: 'assets/images/productimages/amulmasti2.jpeg',
+          img3: 'assets/images/productimages/amulmasti3.jpeg',
+          img4: 'assets/images/productimages/amulmasti4.jpeg',
           price: 55),
     );
   }

@@ -19,10 +19,10 @@ class Cage extends StatelessWidget {
           m_email: 'jainsonsdelhi@yahoo.com',
           m_website: 'www.jiomart.com',
           net_quantity: '1',
-          img1: 'assets/images/cage1.jpeg',
-          img2: 'assets/images/cage2.jpeg',
-          img3: 'assets/images/cage3.jpeg',
-          img4: 'assets/images/cage4.jpeg',
+          img1: 'assets/images/productimages/cage1.jpeg',
+          img2: 'assets/images/productimages/cage2.jpeg',
+          img3: 'assets/images/productimages/cage3.jpeg',
+          img4: 'assets/images/productimages/cage4.jpeg',
           price: 1106),
     );
   }

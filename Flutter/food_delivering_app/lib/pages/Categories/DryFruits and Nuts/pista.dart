@@ -19,10 +19,10 @@ class Pista extends StatelessWidget {
           m_email: 'greenfinity2018@gmail.com',
           m_website: 'https://thegreenfinity.com/',
           net_quantity: '500 g',
-          img1: 'assets/images/pista1.jpeg',
-          img2: 'assets/images/pista2.jpeg',
-          img3: 'assets/images/pista3.jpeg',
-          img4: 'assets/images/pista4.jpeg',
+          img1: 'assets/images/productimages/pista1.jpeg',
+          img2: 'assets/images/productimages/pista2.jpeg',
+          img3: 'assets/images/productimages/pista3.jpeg',
+          img4: 'assets/images/productimages/pista4.jpeg',
           price: 589),
     );
   }

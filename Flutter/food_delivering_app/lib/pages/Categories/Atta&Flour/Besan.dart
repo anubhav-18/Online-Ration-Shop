@@ -19,10 +19,10 @@ class Besan extends StatelessWidget {
           m_email: 'cc.rrl@ril.com',
           m_website: 'www.goodlife.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/besan1.jpeg',
-          img2: 'assets/images/besan2.jpeg',
-          img3: 'assets/images/besan3.jpeg',
-          img4: 'assets/images/besan4.jpeg',
+          img1: 'assets/images/productimages/besan1.jpeg',
+          img2: 'assets/images/productimages/besan2.jpeg',
+          img3: 'assets/images/productimages/besan3.jpeg',
+          img4: 'assets/images/productimages/besan4.jpeg',
           price: 84),
     );
   }

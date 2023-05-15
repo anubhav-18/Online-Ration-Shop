@@ -19,10 +19,10 @@ class ToorDal extends StatelessWidget {
           m_email: 'care@tataconsumer.com',
           m_website: 'www.tatasalt.com',
           net_quantity: '1 KG',
-          img1: 'assets/images/toor1.jpeg',
-          img2: 'assets/images/toor2.jpeg',
-          img3: 'assets/images/toor3.jpeg',
-          img4: 'assets/images/toor4.jpeg',
+          img1: 'assets/images/productimages/toor1.jpeg',
+          img2: 'assets/images/productimages/toor2.jpeg',
+          img3: 'assets/images/productimages/toor3.jpeg',
+          img4: 'assets/images/productimages/toor4.jpeg',
           price: 154),
     );
   }

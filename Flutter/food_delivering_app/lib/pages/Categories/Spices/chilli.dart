@@ -19,10 +19,10 @@ class Chilli extends StatelessWidget {
           m_email: 'customercare@everestspices.com',
           m_website: 'www.everestspices.com',
           net_quantity: '100 g',
-          img1: 'assets/images/chilli1.jpeg',
-          img2: 'assets/images/chilli2.jpeg',
-          img3: 'assets/images/chilli3.jpeg',
-          img4: 'assets/images/chilli4.jpeg',
+          img1: 'assets/images/productimages/chilli1.jpeg',
+          img2: 'assets/images/productimages/chilli2.jpeg',
+          img3: 'assets/images/productimages/chilli3.jpeg',
+          img4: 'assets/images/productimages/chilli4.jpeg',
           price: 111),
     );
   }

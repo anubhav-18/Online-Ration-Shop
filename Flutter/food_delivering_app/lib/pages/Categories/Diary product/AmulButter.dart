@@ -19,10 +19,10 @@ class AmulButter extends StatelessWidget {
           m_email: 'customercare@amul.coop',
           m_website: 'www.amul.com',
           net_quantity: '100 g',
-          img1: 'assets/images/amulbutter1.jpeg',
-          img2: 'assets/images/amulbutter2.jpeg',
-          img3: 'assets/images/amulbutter3.jpeg',
-          img4: 'assets/images/amulbutter4.jpeg',
+          img1: 'assets/images/productimages/amulbutter1.jpeg',
+          img2: 'assets/images/productimages/amulbutter2.jpeg',
+          img3: 'assets/images/productimages/amulbutter3.jpeg',
+          img4: 'assets/images/productimages/amulbutter4.jpeg',
           price: 54),
     );
   }

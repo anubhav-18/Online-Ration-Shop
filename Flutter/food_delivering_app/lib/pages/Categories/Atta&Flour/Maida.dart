@@ -19,10 +19,10 @@ class Maida extends StatelessWidget {
           m_email: 'cs@jiomart.com',
           m_website: 'www.jiomart.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/maida1.jpeg',
-          img2: 'assets/images/maida2.jpeg',
-          img3: 'assets/images/maida3.jpeg',
-          img4: 'assets/images/maida4.jpeg',
+          img1: 'assets/images/productimages/maida1.jpeg',
+          img2: 'assets/images/productimages/maida2.jpeg',
+          img3: 'assets/images/productimages/maida3.jpeg',
+          img4: 'assets/images/productimages/maida4.jpeg',
           price: 45),
     );
   }

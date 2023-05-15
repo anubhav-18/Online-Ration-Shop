@@ -19,10 +19,10 @@ class PastaMasala extends StatelessWidget {
           m_email: 'wecare@in.nestle.com',
           m_website: '	www.nestle.in',
           net_quantity: '139 g',
-          img1: 'assets/images/pm1.jpeg',
-          img2: 'assets/images/pm2.jpeg',
-          img3: 'assets/images/pm3.jpeg',
-          img4: 'assets/images/pm4.jpeg',
+          img1: 'assets/images/productimages/pm1.jpeg',
+          img2: 'assets/images/productimages/pm2.jpeg',
+          img3: 'assets/images/productimages/pm3.jpeg',
+          img4: 'assets/images/productimages/pm4.jpeg',
           price: 53),
     );
   }

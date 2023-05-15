@@ -19,10 +19,10 @@ class Turmeric extends StatelessWidget {
           m_email: 'foods@dsgroup.com',
           m_website: 'www.catchfoods.com',
           net_quantity: '100 g',
-          img1: 'assets/images/turmeric1.jpeg',
-          img2: 'assets/images/turmeric2.jpeg',
-          img3: 'assets/images/turmeric3.jpeg',
-          img4: 'assets/images/turmeric4.jpeg',
+          img1: 'assets/images/productimages/turmeric1.jpeg',
+          img2: 'assets/images/productimages/turmeric2.jpeg',
+          img3: 'assets/images/productimages/turmeric3.jpeg',
+          img4: 'assets/images/productimages/turmeric4.jpeg',
           price: 107),
     );
   }
