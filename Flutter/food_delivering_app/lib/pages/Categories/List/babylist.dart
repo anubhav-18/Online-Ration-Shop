@@ -71,7 +71,6 @@ class _BabyList extends State<BabyList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

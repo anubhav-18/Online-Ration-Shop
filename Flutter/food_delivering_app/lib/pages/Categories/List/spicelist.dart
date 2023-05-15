@@ -71,7 +71,6 @@ class _SpiceList extends State<SpiceList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

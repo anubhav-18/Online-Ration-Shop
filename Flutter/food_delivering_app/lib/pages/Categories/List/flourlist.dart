@@ -71,7 +71,6 @@ class _FlourList extends State<FlourList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

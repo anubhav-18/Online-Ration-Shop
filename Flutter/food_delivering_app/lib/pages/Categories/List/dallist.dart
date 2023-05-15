@@ -71,7 +71,6 @@ class _DalList extends State<DalList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

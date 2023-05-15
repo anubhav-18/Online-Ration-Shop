@@ -71,7 +71,6 @@ class _NutList extends State<NutList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

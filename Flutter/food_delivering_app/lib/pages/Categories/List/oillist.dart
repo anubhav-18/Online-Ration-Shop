@@ -71,7 +71,6 @@ class _OilList extends State<OilList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

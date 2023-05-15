@@ -75,7 +75,6 @@ class _See_AllState extends State<See_All> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

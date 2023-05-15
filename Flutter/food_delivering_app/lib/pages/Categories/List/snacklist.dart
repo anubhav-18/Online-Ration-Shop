@@ -71,7 +71,6 @@ class _SnackList extends State<SnackList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

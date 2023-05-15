@@ -71,7 +71,6 @@ class _SugarList extends State<SugarList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

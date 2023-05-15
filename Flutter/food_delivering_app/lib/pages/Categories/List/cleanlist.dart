@@ -71,7 +71,6 @@ class _CleanList extends State<CleanList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

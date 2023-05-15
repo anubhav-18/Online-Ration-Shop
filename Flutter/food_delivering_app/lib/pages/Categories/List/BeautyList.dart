@@ -71,7 +71,6 @@ class _BeautyList extends State<BeautyList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),

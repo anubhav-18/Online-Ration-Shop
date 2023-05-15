@@ -71,7 +71,6 @@ class _ChocoList extends State<ChocoList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             SizedBox(
               height: 5,
             ),
