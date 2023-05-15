@@ -19,10 +19,10 @@ class DarkFantasy extends StatelessWidget {
           m_email: 'itccares@itc.in',
           m_website: 'www.aashirvaad.com',
           net_quantity: '300 g',
-          img1: 'assets/images/df1.jpeg',
-          img2: 'assets/images/df2.jpeg',
-          img3: 'assets/images/df3.jpeg',
-          img4: 'assets/images/df4.jpeg',
+          img1: 'assets/images/productimages/df1.jpeg',
+          img2: 'assets/images/productimages/df2.jpeg',
+          img3: 'assets/images/productimages/df3.jpeg',
+          img4: 'assets/images/productimages/df4.jpeg',
           price: 112),
     );
   }
