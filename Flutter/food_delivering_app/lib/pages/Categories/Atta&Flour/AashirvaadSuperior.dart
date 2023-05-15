@@ -19,10 +19,10 @@ class AashirvaadSuperior extends StatelessWidget {
           m_email: 'itccares@itc.in',
           m_website: 'www.aashirvaad.com',
           net_quantity: '10 Kg',
-          img1: 'assets/images/superior1.jpeg',
-          img2: 'assets/images/superior2.jpeg',
-          img3: 'assets/images/superior3.jpeg',
-          img4: 'assets/images/superior4.jpeg',
+          img1: 'assets/images/productimages/superior1.jpeg',
+          img2: 'assets/images/productimages/superior2.jpeg',
+          img3: 'assets/images/productimages/superior3.jpeg',
+          img4: 'assets/images/productimages/superior4.jpeg',
           price: 468),
     );
   }
