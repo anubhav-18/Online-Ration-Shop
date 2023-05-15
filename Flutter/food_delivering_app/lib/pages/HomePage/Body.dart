@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelect.dart';
-import 'package:food_delivering_app/pages/Categories/Dal&Pulses/2.dart';
+// import 'package:food_delivering_app/pages/Categories/Dal&Pulses/2.dart';
 import 'package:food_delivering_app/pages/Categories/List/BeautyList.dart';
 import 'package:food_delivering_app/pages/Categories/List/babylist.dart';
 import 'package:food_delivering_app/pages/Categories/List/chocolist.dart';
@@ -105,7 +105,7 @@ class _BodyState extends State<Body> {
                 gridBorder(
                   image: 'assets/images/categoriesimg/spicesOut.jpg',
                   category: AashirvaadSelect(),),
-                  category: SpiceList(),),
+                  // category: SpiceList(),),
                 gridBorder(
                     image: 'assets/images/categoriesimg/dryfruitOut.jpg',
                     category: NutList()),

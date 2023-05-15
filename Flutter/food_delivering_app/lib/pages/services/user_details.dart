@@ -8,3 +8,8 @@ Future addUserDetails(String username, String email) async {
     "Email": email,
   });
 }
+
+Future locationDetails(String address) async {
+  await FirebaseFirestore.instance.collection("User Details").add({
+    "Address": address});
+}
