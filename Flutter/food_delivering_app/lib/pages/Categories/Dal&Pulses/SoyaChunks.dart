@@ -19,10 +19,10 @@ class Soyachunks extends StatelessWidget {
           m_email: 'care@adaniwilmar.in',
           m_website: 'www.adaniwilmar.com',
           net_quantity: '200 g',
-          img1: 'assets/images/soya1.jpeg',
-          img2: 'assets/images/soya2.jpeg',
-          img3: 'assets/images/soya3.jpeg',
-          img4: 'assets/images/soya4.jpeg',
+          img1: 'assets/images/productimages/soya1.jpeg',
+          img2: 'assets/images/productimages/soya2.jpeg',
+          img3: 'assets/images/productimages/soya3.jpeg',
+          img4: 'assets/images/productimages/soya4.jpeg',
           price: 55),
     );
   }
