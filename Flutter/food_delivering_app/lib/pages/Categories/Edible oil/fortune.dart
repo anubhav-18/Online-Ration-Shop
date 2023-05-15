@@ -19,10 +19,10 @@ class Fortune extends StatelessWidget {
           m_email: 'care@adaniwilmar.in',
           m_website: 'www.adaniwilmar.com',
           net_quantity: '1 L',
-          img1: 'assets/images/fortune1.jpeg',
-          img2: 'assets/images/fortune2.jpeg',
-          img3: 'assets/images/fortune3.jpeg',
-          img4: 'assets/images/fortune4.jpeg',
+          img1: 'assets/images/productimages/fortune1.jpeg',
+          img2: 'assets/images/productimages/fortune2.jpeg',
+          img3: 'assets/images/productimages/fortune3.jpeg',
+          img4: 'assets/images/productimages/fortune4.jpeg',
           price: 127),
     );
   }
