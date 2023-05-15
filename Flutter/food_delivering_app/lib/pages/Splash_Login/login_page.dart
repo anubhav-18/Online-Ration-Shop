@@ -138,8 +138,9 @@ class _LoginPageState extends State<LoginPage> {
                       child: MaterialButton(
                         minWidth: double.infinity,
                         height: 60,
-                        onPressed: () {
-                          FirebaseAuth.instance
+                        onPressed: () async {
+                          try {
+                          await FirebaseAuth.instance
                               .signInWithEmailAndPassword(
                                   email: _emailTextController.text,
                                   password: _passwordTextController.text)
@@ -149,10 +150,20 @@ class _LoginPageState extends State<LoginPage> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => HomePage()));
-                          })
-                          .onError((error, stackTrace) {
-                            print('Error ${error.toString()}');
                           });
+                          } on FirebaseAuthException catch(e) {
+                            print(e);
+                            showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                content: Text(e.message.toString()),
+                              );
+                            });
+                          }
+                          // .onError((error, stackTrace) {
+                          //   print('Error ${error.toString()}');
+                          // });
                           //.catch((error) => {
                           //   switch (error.code) {
                           //       case "auth/invalid-email":

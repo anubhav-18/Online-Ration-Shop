@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -55,7 +57,7 @@ class ForgotPassword extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: Text(
-                    'Usernam/Email',
+                    'Username/Email',
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -93,15 +95,27 @@ class ForgotPassword extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
                     ),
-                    onPressed: () {
-                      FirebaseAuth.instance
-                          .sendPasswordResetEmail(
-                              email: _emailTextController.text)
-                          .then((value) => Navigator.of(context).pop())
-                          .onError((error, stackTrace) {
-                        print('Error ${error.toString()}');
-                      });
-                      ;
+                    onPressed: () async {
+                      try {
+                        await FirebaseAuth.instance
+                            .sendPasswordResetEmail(
+                                email: _emailTextController.text)
+                            .then((value) => Navigator.of(context).pop());
+                        // .catchError((e) => Sta);
+                        // .catchError(e) {}
+                        //   .onError((error, stackTrace) {
+                        // print('Error ${error.toString()}');
+                        // });
+                      } on FirebaseAuthException catch (e) {
+                        print(e);
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                content: Text(e.message.toString()),
+                              );
+                            });
+                      }
                     },
                     child: Text(
                       "Reset Password",
@@ -121,7 +135,7 @@ class ForgotPassword extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   // crossAxisAlignment: CrossAxisAlignment.baseline,
                   children: [
-                    Text("Don't ave an Account ?"),
+                    Text("Don't have an Account ?"),
                     InkWell(
                       onTap: () {
                         Navigator.push(

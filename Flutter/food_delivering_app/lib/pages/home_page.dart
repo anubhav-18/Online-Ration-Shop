@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         // width: double.maxFinite,
         child: SingleChildScrollView(
+          physics: NeverScrollableScrollPhysics(),
           child: Container(
             child: Column(
               children: [
@@ -206,6 +207,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget MyDrawerList() {
     return Container(
+      height: MediaQuery.of(context).size.height*0.8,
       padding: const EdgeInsets.only(top: 8),
       child: Column(children: [
         heading('Home'),
@@ -220,32 +222,32 @@ class _HomePageState extends State<HomePage> {
         menuList('Contact Us', Icons.contact_support, Contact_Us()),
         menuList('FAQs', Icons.help, FAQs()),
         menuList('About us', Icons.group, About_Us()),
-          // ListTile(
-          //   leading: Icon(
-          //     Icons.logout,
-          //     size: 20,
-          //     color: bckGrndColor,
-          //   ),
-          //   title: Text(
-          //     'LogOut',
-          //     style: TextStyle(fontSize: 16),
-          //   ),
-          //   selectedTileColor: Colors.grey,
-          //   minLeadingWidth: 15,
-          //   minVerticalPadding: 10,
-          //   onTap: () async {
-          //     await GoogleSignInProvider().googleLogout();
-          //     // FirebaseAuth.instance.signOut();
-          //     // .then((value) {
-          //     //   print('SignOut Succesfully');
-          //       // Navigator.push(
-          //       //     context, MaterialPageRoute(builder: (context) => signNlog()));
-          //     // }
-          //     // );
-          //     Navigator.push(
-          //         context, MaterialPageRoute(builder: (context) => signNlog()));
-          //   },
-          // )
+          ListTile(
+            leading: Icon(
+              Icons.logout,
+              size: 20,
+              color: bckGrndColor,
+            ),
+            title: Text(
+              'LogOut',
+              style: TextStyle(fontSize: 16),
+            ),
+            selectedTileColor: Colors.grey,
+            minLeadingWidth: 15,
+            minVerticalPadding: 10,
+            onTap: () async {
+              await GoogleSignInProvider().googleLogout();
+              // FirebaseAuth.instance.signOut();
+              // .then((value) {
+              //   print('SignOut Succesfully');
+                // Navigator.push(
+                //     context, MaterialPageRoute(builder: (context) => signNlog()));
+              // }
+              // );
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => signNlog()));
+            },
+          )
       ]),
     );
   }
@@ -255,7 +257,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 15),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
           child: Text(
             Title,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
