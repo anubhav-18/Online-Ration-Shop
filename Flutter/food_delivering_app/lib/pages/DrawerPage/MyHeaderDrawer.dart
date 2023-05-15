@@ -12,7 +12,7 @@ class MyHeaderDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser! ;
+    final user = FirebaseAuth.instance.currentUser!;
 
     return Container(
         color: bckGrndColor,
@@ -29,14 +29,13 @@ class MyHeaderDrawer extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
-              child: 
-              CircleAvatar(
-                radius: 15,
-                // child: Icon(Icons.person),
-                backgroundImage: 
-                NetworkImage('https://www.bradcypert.com/pexels-pixabay-349758_hu3d03a01dcc18bc5be0e67db3d8d209a6_295907_0x600_resize_q75_h2_box.webp'
-                  // FirebaseAuth.instance.currentUser!.photoURL!
-                  )),
+              child: CircleAvatar(
+                  radius: 15,
+                  // child: Icon(Icons.person),
+                  backgroundImage: NetworkImage(
+                      'https://www.bradcypert.com/pexels-pixabay-349758_hu3d03a01dcc18bc5be0e67db3d8d209a6_295907_0x600_resize_q75_h2_box.webp'
+                      // FirebaseAuth.instance.currentUser!.photoURL!
+                      )),
               // Icon(Icons.person,
               //     size: 55, color: bckGrndColor.withOpacity(0.5)),
             ),

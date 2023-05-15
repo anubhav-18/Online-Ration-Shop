@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivering_app/firebase_options.dart';
 import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
+import 'package:food_delivering_app/pages/Splash_Login/splash_screen.dart';
 import 'package:food_delivering_app/pages/btm_nav.dart';
 import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/services/google_sign.dart';
@@ -25,19 +26,18 @@ class MyApp extends StatelessWidget {
       ChangeNotifierProvider(
           create: (context) => GoogleSignInProvider(),
           child:
-              // return
+              //return
               MaterialApp(
             debugShowCheckedModeBanner: false,
-            home:
-                SafeArea(minimum: EdgeInsets.all(5), child: HomePage()),
+            home: SafeArea(minimum: EdgeInsets.all(5), child: HomePage()),
             initialRoute: '/',
             routes: {
+              '/splashScreen': (context) => SplashScreen(),
               '/home': (context) => HomePage(),
               '/categories': (context) => CategoriesPage(),
               '/order': (context) => My_Order(),
               '/cart_page': (context) => CartPage(),
             },
-            // );
           ));
 }
 // }

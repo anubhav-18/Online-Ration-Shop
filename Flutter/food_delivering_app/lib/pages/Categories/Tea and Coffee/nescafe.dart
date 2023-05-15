@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:productdetails/product_structure.dart';
-import 'package:productdetails/appbar.dart';
+import 'package:food_delivering_app/pages/Categories/Product_Struct.dart';
+import 'package:food_delivering_app/pages/HomePage/appbar.dart';
 
 class Nescafe extends StatelessWidget {
   const Nescafe({Key? key}) : super(key: key);

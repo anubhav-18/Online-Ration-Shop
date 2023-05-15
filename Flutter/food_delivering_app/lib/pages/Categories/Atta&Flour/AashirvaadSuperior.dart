@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:productdetails/product_structure.dart';
-import 'package:productdetails/appbar.dart';
+import 'package:food_delivering_app/pages/Categories/Product_Struct.dart';
+import 'package:food_delivering_app/pages/HomePage/appbar.dart';
 
 class AashirvaadSuperior extends StatelessWidget {
   const AashirvaadSuperior({Key? key}) : super(key: key);
@@ -12,7 +12,8 @@ class AashirvaadSuperior extends StatelessWidget {
       body: productdescp(
           title: 'Aashirvaad Superior MP Whole Wheat Atta 10 kg',
           fdtitle: 'Hygienically processed and packed',
-          description: 'Aashirvaad Superior MP Whole Wheat Atta provides goodness of taste in every bite. Also, it has a sweet and aromatic taste that works together to give you fuller and softer rotis, every single time. Buy Aashirvaad Superior MP Whole Wheat Atta online now!',
+          description:
+              'Aashirvaad Superior MP Whole Wheat Atta provides goodness of taste in every bite. Also, it has a sweet and aromatic taste that works together to give you fuller and softer rotis, every single time. Buy Aashirvaad Superior MP Whole Wheat Atta online now!',
           brand_name: 'Aashirvaad',
           manu: 'ITC Ltd.',
           address: 'ITC Limited 37, J.L. Nehru Road, Kolkata - 700071',

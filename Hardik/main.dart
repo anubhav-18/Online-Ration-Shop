@@ -276,7 +276,6 @@ class ProductDetails extends StatelessWidget {
       home: Pepsi(),
     );
   }
-
 }
 
 // import 'package:flutter/material.dart';

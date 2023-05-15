@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:productdetails/product_structure.dart';
-import 'package:productdetails/appbar.dart';
+import 'package:food_delivering_app/pages/Categories/Product_Struct.dart';
+import 'package:food_delivering_app/pages/HomePage/appbar.dart';
 
 class Shampoo extends StatelessWidget {
   const Shampoo({Key? key}) : super(key: key);
@@ -12,10 +12,12 @@ class Shampoo extends StatelessWidget {
       body: productdescp(
           title: 'Dabur Vatika Health Shampoo 640 ml',
           fdtitle: 'Gentle on the scalp',
-          description: 'Get salon-like hair treatment at home with Dabur Vatika Health Shampoo. With every wash it leaves your hair looking beautifully moisturized and clean. It is a gentle hair cleanser that keeps your hair looking healthy and manageable. It is mild on your scalp but gives protection from the aggression your hair faces every day. So what are you waiting for? Buy this product online at the best rate, right here!',
+          description:
+              'Get salon-like hair treatment at home with Dabur Vatika Health Shampoo. With every wash it leaves your hair looking beautifully moisturized and clean. It is a gentle hair cleanser that keeps your hair looking healthy and manageable. It is mild on your scalp but gives protection from the aggression your hair faces every day. So what are you waiting for? Buy this product online at the best rate, right here!',
           brand_name: 'Dabur',
           manu: 'Dabur India Ltd.',
-          address: 'Dabur India Ltd.(Unit 2), Integrated Industrial Estate, Plot No. 4, Sector -2, Pantnagar, Distt. Udham Singh Nagar Uttarakhand- 263146',
+          address:
+              'Dabur India Ltd.(Unit 2), Integrated Industrial Estate, Plot No. 4, Sector -2, Pantnagar, Distt. Udham Singh Nagar Uttarakhand- 263146',
           m_email: 'daburcares@feedback.dabur',
           m_website: 'www.dabur.com',
           net_quantity: '640 ml',
