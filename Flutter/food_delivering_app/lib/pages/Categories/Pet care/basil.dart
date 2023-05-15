@@ -19,10 +19,10 @@ class Basil extends StatelessWidget {
           m_email: 'basilproducts@gmail.com',
           m_website: 'https://thebasil.in/',
           net_quantity: '900 g',
-          img1: 'assets/images/basil1.jpeg',
-          img2: 'assets/images/basil2.jpeg',
-          img3: 'assets/images/basil3.jpeg',
-          img4: 'assets/images/basil4.jpeg',
+          img1: 'assets/images/productimages/basil1.jpeg',
+          img2: 'assets/images/productimages/basil2.jpeg',
+          img3: 'assets/images/productimages/basil3.jpeg',
+          img4: 'assets/images/productimages/basil4.jpeg',
           price: 195),
     );
   }
