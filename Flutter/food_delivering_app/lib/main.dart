@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget {
               //return
               MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: SafeArea(minimum: EdgeInsets.all(5), child: HomePage()),
+            home: SafeArea(minimum: EdgeInsets.all(5), child: sign_route_info()),
             initialRoute: '/',
             routes: {
-              '/splashScreen': (context) => SplashScreen(),
+              
               '/home': (context) => HomePage(),
               '/categories': (context) => CategoriesPage(),
               '/order': (context) => My_Order(),

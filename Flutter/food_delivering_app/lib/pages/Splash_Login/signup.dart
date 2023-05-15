@@ -19,6 +19,7 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _userNameTextController = TextEditingController();
+  final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -139,19 +140,30 @@ class _SignupPageState extends State<SignupPage> {
                         minWidth: double.infinity,
                         height: 60,
                         onPressed: () {
-                          FirebaseAuth.instance
-                              .createUserWithEmailAndPassword(
-                                  email: _emailTextController.text,
-                                  password: _passwordTextController.text)
-                              .then((value) {
-                            print("Account Created Succesfullyy");
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => HomePage()));
-                          }).onError((error, stackTrace) {
-                            print('Error ${error.toString()}');
-                          });
+                          try {
+                            final newuser =
+                                _auth.createUserWithEmailAndPassword(
+                                    email: _emailTextController.text,
+                                    password: _passwordTextController.text);
+                            if (newuser != null) {
+                              Navigator.pushNamed(context, '/homepage');
+                            }
+                          } catch (e) {
+                            print(e);
+                          }
+                          // FirebaseAuth.instance
+                          //     .createUserWithEmailAndPassword(
+                          //         email: _emailTextController.text,
+                          //         password: _passwordTextController.text)
+                          //     .then((value) {
+                          //   print("Account Created Succesfullyy");
+                          //   Navigator.push(
+                          //       context,
+                          //       MaterialPageRoute(
+                          //           builder: (context) => HomePage()));
+                          // }).onError((error, stackTrace) {
+                          //   print('Error ${error.toString()}');
+                          // });
 
                           addUserDetails(_userNameTextController.text,
                               _emailTextController.text);
@@ -300,8 +312,11 @@ TextField inputTextField(
         borderSide: BorderSide(color: Colors.black),
       ),
       border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
-      prefixIcon: Icon(icon, color: Colors.black,),
-      // suffixIcon: isPasswordType ? IconButton(onPressed: () { }, icon: Icon(Icons.remove_red_eye)) : null 
+      prefixIcon: Icon(
+        icon,
+        color: Colors.black,
+      ),
+      // suffixIcon: isPasswordType ? IconButton(onPressed: () { }, icon: Icon(Icons.remove_red_eye)) : null
     ),
     keyboardType: isPasswordType
         ? TextInputType.visiblePassword
