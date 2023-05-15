@@ -25,6 +25,7 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _userNameTextController = TextEditingController();
+  final _auth = FirebaseAuth.instance;
 
   void dispose() {
     _emailTextController.dispose();

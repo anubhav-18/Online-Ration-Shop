@@ -12,10 +12,12 @@ class HairOil extends StatelessWidget {
       body: productdescp(
           title: 'Parachute 100% Pure Coconut Hair Oil 600 ml',
           fdtitle: 'Nourishes the scalp',
-          description: 'Tired of dull and frizzy hair? Hair oil plays a vital role in protecting your hair from regular wear and tear. Parachute 100% Pure Coconut Hair Oil gives your hair the much needed nourishment and protects it from further damage. It can be used for a deep relaxing massage before washing your hair or to tame your hair before styling. Give your hair the care it deserves by making this a part of your hair care regime. So what are you waiting for? Buy this product online at the best rate, right here!',
+          description:
+              'Tired of dull and frizzy hair? Hair oil plays a vital role in protecting your hair from regular wear and tear. Parachute 100% Pure Coconut Hair Oil gives your hair the much needed nourishment and protects it from further damage. It can be used for a deep relaxing massage before washing your hair or to tame your hair before styling. Give your hair the care it deserves by making this a part of your hair care regime. So what are you waiting for? Buy this product online at the best rate, right here!',
           brand_name: 'Parachute',
           manu: 'Marico Ltd.',
-          address:' Marico Ltd.Plot No.Ff 06, P.V.Palayam Po Sipcot Industrial Growth Center, Perundurai-638052',
+          address:
+              ' Marico Ltd.Plot No.Ff 06, P.V.Palayam Po Sipcot Industrial Growth Center, Perundurai-638052',
           m_email: 'csc@marico.com',
           m_website: 'www.marico.com',
           net_quantity: '600 ml',

@@ -8,6 +8,7 @@ import 'package:food_delivering_app/pages/services/google_sign.dart';
 import 'package:provider/provider.dart';
 import 'pages/Home_Page.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 import 'pages/services/sign_route_info.dart';
 
 void main() async {
@@ -41,3 +42,4 @@ class MyApp extends StatelessWidget {
           ));
 }
 // }
+// // }

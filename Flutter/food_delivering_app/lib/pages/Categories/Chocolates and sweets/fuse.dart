@@ -12,10 +12,13 @@ class Fuse extends StatelessWidget {
       body: productdescp(
           title: 'Cadbury Fuse Chocolate 50 g',
           fdtitle: 'Tasty & flavourful',
-          description: 'Cadbury has been inventing and investing in chocolates for nearly 200 years. Cadbury Fuse Chocolate contains a handpicked delicious selection of finest quality ingredients. They are incredibly indulgent and will satisfy any discerning chocoholic''s needs. Savour the taste of the smoothness, richness and creaminess with every bite. Let your taste buds sink with an amazing burst of chocolatey flavours. Buy this product online today.',
+          description:
+              'Cadbury has been inventing and investing in chocolates for nearly 200 years. Cadbury Fuse Chocolate contains a handpicked delicious selection of finest quality ingredients. They are incredibly indulgent and will satisfy any discerning chocoholic'
+              's needs. Savour the taste of the smoothness, richness and creaminess with every bite. Let your taste buds sink with an amazing burst of chocolatey flavours. Buy this product online today.',
           brand_name: 'Cadbury',
           manu: 'Mondelez India Foods Pvt. Ltd.',
-          address: 'Mondelez India Foods Private Limited Unit No. 2001, 20Th Floor, Tower - 3 (Wing C), Indiabulls Finance Centre, Parel Mumbai - 400 013.',
+          address:
+              'Mondelez India Foods Private Limited Unit No. 2001, 20Th Floor, Tower - 3 (Wing C), Indiabulls Finance Centre, Parel Mumbai - 400 013.',
           m_email: 'suggestions@mdlzindia.com',
           m_website: 'www.mdlzindia.com',
           net_quantity: '50 g',

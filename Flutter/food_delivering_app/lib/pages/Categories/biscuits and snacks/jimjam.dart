@@ -11,11 +11,14 @@ class JimJam extends StatelessWidget {
       appBar: buildApp(),
       body: productdescp(
           title: 'Britannia Jimjam Sandwich Biscuits 138 g',
-          fdtitle: 'Cream sandwiched between crispy biscuits,Topped with a juicy jam and sugar crystals.Enjoy with a glass of milk or just like that,Lip-smacking flavor, cool shapes and soft cream,Popular with the kids',
-          description: 'Britannia Jimjam Sandwich Biscuits are loved by people of almost all age groups. The crispy texture of biscuit is complemented by the sweet flavour of cream inside and top of all the jam at the center top sprinkled with the sugar crystals to make this biscuit best of all. Britannia biscuits and cookies for long has been a part of every home, sharing those moments of joy. Go ahead & buy this product online today!',
+          fdtitle:
+              'Cream sandwiched between crispy biscuits,Topped with a juicy jam and sugar crystals.Enjoy with a glass of milk or just like that,Lip-smacking flavor, cool shapes and soft cream,Popular with the kids',
+          description:
+              'Britannia Jimjam Sandwich Biscuits are loved by people of almost all age groups. The crispy texture of biscuit is complemented by the sweet flavour of cream inside and top of all the jam at the center top sprinkled with the sugar crystals to make this biscuit best of all. Britannia biscuits and cookies for long has been a part of every home, sharing those moments of joy. Go ahead & buy this product online today!',
           brand_name: 'Britannia',
           manu: 'Britannia Industries Ltd.',
-          address: 'Britannia Industrial Ltd.Mfg :Eastern Agro Foods Pvt. Ltd, Takai Adoshi Road, Po Sajangoan, Village Dekhu, Dist. Raigarh 4123, Maharashtra',
+          address:
+              'Britannia Industrial Ltd.Mfg :Eastern Agro Foods Pvt. Ltd, Takai Adoshi Road, Po Sajangoan, Village Dekhu, Dist. Raigarh 4123, Maharashtra',
           m_email: 'feedback@britindia.com',
           m_website: 'www.britannia.co.in',
           net_quantity: '138 g',
