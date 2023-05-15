@@ -18,10 +18,10 @@ class Maggi extends StatelessWidget {
           m_email: 'wecare@in.nestle.com',
           m_website: '	www.nestle.in',
           net_quantity: '560 g',
-          img1: 'assets/images/maggi1.jpeg',
-          img2: 'assets/images/maggi2.jpeg',
-          img3: 'assets/images/maggi3.jpeg',
-          img4: 'assets/images/maggi4.jpeg',
+          img1: 'assets/images/productimages/maggi1.jpeg',
+          img2: 'assets/images/productimages/maggi2.jpeg',
+          img3: 'assets/images/productimages/maggi3.jpeg',
+          img4: 'assets/images/productimages/maggi4.jpeg',
           price: 96),
     );
   }
