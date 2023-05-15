@@ -19,10 +19,10 @@ class CheesePasta extends StatelessWidget {
           m_email: 'wecare@in.nestle.com',
           m_website: '	www.nestle.in',
           net_quantity: '75 g',
-          img1: 'assets/images/pasta1.jpeg',
-          img2: 'assets/images/pasta2.jpeg',
-          img3: 'assets/images/pasta3.jpeg',
-          img4: 'assets/images/pasta4.jpeg',
+          img1: 'assets/images/productimages/pasta1.jpeg',
+          img2: 'assets/images/productimages/pasta2.jpeg',
+          img3: 'assets/images/productimages/pasta3.jpeg',
+          img4: 'assets/images/productimages/pasta4.jpeg',
           price: 24),
     );
   }
