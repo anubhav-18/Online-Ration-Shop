@@ -19,10 +19,10 @@ class Cashew extends StatelessWidget {
           m_email: 'info@happilo.com',
           m_website: 'www.happilo.com',
           net_quantity: '500 g',
-          img1: 'assets/images/cashew1.jpeg',
-          img2: 'assets/images/cashew2.jpeg',
-          img3: 'assets/images/cashew3.jpeg',
-          img4: 'assets/images/cashew4.jpeg',
+          img1: 'assets/images/productimages/cashew1.jpeg',
+          img2: 'assets/images/productimages/cashew2.jpeg',
+          img3: 'assets/images/productimages/cashew3.jpeg',
+          img4: 'assets/images/productimages/cashew4.jpeg',
           price: 384),
     );
   }
