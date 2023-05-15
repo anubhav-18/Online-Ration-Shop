@@ -30,7 +30,6 @@ class productdescp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Address_widget(),
         CarouselSlider(
             items: [
               Container(

@@ -28,9 +28,9 @@ class _SugarList extends State<SugarList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Salt,Sugar & Jaggery',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,10 +71,6 @@ class _SugarList extends State<SugarList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/jaggery1.jpeg',
               old_price: 281,

@@ -28,9 +28,9 @@ class _DalList extends State<DalList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Dals & Pulses',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,10 +71,6 @@ class _DalList extends State<DalList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/chana1.jpeg',
               old_price: 72,

@@ -28,9 +28,9 @@ class _BabyList extends State<BabyList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Mom & Baby Care',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,10 +71,6 @@ class _BabyList extends State<BabyList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/cg1.jpeg',
               old_price: 331,

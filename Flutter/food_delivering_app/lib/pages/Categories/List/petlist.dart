@@ -28,9 +28,9 @@ class _PetList extends State<PetList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Pet Care',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,10 +71,6 @@ class _PetList extends State<PetList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/basil1.jpeg',
               old_price: 181,

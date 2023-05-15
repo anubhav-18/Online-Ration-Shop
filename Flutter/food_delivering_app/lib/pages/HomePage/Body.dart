@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelect.dart';
+import 'package:food_delivering_app/pages/Categories/Chocolates%20and%20sweets/choclairs.dart';
+import 'package:food_delivering_app/pages/Categories/Cold%20drinks%20and%20juices/pepsi.dart';
+import 'package:food_delivering_app/pages/Categories/Diary%20product/AmulButter.dart';
 // import 'package:food_delivering_app/pages/Categories/Dal&Pulses/2.dart';
 import 'package:food_delivering_app/pages/Categories/List/BeautyList.dart';
 import 'package:food_delivering_app/pages/Categories/List/babylist.dart';
@@ -16,6 +19,7 @@ import 'package:food_delivering_app/pages/Categories/List/snacklist.dart';
 import 'package:food_delivering_app/pages/Categories/List/spicelist.dart';
 import 'package:food_delivering_app/pages/Categories/List/sugarlist.dart';
 import 'package:food_delivering_app/pages/Categories/List/tealist.dart';
+import 'package:food_delivering_app/pages/Categories/biscuits%20and%20snacks/bourbon.dart';
 // import 'package:food_delivering_app/pages/Categories/Spices/3.dart';
 import 'package:food_delivering_app/pages/HomePage/See_All.dart';
 import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
@@ -104,7 +108,7 @@ class _BodyState extends State<Body> {
                     category: DalList()),
                 gridBorder(
                   image: 'assets/images/categoriesimg/spicesOut.jpg',
-                  category: AashirvaadSelect(),),
+                  category: SpiceList(),),
                   // category: SpiceList(),),
                 gridBorder(
                     image: 'assets/images/categoriesimg/dryfruitOut.jpg',
@@ -311,28 +315,28 @@ class Bestseller extends StatelessWidget {
             title: 'Amul',
             quantity: '100 g',
             price: 54,
-            page: AashirvaadSelect(),
+            page: AmulButter(),
           ),
           cardCreation(
             image: 'assets/images/productimages/b1.jpeg',
             title: 'Bourbon',
             quantity: '150 g',
             price: 30,
-            page: AashirvaadSelect(),
+            page: Bourbon(),
           ),
           cardCreation(
             image: 'assets/images/productimages/pepsi1.jpeg',
             title: 'Pepsi',
             quantity: '2.25 L',
             price: 64,
-            page: AashirvaadSelect(),
+            page: Pepsi(),
           ),
           cardCreation(
             image: 'assets/images/productimages/cl1.jpeg',
             title: 'Choclairs',
             quantity: '605 g',
             price: 160,
-            page: AashirvaadSelect(),
+            page: Choclairs(),
           ),
         ],
       ),

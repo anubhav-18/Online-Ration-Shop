@@ -28,9 +28,9 @@ class _FlourList extends State<FlourList> {
             Navigator.pop(context);
           },
         ),
-        centerTitle: false,
+        centerTitle: true,
         title: Text(
-          'BestSeller',
+          'Atta & Flour',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: [
@@ -71,10 +71,6 @@ class _FlourList extends State<FlourList> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
-            SizedBox(
-              height: 5,
-            ),
             ProductListTile(
               img: 'assets/images/productimages/select1.jpeg',
               old_price: 331,
