@@ -19,10 +19,10 @@ class SaffolaActive extends StatelessWidget {
           m_email: 'csc@marico.com',
           m_website: 'www.marico.com',
           net_quantity: '1 L',
-          img1: 'assets/images/sa1.jpeg',
-          img2: 'assets/images/sa2.jpeg',
-          img3: 'assets/images/sa3.jpeg',
-          img4: 'assets/images/sa4.jpeg',
+          img1: 'assets/images/productimages/sa1.jpeg',
+          img2: 'assets/images/productimages/sa2.jpeg',
+          img3: 'assets/images/productimages/sa3.jpeg',
+          img4: 'assets/images/productimages/sa4.jpeg',
           price: 129),
     );
   }
