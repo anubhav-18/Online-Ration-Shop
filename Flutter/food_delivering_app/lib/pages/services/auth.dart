@@ -1,27 +1,52 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:food_delivering_app/pages/Splash_Login/signup.dart';
-import 'package:food_delivering_app/pages/home_page.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:flutter/material.dart';
 
-class authrepo extends GetxController {
-  static authrepo get instance => Get.find();
+import 'AuthException.dart';
 
+class AuthenticationService {
   final _auth = FirebaseAuth.instance;
-  late final Rx<User?> firebaseUser;
+late final _status ; 
 
-  @override
-  void onReady() {
-    firebaseUser = Rx<User?>(_auth.currentUser);
-    firebaseUser.bindStream(_auth.userChanges());
-    ever(firebaseUser, _setIntialScreen);
+  Future<AuthStatus> createAccount({
+    required String email,
+    required String password,
+    required String name,
+  }) async {
+    try {
+      UserCredential newUser = await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      _auth.currentUser!.updateDisplayName(name);
+      _status = AuthStatus.successful;
+    } on FirebaseAuthException catch (e) {
+      _status = AuthExceptionHandler.handleAuthException(e);
+    }
+    return _status;
   }
 
-  _setIntialScreen(User? user) {
-    user == null
-        ? Get.offAll(() => SignupPage())
-        : Get.offAll(() => HomePage());
-        
+  Future<AuthStatus> login({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      await _auth.signInWithEmailAndPassword(email: email, password: password);
+      _status = AuthStatus.successful;
+    } on  FirebaseAuthException catch (e) {
+      _status = AuthExceptionHandler.handleAuthException(e);
+    }
+    return _status;
+  }
+
+  Future<AuthStatus> resetPassword({required String email}) async {
+    await _auth
+        .sendPasswordResetEmail(email: email)
+        .then((value) => _status = AuthStatus.successful)
+        .catchError((e) => _status = AuthExceptionHandler.handleAuthException(e));
+    return _status;
+  }
+
+  Future<void> logout() async {
+    await _auth.signOut();
   }
 }
