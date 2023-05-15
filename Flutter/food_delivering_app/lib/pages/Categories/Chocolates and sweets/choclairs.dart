@@ -21,10 +21,10 @@ class Choclairs extends StatelessWidget {
           m_email: 'suggestions@mdlzindia.com',
           m_website: 'www.mdlzindia.com',
           net_quantity: '605 g',
-          img1: 'assets/images/cl1.jpeg',
-          img2: 'assets/images/cl2.jpeg',
-          img3: 'assets/images/cl3.jpeg',
-          img4: 'assets/images/cl4.jpeg',
+          img1: 'assets/images/productimages/cl1.jpeg',
+          img2: 'assets/images/productimages/cl2.jpeg',
+          img3: 'assets/images/productimages/cl3.jpeg',
+          img4: 'assets/images/productimages/cl4.jpeg',
           price: 160),
     );
   }

@@ -19,10 +19,10 @@ class MaggiSpecial extends StatelessWidget {
           m_email: 'wecare@in.nestle.com',
           m_website: 'www.nestle.in',
           net_quantity: '70 g',
-          img1: 'assets/images/ms1.jpeg',
-          img2: 'assets/images/ms2.jpeg',
-          img3: 'assets/images/ms3.jpeg',
-          img4: 'assets/images/ms4.jpeg',
+          img1: 'assets/images/productimages/ms1.jpeg',
+          img2: 'assets/images/productimages/ms2.jpeg',
+          img3: 'assets/images/productimages/ms3.jpeg',
+          img4: 'assets/images/productimages/ms4.jpeg',
           price: 18),
     );
   }

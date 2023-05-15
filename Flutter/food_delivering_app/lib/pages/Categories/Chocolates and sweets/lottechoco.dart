@@ -23,10 +23,10 @@ class LotteChoco extends StatelessWidget {
           m_email: 'support@lotteindia.com',
           m_website: 'https://www.lotteindia.com/',
           net_quantity: '336 g',
-          img1: 'assets/images/lotte1.jpeg',
-          img2: 'assets/images/lotte2.jpeg',
-          img3: 'assets/images/lotte3.jpeg',
-          img4: 'assets/images/lotte4.jpeg',
+          img1: 'assets/images/productimages/lotte1.jpeg',
+          img2: 'assets/images/productimages/lotte2.jpeg',
+          img3: 'assets/images/productimages/lotte3.jpeg',
+          img4: 'assets/images/productimages/lotte4.jpeg',
           price: 116),
     );
   }

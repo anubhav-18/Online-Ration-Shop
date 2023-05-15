@@ -23,10 +23,10 @@ class Bourbon extends StatelessWidget {
           m_email: 'feedback@britindia.com',
           m_website: 'www.britannia.co.in',
           net_quantity: '150 g',
-          img1: 'assets/images/b1.jpeg',
-          img2: 'assets/images/b2.jpeg',
-          img3: 'assets/images/b3.jpeg',
-          img4: 'assets/images/b4.jpeg',
+          img1: 'assets/images/productimages/b1.jpeg',
+          img2: 'assets/images/productimages/b2.jpeg',
+          img3: 'assets/images/productimages/b3.jpeg',
+          img4: 'assets/images/productimages/b4.jpeg',
           price: 30),
     );
   }

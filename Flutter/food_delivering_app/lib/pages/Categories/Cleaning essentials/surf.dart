@@ -21,10 +21,10 @@ class Surf extends StatelessWidget {
           m_email: '	lever.care@unilever.com',
           m_website: 'www.hul.co.in',
           net_quantity: '6 Kg',
-          img1: 'assets/images/surf1.jpeg',
-          img2: 'assets/images/surf2.jpeg',
-          img3: 'assets/images/surf3.jpeg',
-          img4: 'assets/images/surf4.jpeg',
+          img1: 'assets/images/productimages/surf1.jpeg',
+          img2: 'assets/images/productimages/surf2.jpeg',
+          img3: 'assets/images/productimages/surf3.jpeg',
+          img4: 'assets/images/productimages/surf4.jpeg',
           price: 1031),
     );
   }

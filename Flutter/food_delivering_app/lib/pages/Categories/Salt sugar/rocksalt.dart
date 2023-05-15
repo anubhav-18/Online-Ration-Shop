@@ -19,10 +19,10 @@ class RockSalt extends StatelessWidget {
           m_email: 'care@tataconsumer.com',
           m_website: 'www.tatasalt.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/rocksalt1.jpeg',
-          img2: 'assets/images/rocksalt2.jpeg',
-          img3: 'assets/images/rocksalt3.jpeg',
-          img4: 'assets/images/rocksalt4.jpeg',
+          img1: 'assets/images/productimages/rocksalt1.jpeg',
+          img2: 'assets/images/productimages/rocksalt2.jpeg',
+          img3: 'assets/images/productimages/rocksalt3.jpeg',
+          img4: 'assets/images/productimages/rocksalt4.jpeg',
           price: 99),
     );
   }

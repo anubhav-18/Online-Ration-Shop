@@ -22,10 +22,10 @@ class Vim extends StatelessWidget {
           m_email: '	lever.care@unilever.com',
           m_website: 'www.hul.co.in',
           net_quantity: '750 Ml',
-          img1: 'assets/images/vim1.jpeg',
-          img2: 'assets/images/vim2.jpeg',
-          img3: 'assets/images/vim3.jpeg',
-          img4: 'assets/images/vim4.jpeg',
+          img1: 'assets/images/productimages/vim1.jpeg',
+          img2: 'assets/images/productimages/vim2.jpeg',
+          img3: 'assets/images/productimages/vim3.jpeg',
+          img4: 'assets/images/productimages/vim4.jpeg',
           price: 139),
     );
   }

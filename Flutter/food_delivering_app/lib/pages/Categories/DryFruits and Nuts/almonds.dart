@@ -19,10 +19,10 @@ class Almonds extends StatelessWidget {
           m_email: 'customerservice@ril.com',
           m_website: 'www.relianceretail.com',
           net_quantity: '500 g',
-          img1: 'assets/images/almond1.jpeg',
-          img2: 'assets/images/almond2.jpeg',
-          img3: 'assets/images/almond3.jpeg',
-          img4: 'assets/images/almond4.jpeg',
+          img1: 'assets/images/productimages/almond1.jpeg',
+          img2: 'assets/images/productimages/almond2.jpeg',
+          img3: 'assets/images/productimages/almond3.jpeg',
+          img4: 'assets/images/productimages/almond4.jpeg',
           price: 369),
     );
   }

@@ -22,10 +22,10 @@ class Fuse extends StatelessWidget {
           m_email: 'suggestions@mdlzindia.com',
           m_website: 'www.mdlzindia.com',
           net_quantity: '50 g',
-          img1: 'assets/images/fuse1.jpeg',
-          img2: 'assets/images/fuse2.jpeg',
-          img3: 'assets/images/fuse3.jpeg',
-          img4: 'assets/images/fuse4.jpeg',
+          img1: 'assets/images/productimages/fuse1.jpeg',
+          img2: 'assets/images/productimages/fuse2.jpeg',
+          img3: 'assets/images/productimages/fuse3.jpeg',
+          img4: 'assets/images/productimages/fuse4.jpeg',
           price: 28),
     );
   }

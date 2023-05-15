@@ -19,10 +19,10 @@ class Gulab extends StatelessWidget {
           m_email: 'gulaboils@yahoo.com',
           m_website: 'www.gulab.com',
           net_quantity: '15 L',
-          img1: 'assets/images/gulab1.jpeg',
-          img2: 'assets/images/gulab2.jpeg',
-          img3: 'assets/images/gulab3.jpeg',
-          img4: 'assets/images/gulab4.jpeg',
+          img1: 'assets/images/productimages/gulab1.jpeg',
+          img2: 'assets/images/productimages/gulab2.jpeg',
+          img3: 'assets/images/productimages/gulab3.jpeg',
+          img4: 'assets/images/productimages/gulab4.jpeg',
           price: 2799),
     );
   }

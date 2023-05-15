@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(
         // width: double.maxFinite,
         child: SingleChildScrollView(
+          physics: NeverScrollableScrollPhysics(),
           child: Container(
             child: Column(
               children: [
@@ -206,6 +207,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget MyDrawerList() {
     return Container(
+      height: MediaQuery.of(context).size.height*0.8,
       padding: const EdgeInsets.only(top: 8),
       child: Column(children: [
         heading('Home'),
@@ -255,7 +257,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 15),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
           child: Text(
             Title,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

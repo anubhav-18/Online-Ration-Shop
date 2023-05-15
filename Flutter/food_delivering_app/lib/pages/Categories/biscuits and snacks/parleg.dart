@@ -23,10 +23,10 @@ class ParleG extends StatelessWidget {
           m_email: 'cs@parle.biz',
           m_website: 'www.parleproducts.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/parleg1.jpeg',
-          img2: 'assets/images/parleg2.jpeg',
-          img3: 'assets/images/parleg3.jpeg',
-          img4: 'assets/images/parleg4.jpeg',
+          img1: 'assets/images/productimages/parleg1.jpeg',
+          img2: 'assets/images/productimages/parleg2.jpeg',
+          img3: 'assets/images/productimages/parleg3.jpeg',
+          img4: 'assets/images/productimages/parleg4.jpeg',
           price: 120),
     );
   }

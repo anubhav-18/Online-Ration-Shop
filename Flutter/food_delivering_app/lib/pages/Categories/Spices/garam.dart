@@ -19,10 +19,10 @@ class Garam extends StatelessWidget {
           m_email: 'customercare@everestspices.com',
           m_website: 'www.everestspices.com',
           net_quantity: '100 g',
-          img1: 'assets/images/garam1.jpeg',
-          img2: 'assets/images/garam2.jpeg',
-          img3: 'assets/images/garam3.jpeg',
-          img4: 'assets/images/garam4.jpeg',
+          img1: 'assets/images/productimages/garam1.jpeg',
+          img2: 'assets/images/productimages/garam2.jpeg',
+          img3: 'assets/images/productimages/garam3.jpeg',
+          img4: 'assets/images/productimages/garam4.jpeg',
           price: 81),
     );
   }

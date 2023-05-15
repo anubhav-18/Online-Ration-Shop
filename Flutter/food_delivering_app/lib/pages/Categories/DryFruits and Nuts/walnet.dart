@@ -19,10 +19,10 @@ class Walnet extends StatelessWidget {
           m_email: 'customerservice@ril.com',
           m_website: 'www.relianceretail.com',
           net_quantity: '500 g',
-          img1: 'assets/images/wlanut1.jpeg',
-          img2: 'assets/images/wlanut2.jpeg',
-          img3: 'assets/images/wlanut3.jpeg',
-          img4: 'assets/images/wlanut4.jpeg',
+          img1: 'assets/images/productimages/wlanut1.jpeg',
+          img2: 'assets/images/productimages/wlanut2.jpeg',
+          img3: 'assets/images/productimages/wlanut3.jpeg',
+          img4: 'assets/images/productimages/wlanut4.jpeg',
           price: 659),
     );
   }

@@ -24,10 +24,10 @@ class Harpic extends StatelessWidget {
           m_email: 'IndiaHelp@rb.com',
           m_website: 'www.rb.com',
           net_quantity: '2.5 L',
-          img1: 'assets/images/harpic1.jpeg',
-          img2: 'assets/images/harpic2.jpeg',
-          img3: 'assets/images/harpic3.jpeg',
-          img4: 'assets/images/harpic4.jpeg',
+          img1: 'assets/images/productimages/harpic1.jpeg',
+          img2: 'assets/images/productimages/harpic2.jpeg',
+          img3: 'assets/images/productimages/harpic3.jpeg',
+          img4: 'assets/images/productimages/harpic4.jpeg',
           price: 390),
     );
   }

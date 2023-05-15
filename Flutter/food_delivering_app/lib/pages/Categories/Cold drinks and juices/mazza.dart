@@ -19,10 +19,10 @@ class Mazza extends StatelessWidget {
           m_email: 'indiahelpline@coca-cola.com',
           m_website: 'www.coca-cola.com',
           net_quantity: '600 Ml',
-          img1: 'assets/images/mazza1.jpeg',
-          img2: 'assets/images/mazza2.jpeg',
-          img3: 'assets/images/mazza3.jpeg',
-          img4: 'assets/images/mazza4.jpeg',
+          img1: 'assets/images/productimages/mazza1.jpeg',
+          img2: 'assets/images/productimages/mazza2.jpeg',
+          img3: 'assets/images/productimages/mazza3.jpeg',
+          img4: 'assets/images/productimages/mazza4.jpeg',
           price: 36),
     );
   }

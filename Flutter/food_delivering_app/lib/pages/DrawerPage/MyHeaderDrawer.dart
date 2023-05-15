@@ -17,7 +17,7 @@ class MyHeaderDrawer extends StatelessWidget {
     return Container(
         color: bckGrndColor,
         width: double.infinity,
-        height: 200,
+        height: MediaQuery.of(context).size.height*0.20 ,
         padding: EdgeInsets.only(top: 20),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Stack(children: [
@@ -29,6 +29,7 @@ class MyHeaderDrawer extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
+<<<<<<< HEAD
               child: CircleAvatar(
                   radius: 15,
                   // child: Icon(Icons.person),
@@ -38,6 +39,17 @@ class MyHeaderDrawer extends StatelessWidget {
                       )),
               // Icon(Icons.person,
               //     size: 55, color: bckGrndColor.withOpacity(0.5)),
+=======
+              child: 
+              CircleAvatar(
+                radius: 15,
+                // backgroundImage:,
+                // backgroundImage: ,
+                backgroundColor: Colors.white.withOpacity(0.4),
+                child: Icon(Icons.person,size: 55, color: Colors.grey),
+                
+              ),
+>>>>>>> 21a438eecc50b132d0a9594c63c18f94d78011d1
             ),
             Positioned(
                 bottom: 12,
@@ -53,7 +65,7 @@ class MyHeaderDrawer extends StatelessWidget {
                     width: 25,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(width: 1, color: Colors.white),
+                        border: Border.all(width: 1, color: Colors.black),
                         color: Colors.white),
                     child: Icon(
                       Icons.edit,
@@ -64,13 +76,14 @@ class MyHeaderDrawer extends StatelessWidget {
                 ))
           ]),
           Text(
-            // '${FirebaseAuth.instance.currentUser!.displayName}',
-            'Anubhahv0',
+            
+            '${FirebaseAuth.instance.currentUser!.displayName}',
+            // 'Anubhahv0',
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           Text(
-            // '${FirebaseAuth.instance.currentUser!.email}',
-            'email',
+            '${FirebaseAuth.instance.currentUser!.email}',
+            // 'email',
             style: TextStyle(color: Colors.grey[200], fontSize: 14),
           ),
         ]));

@@ -23,10 +23,10 @@ class BodyLotion extends StatelessWidget {
           m_email: 'care@beiersdorf.com',
           m_website: 'www.nivea.in',
           net_quantity: '400 ml',
-          img1: 'assets/images/lotion1.jpeg',
-          img2: 'assets/images/lotion2.jpeg',
-          img3: 'assets/images/lotion3.jpeg',
-          img4: 'assets/images/lotion4.jpeg',
+          img1: 'assets/images/productimages/lotion1.jpeg',
+          img2: 'assets/images/productimages/lotion2.jpeg',
+          img3: 'assets/images/productimages/lotion3.jpeg',
+          img4: 'assets/images/productimages/lotion4.jpeg',
           price: 276),
     );
   }

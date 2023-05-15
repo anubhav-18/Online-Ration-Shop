@@ -19,10 +19,10 @@ class MoongDal extends StatelessWidget {
           m_email: 'care@tataconsumer.com',
           m_website: 'www.tatasalt.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/moon1.jpeg',
-          img2: 'assets/images/moon2.jpeg',
-          img3: 'assets/images/moon3.jpeg',
-          img4: 'assets/images/moon4.jpeg',
+          img1: 'assets/images/productimages/moon1.jpeg',
+          img2: 'assets/images/productimages/moon2.jpeg',
+          img3: 'assets/images/productimages/moon3.jpeg',
+          img4: 'assets/images/productimages/moon4.jpeg',
           price: 141),
     );
   }

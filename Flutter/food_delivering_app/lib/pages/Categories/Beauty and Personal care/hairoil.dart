@@ -21,10 +21,10 @@ class HairOil extends StatelessWidget {
           m_email: 'csc@marico.com',
           m_website: 'www.marico.com',
           net_quantity: '600 ml',
-          img1: 'assets/images/hairoil1.jpeg',
-          img2: 'assets/images/hairoil2.jpeg',
-          img3: 'assets/images/hairoil3.jpeg',
-          img4: 'assets/images/hairoil4.jpeg',
+          img1: 'assets/images/productimages/hairoil1.jpeg',
+          img2: 'assets/images/productimages/hairoil2.jpeg',
+          img3: 'assets/images/productimages/hairoil3.jpeg',
+          img4: 'assets/images/productimages/hairoil4.jpeg',
           price: 200),
     );
   }

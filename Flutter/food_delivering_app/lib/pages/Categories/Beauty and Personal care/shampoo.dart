@@ -21,10 +21,10 @@ class Shampoo extends StatelessWidget {
           m_email: 'daburcares@feedback.dabur',
           m_website: 'www.dabur.com',
           net_quantity: '640 ml',
-          img1: 'assets/images/shampoo1.jpeg',
-          img2: 'assets/images/shampoo2.jpeg',
-          img3: 'assets/images/shampoo3.jpeg',
-          img4: 'assets/images/shampoo4.jpeg',
+          img1: 'assets/images/productimages/shampoo1.jpeg',
+          img2: 'assets/images/productimages/shampoo2.jpeg',
+          img3: 'assets/images/productimages/shampoo3.jpeg',
+          img4: 'assets/images/productimages/shampoo4.jpeg',
           price: 247),
     );
   }

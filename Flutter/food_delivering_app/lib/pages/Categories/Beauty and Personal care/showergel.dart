@@ -21,10 +21,10 @@ class ShowerGel extends StatelessWidget {
           m_email: 'care@beiersdorf.com',
           m_website: 'www.nivea.in',
           net_quantity: '250 ml',
-          img1: 'assets/images/gel1.jpeg',
-          img2: 'assets/images/gel2.jpeg',
-          img3: 'assets/images/gel3.jpeg',
-          img4: 'assets/images/gel4.jpeg',
+          img1: 'assets/images/productimages/gel1.jpeg',
+          img2: 'assets/images/productimages/gel2.jpeg',
+          img3: 'assets/images/productimages/gel3.jpeg',
+          img4: 'assets/images/productimages/gel4.jpeg',
           price: 155),
     );
   }

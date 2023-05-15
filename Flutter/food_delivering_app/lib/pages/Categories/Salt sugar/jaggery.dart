@@ -19,10 +19,10 @@ class Jaggery extends StatelessWidget {
           m_email: 'jaynti.lalinternational@gmail.com',
           m_website: 'www.jiomart.com',
           net_quantity: '100 g',
-          img1: 'assets/images/jaggery1.jpeg',
-          img2: 'assets/images/jaggery2.jpeg',
-          img3: 'assets/images/jaggery3.jpeg',
-          img4: 'assets/images/jaggery4.jpeg',
+          img1: 'assets/images/productimages/jaggery1.jpeg',
+          img2: 'assets/images/productimages/jaggery2.jpeg',
+          img3: 'assets/images/productimages/jaggery3.jpeg',
+          img4: 'assets/images/productimages/jaggery4.jpeg',
           price: 139),
     );
   }

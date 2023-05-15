@@ -19,10 +19,10 @@ class ChanaDal extends StatelessWidget {
           m_email: 'care@tataconsumer.com',
           m_website: 'www.tatasalt.com',
           net_quantity: '500 g',
-          img1: 'assets/images/chana1.jpeg',
-          img2: 'assets/images/chana2.jpeg',
-          img3: 'assets/images/chana3.jpeg',
-          img4: 'assets/images/chana4.jpeg',
+          img1: 'assets/images/productimages/chana1.jpeg',
+          img2: 'assets/images/productimages/chana2.jpeg',
+          img3: 'assets/images/productimages/chana3.jpeg',
+          img4: 'assets/images/productimages/chana4.jpeg',
           price: 59),
     );
   }

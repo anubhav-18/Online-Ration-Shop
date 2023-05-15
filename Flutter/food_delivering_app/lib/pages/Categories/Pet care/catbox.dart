@@ -19,10 +19,10 @@ class CatBox extends StatelessWidget {
           m_email: 'taiyoplussdiscovery@gmail.com',
           m_website: 'https://www.taiyogroup.in/',
           net_quantity: '1',
-          img1: 'assets/images/cb1.jpeg',
-          img2: 'assets/images/cb2.jpeg',
-          img3: 'assets/images/cb3.jpeg',
-          img4: 'assets/images/cb4.jpeg',
+          img1: 'assets/images/productimages/cb1.jpeg',
+          img2: 'assets/images/productimages/cb2.jpeg',
+          img3: 'assets/images/productimages/cb3.jpeg',
+          img4: 'assets/images/productimages/cb4.jpeg',
           price: 945),
     );
   }
