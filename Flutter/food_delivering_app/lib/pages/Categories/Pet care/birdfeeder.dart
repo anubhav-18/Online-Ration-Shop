@@ -19,10 +19,10 @@ class BirdFeeder extends StatelessWidget {
           m_email: 'amijivdaya@gmail.com',
           m_website: 'https://amijivdaya.com/',
           net_quantity: '2 pcs',
-          img1: 'assets/images/bf1.jpeg',
-          img2: 'assets/images/bf2.jpeg',
-          img3: 'assets/images/bf3.jpeg',
-          img4: 'assets/images/bf4.jpeg',
+          img1: 'assets/images/productimages/bf1.jpeg',
+          img2: 'assets/images/productimages/bf2.jpeg',
+          img3: 'assets/images/productimages/bf3.jpeg',
+          img4: 'assets/images/productimages/bf4.jpeg',
           price: 366),
     );
   }
