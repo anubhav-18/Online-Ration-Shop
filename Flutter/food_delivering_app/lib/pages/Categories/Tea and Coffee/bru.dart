@@ -19,10 +19,10 @@ class Bru extends StatelessWidget {
           m_email: 'lever.care@unilever.com',
           m_website: '	www.hul.co.in',
           net_quantity: '200 g',
-          img1: 'assets/images/bru1.jpeg',
-          img2: 'assets/images/bru2.jpeg',
-          img3: 'assets/images/bru3.jpeg',
-          img4: 'assets/images/bru4.jpeg',
+          img1: 'assets/images/productimages/bru1.jpeg',
+          img2: 'assets/images/productimages/bru2.jpeg',
+          img3: 'assets/images/productimages/bru3.jpeg',
+          img4: 'assets/images/productimages/bru4.jpeg',
           price: 333),
     );
   }
