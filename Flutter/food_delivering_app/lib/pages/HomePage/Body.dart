@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelect.dart';
+import 'package:food_delivering_app/pages/Categories/Chocolates%20and%20sweets/choclairs.dart';
+import 'package:food_delivering_app/pages/Categories/Cold%20drinks%20and%20juices/pepsi.dart';
+import 'package:food_delivering_app/pages/Categories/Diary%20product/AmulButter.dart';
 import 'package:food_delivering_app/pages/Categories/List/BeautyList.dart';
 import 'package:food_delivering_app/pages/Categories/List/babylist.dart';
 import 'package:food_delivering_app/pages/Categories/List/chocolist.dart';
