@@ -19,10 +19,10 @@ class TataTea extends StatelessWidget {
           m_email: 'cc@tgbl.com',
           m_website: 'www.tataconsumer.com',
           net_quantity: '1 Kg',
-          img1: 'assets/images/tpt1.jpeg',
-          img2: 'assets/images/tpt2.jpeg',
-          img3: 'assets/images/tpt3.jpeg',
-          img4: 'assets/images/tpt4.jpeg',
+          img1: 'assets/images/productimages/tpt1.jpeg',
+          img2: 'assets/images/productimages/tpt2.jpeg',
+          img3: 'assets/images/productimages/tpt3.jpeg',
+          img4: 'assets/images/productimages/tpt4.jpeg',
           price: 431),
     );
   }
