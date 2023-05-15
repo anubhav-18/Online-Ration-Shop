@@ -10,15 +10,28 @@ import 'package:food_delivering_app/pages/services/user_details.dart';
 import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../services/Auth.dart';
+import '../services/AuthException.dart';
+
 class SignupPage extends StatefulWidget {
   @override
   State<SignupPage> createState() => _SignupPageState();
 }
 
 class _SignupPageState extends State<SignupPage> {
+  final _key = GlobalKey<FormState>();
+  final _authService = AuthenticationService();
   TextEditingController _passwordTextController = TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _userNameTextController = TextEditingController();
+  final _auth = FirebaseAuth.instance;
+
+  void dispose() {
+    _emailTextController.dispose();
+    _passwordTextController.dispose();
+    _userNameTextController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -138,20 +151,58 @@ class _SignupPageState extends State<SignupPage> {
                       child: MaterialButton(
                         minWidth: double.infinity,
                         height: 60,
+<<<<<<< HEAD
                         onPressed: () {
-                          FirebaseAuth.instance
-                              .createUserWithEmailAndPassword(
-                                  email: _emailTextController.text,
-                                  password: _passwordTextController.text)
-                              .then((value) {
-                            print("Account Created Succesfullyy");
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => HomePage()));
-                          }).onError((error, stackTrace) {
-                            print('Error ${error.toString()}');
-                          });
+                          try {
+                            final newuser =
+                                _auth.createUserWithEmailAndPassword(
+                                    email: _emailTextController.text,
+                                    password: _passwordTextController.text);
+                            if (newuser != null) {
+                              Navigator.pushNamed(context, '/homepage');
+                            }
+                          } catch (e) {
+                            print(e);
+                          }
+                          // FirebaseAuth.instance
+                          //     .createUserWithEmailAndPassword(
+                          //         email: _emailTextController.text,
+                          //         password: _passwordTextController.text)
+                          //     .then((value) {
+                          //   print("Account Created Succesfullyy");
+                          //   Navigator.push(
+                          //       context,
+                          //       MaterialPageRoute(
+                          //           builder: (context) => HomePage()));
+                          // }).onError((error, stackTrace) {
+=======
+                        onPressed: () async {
+                          try {
+                            await FirebaseAuth.instance
+                                .createUserWithEmailAndPassword(
+                                    email: _emailTextController.text,
+                                    password: _passwordTextController.text)
+                                .then((value) {
+                              print("Account Created Succesfullyy");
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomePage()));
+                            });
+                          } on FirebaseAuthException catch (e) {
+                            print(e);
+                            showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                content: Text(e.message.toString()),
+                              );
+                            });
+                          }
+                          // .onError((error, stackTrace) {
+>>>>>>> 21a438eecc50b132d0a9594c63c18f94d78011d1
+                          //   print('Error ${error.toString()}');
+                          // });
 
                           addUserDetails(_userNameTextController.text,
                               _emailTextController.text);
@@ -300,8 +351,11 @@ TextField inputTextField(
         borderSide: BorderSide(color: Colors.black),
       ),
       border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
-      prefixIcon: Icon(icon, color: Colors.black,),
-      // suffixIcon: isPasswordType ? IconButton(onPressed: () { }, icon: Icon(Icons.remove_red_eye)) : null 
+      prefixIcon: Icon(
+        icon,
+        color: Colors.black,
+      ),
+      // suffixIcon: isPasswordType ? IconButton(onPressed: () { }, icon: Icon(Icons.remove_red_eye)) : null
     ),
     keyboardType: isPasswordType
         ? TextInputType.visiblePassword

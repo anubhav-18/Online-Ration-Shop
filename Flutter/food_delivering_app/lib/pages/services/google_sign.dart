@@ -5,6 +5,10 @@ import 'package:google_sign_in/google_sign_in.dart';
 class GoogleSignInProvider extends ChangeNotifier {
   final googleSignIn = GoogleSignIn();
 
+  String? Gphoto;
+  String? Gemail;
+  String? Gname;
+
   GoogleSignInAccount? _user;
 
   GoogleSignInAccount get user => _user!;
@@ -27,11 +31,25 @@ class GoogleSignInProvider extends ChangeNotifier {
       print(e.toString());
     }
 
+    if (_user != null) {
+      Gphoto = user.photoUrl;
+      Gemail = user.email;
+      Gname = user.displayName;
+    }
+
+    print('user signin with google ');
+
     notifyListeners();
   }
 
   Future googleLogout() async {
     await googleSignIn.signOut();
     FirebaseAuth.instance.signOut();
+
+    Gemail = null;
+    Gphoto = null;
+    Gname = null;
+
+    print('User signout of google');
   }
 }

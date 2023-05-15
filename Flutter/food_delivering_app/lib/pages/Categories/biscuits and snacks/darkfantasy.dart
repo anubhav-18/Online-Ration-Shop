@@ -59,10 +59,12 @@ class DarkFantasy extends StatelessWidget {
       body: productdescp(
           title: 'Sunfeast Dark Fantasy Original Choco Filled Cookie 300 g',
           fdtitle: 'Made from the finest quality ingredients',
-          description: 'Give in to your sweet cravings with Sunfeast Dark Fantasy Original Choco Filled Cookie. These cookies are crunchy yet delicate in texture. They are a perfect accompaniment to your tea or coffee. They are prepared using the finest ingredients and its hygienic packaging ensures that they remain fresh over a longer period. So go ahead, buy Sunfeast Dark Fantasy Original Choco Filled Cookie online today!',
+          description:
+              'Give in to your sweet cravings with Sunfeast Dark Fantasy Original Choco Filled Cookie. These cookies are crunchy yet delicate in texture. They are a perfect accompaniment to your tea or coffee. They are prepared using the finest ingredients and its hygienic packaging ensures that they remain fresh over a longer period. So go ahead, buy Sunfeast Dark Fantasy Original Choco Filled Cookie online today!',
           brand_name: 'Sunfeast',
           manu: 'ITC Ltd.',
-          address: 'Itc Limited Division Plot No 1 Sector 11, Bhel, Haridwar 249403',
+          address:
+              'Itc Limited Division Plot No 1 Sector 11, Bhel, Haridwar 249403',
           m_email: 'itccares@itc.in',
           m_website: 'www.aashirvaad.com',
           net_quantity: '300 g',

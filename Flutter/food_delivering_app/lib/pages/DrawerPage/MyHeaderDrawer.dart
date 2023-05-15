@@ -12,12 +12,12 @@ class MyHeaderDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser! ;
+    final user = FirebaseAuth.instance.currentUser!;
 
     return Container(
         color: bckGrndColor,
         width: double.infinity,
-        height: 200,
+        height: MediaQuery.of(context).size.height*0.20 ,
         padding: EdgeInsets.only(top: 20),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Stack(children: [
@@ -29,16 +29,27 @@ class MyHeaderDrawer extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
+<<<<<<< HEAD
+              child: CircleAvatar(
+                  radius: 15,
+                  // child: Icon(Icons.person),
+                  backgroundImage: NetworkImage(
+                      'https://www.bradcypert.com/pexels-pixabay-349758_hu3d03a01dcc18bc5be0e67db3d8d209a6_295907_0x600_resize_q75_h2_box.webp'
+                      // FirebaseAuth.instance.currentUser!.photoURL!
+                      )),
+              // Icon(Icons.person,
+              //     size: 55, color: bckGrndColor.withOpacity(0.5)),
+=======
               child: 
               CircleAvatar(
                 radius: 15,
-                // child: Icon(Icons.person),
-                backgroundImage: 
-                NetworkImage('https://www.bradcypert.com/pexels-pixabay-349758_hu3d03a01dcc18bc5be0e67db3d8d209a6_295907_0x600_resize_q75_h2_box.webp'
-                  // FirebaseAuth.instance.currentUser!.photoURL!
-                  )),
-              // Icon(Icons.person,
-              //     size: 55, color: bckGrndColor.withOpacity(0.5)),
+                // backgroundImage:,
+                // backgroundImage: ,
+                backgroundColor: Colors.white.withOpacity(0.4),
+                child: Icon(Icons.person,size: 55, color: Colors.grey),
+                
+              ),
+>>>>>>> 21a438eecc50b132d0a9594c63c18f94d78011d1
             ),
             Positioned(
                 bottom: 12,
@@ -54,7 +65,7 @@ class MyHeaderDrawer extends StatelessWidget {
                     width: 25,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(width: 1, color: Colors.white),
+                        border: Border.all(width: 1, color: Colors.black),
                         color: Colors.white),
                     child: Icon(
                       Icons.edit,
@@ -65,13 +76,14 @@ class MyHeaderDrawer extends StatelessWidget {
                 ))
           ]),
           Text(
-            // '${FirebaseAuth.instance.currentUser!.displayName}',
-            'Anubhahv0',
+            
+            '${FirebaseAuth.instance.currentUser!.displayName}',
+            // 'Anubhahv0',
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           Text(
-            // '${FirebaseAuth.instance.currentUser!.email}',
-            'email',
+            '${FirebaseAuth.instance.currentUser!.email}',
+            // 'email',
             style: TextStyle(color: Colors.grey[200], fontSize: 14),
           ),
         ]));

@@ -57,12 +57,16 @@ class BodyLotion extends StatelessWidget {
         ],
       ),
       body: productdescp(
-          title: 'Nivea Body Milk Nourishing Body Lotion with 2x Almond Oil for 48H Moisturization for Very Dry Skin 400 ml',
-          fdtitle: 'Suitable for very dry skin ,Provides 24 hours moisturization',
-          description: 'Get even toned and nourished skin withNivea Body Milk Nourishing Body Lotion with 2x Almond Oil for 48H Moisturization for Very Dry Skin. This body lotion helps you get a perfectly moisturized skin during winters. It is enriched with the goodness of Almond oil that helps you keep your skin hydrated. So what are you waiting for? Try this product today. Buy it online here!',
+          title:
+              'Nivea Body Milk Nourishing Body Lotion with 2x Almond Oil for 48H Moisturization for Very Dry Skin 400 ml',
+          fdtitle:
+              'Suitable for very dry skin ,Provides 24 hours moisturization',
+          description:
+              'Get even toned and nourished skin withNivea Body Milk Nourishing Body Lotion with 2x Almond Oil for 48H Moisturization for Very Dry Skin. This body lotion helps you get a perfectly moisturized skin during winters. It is enriched with the goodness of Almond oil that helps you keep your skin hydrated. So what are you waiting for? Try this product today. Buy it online here!',
           brand_name: 'Nivea',
           manu: 'Nivea India Pvt. Ltd.',
-          address: 'Nivea India Pvt. Ltd.Sm-9/1. Sanand Ii Industrial Estate, Vilk Bol Tal Sanand Dist, Ahemdabad(Gujarat)-382110.',
+          address:
+              'Nivea India Pvt. Ltd.Sm-9/1. Sanand Ii Industrial Estate, Vilk Bol Tal Sanand Dist, Ahemdabad(Gujarat)-382110.',
           m_email: 'care@beiersdorf.com',
           m_website: 'www.nivea.in',
           net_quantity: '400 ml',

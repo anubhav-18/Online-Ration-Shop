@@ -59,7 +59,11 @@ class ParleG extends StatelessWidget {
       body: productdescp(
           title: 'Parle-G Gold Biscuits 1 kg',
           fdtitle: 'Made from the finest quality ingredients',
-          description: 'Filled with the goodness of milk and wheat, Parle-G has been a source of all-round nourishment for the nation since decades. They''re crispy, they''re tasty and they''ll leave you craving for more. Parle G Biscuits have been an all-time favourite across people of all ages. It is a must-have product to enjoy fun-filled tea parties. Enjoy them with tea or as a standalone snack, the choice is yours. So wait no more. Buy your pack of Parle G Gold Biscuits online today!',
+          description:
+              'Filled with the goodness of milk and wheat, Parle-G has been a source of all-round nourishment for the nation since decades. They'
+              're crispy, they'
+              're tasty and they'
+              'll leave you craving for more. Parle G Biscuits have been an all-time favourite across people of all ages. It is a must-have product to enjoy fun-filled tea parties. Enjoy them with tea or as a standalone snack, the choice is yours. So wait no more. Buy your pack of Parle G Gold Biscuits online today!',
           brand_name: 'Parle',
           manu: 'Parle Products Pvt. Ltd.',
           address: 'Anand Food Products 16-1-486 Saidabad, Haderabad, 500059',
