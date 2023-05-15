@@ -68,9 +68,9 @@ class AashirvaadSelect  extends StatelessWidget {
           m_website: 'www.aashirvaad.com',
           net_quantity: '5 Kg',
           img1: 'assets/images/productimages/select1.jpeg',
-          img2: 'assets/images//productimages/select2.jpeg',
-          img3: 'assets/images//productimages/select3.jpeg',
-          img4: 'assets/images//productimages/select4.jpeg',
+          img2: 'assets/images/productimages/select2.jpeg',
+          img3: 'assets/images/productimages/select3.jpeg',
+          img4: 'assets/images/productimages/select4.jpeg',
           price: 269),
     );
   }
