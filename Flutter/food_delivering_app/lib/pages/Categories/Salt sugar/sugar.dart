@@ -19,10 +19,10 @@ class Sugar extends StatelessWidget {
           m_email: 'customercare@renukasugars.com',
           m_website: '	www.madhursugar.com',
           net_quantity: '5 Kg',
-          img1: 'assets/images/sugar1.jpeg',
-          img2: 'assets/images/sugar2.jpeg',
-          img3: 'assets/images/sugar3.jpeg',
-          img4: 'assets/images/sugar4.jpeg',
+          img1: 'assets/images/productimages/sugar1.jpeg',
+          img2: 'assets/images/productimages/sugar2.jpeg',
+          img3: 'assets/images/productimages/sugar3.jpeg',
+          img4: 'assets/images/productimages/sugar4.jpeg',
           price: 232),
     );
   }
