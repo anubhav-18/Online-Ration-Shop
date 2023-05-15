@@ -3,13 +3,11 @@ import 'package:food_delivering_app/firebase_options.dart';
 import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
 import 'package:food_delivering_app/pages/Splash_Login/splash_screen.dart';
-import 'package:food_delivering_app/pages/btm_nav.dart';
 import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/services/google_sign.dart';
 import 'package:provider/provider.dart';
 import 'pages/Home_Page.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 import 'pages/services/sign_route_info.dart';
 
 void main() async {

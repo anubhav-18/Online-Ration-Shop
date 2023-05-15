@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/Categories/Product_Struct.dart';
 import 'package:food_delivering_app/pages/HomePage/appbar.dart';
-
 class Saffola extends StatelessWidget {
   const Saffola({Key? key}) : super(key: key);
 

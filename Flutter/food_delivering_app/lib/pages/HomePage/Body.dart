@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelect.dart';
-import 'package:food_delivering_app/pages/Categories/Dal&Pulses/2.dart';
+// import 'package:food_delivering_app/pages/Categories/Dal&Pulses/2.dart';
+import 'package:food_delivering_app/pages/Categories/List/BeautyList.dart';
+import 'package:food_delivering_app/pages/Categories/List/babylist.dart';
+import 'package:food_delivering_app/pages/Categories/List/chocolist.dart';
+import 'package:food_delivering_app/pages/Categories/List/cleanlist.dart';
+import 'package:food_delivering_app/pages/Categories/List/dallist.dart';
+import 'package:food_delivering_app/pages/Categories/List/drinklist.dart';
+import 'package:food_delivering_app/pages/Categories/List/flourlist.dart';
+import 'package:food_delivering_app/pages/Categories/List/nutlist.dart';
+import 'package:food_delivering_app/pages/Categories/List/oillist.dart';
+import 'package:food_delivering_app/pages/Categories/List/pastalist.dart';
+import 'package:food_delivering_app/pages/Categories/List/petlist.dart';
+import 'package:food_delivering_app/pages/Categories/List/snacklist.dart';
+import 'package:food_delivering_app/pages/Categories/List/spicelist.dart';
+import 'package:food_delivering_app/pages/Categories/List/sugarlist.dart';
+import 'package:food_delivering_app/pages/Categories/List/tealist.dart';
 // import 'package:food_delivering_app/pages/Categories/Spices/3.dart';
 import 'package:food_delivering_app/pages/HomePage/See_All.dart';
 import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
@@ -83,49 +98,50 @@ class _BodyState extends State<Body> {
               children: [
                 gridBorder(
                   image: 'assets/images/categoriesimg/atta&flourOut.jpg',
-                  category: AashirvaadSelect(),),
+                  category: FlourList(),),
                 gridBorder(
                     image: 'assets/images/categoriesimg/staplesOut.jpg',
-                    category: Pulses()),
+                    category: DalList()),
                 gridBorder(
                   image: 'assets/images/categoriesimg/spicesOut.jpg',
-                  category: Pulses(),),
+                  category: AashirvaadSelect(),),
+                  // category: SpiceList(),),
                 gridBorder(
                     image: 'assets/images/categoriesimg/dryfruitOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: NutList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/edibleoilOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: OilList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/saltsugarOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: SugarList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/beveragesOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: DrinkList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/snacksOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: SnackList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/noodles&pastaOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: PastaList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/teacoffeeOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: TeaList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/chocolatesOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: ChocoList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/momnbabyOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: BabyList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/beautyOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: BeautyList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/petcareOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: PetList()),
                 gridBorder(
                     image: 'assets/images/categoriesimg/cleaningOut.jpg',
-                    category: AashirvaadSelect()),
+                    category: CleanList()),
               ],
             ),
           ),
