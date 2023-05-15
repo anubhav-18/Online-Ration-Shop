@@ -19,10 +19,10 @@ class JimJam extends StatelessWidget {
           m_email: 'feedback@britindia.com',
           m_website: 'www.britannia.co.in',
           net_quantity: '138 g',
-          img1: 'assets/images/jj1.jpeg',
-          img2: 'assets/images/jj2.jpeg',
-          img3: 'assets/images/jj3.jpeg',
-          img4: 'assets/images/jj4.jpeg',
+          img1: 'assets/images/productimages/jj1.jpeg',
+          img2: 'assets/images/productimages/jj2.jpeg',
+          img3: 'assets/images/productimages/jj3.jpeg',
+          img4: 'assets/images/productimages/jj4.jpeg',
           price: 25),
     );
   }
