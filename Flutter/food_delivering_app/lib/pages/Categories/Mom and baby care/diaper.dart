@@ -18,10 +18,10 @@ class Diaper extends StatelessWidget {
           m_email: 'customercare@unicharm.com',
           m_website: 'www.unicharm.co.in',
           net_quantity: '62 pcs',
-          img1: 'assets/images/diaper1.jpeg',
-          img2: 'assets/images/diaper2.jpeg',
-          img3: 'assets/images/diaper3.jpeg',
-          img4: 'assets/images/diaper4.jpeg',
+          img1: 'assets/images/productimages/diaper1.jpeg',
+          img2: 'assets/images/productimages/diaper2.jpeg',
+          img3: 'assets/images/productimages/diaper3.jpeg',
+          img4: 'assets/images/productimages/diaper4.jpeg',
           price: 865),
     );
   }
