@@ -42,7 +42,7 @@ class GoogleSignInProvider extends ChangeNotifier {
   }
 
   Future googleLogout() async {
-    await googleSignIn.signOut();
+    await googleSignIn.disconnect();
     FirebaseAuth.instance.signOut();
 
     Gemail = null;

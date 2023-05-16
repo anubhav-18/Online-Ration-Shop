@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/constants.dart';
@@ -17,7 +18,7 @@ class MyHeaderDrawer extends StatelessWidget {
     return Container(
         color: bckGrndColor,
         width: double.infinity,
-        height: MediaQuery.of(context).size.height*0.20 ,
+        height: MediaQuery.of(context).size.height * 0.20,
         padding: EdgeInsets.only(top: 20),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Stack(children: [
@@ -29,13 +30,11 @@ class MyHeaderDrawer extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
-              child: 
-              CircleAvatar(
-                radius: 15,
-                // backgroundImage:,
-              backgroundImage: NetworkImage(
-                      'https://www.bradcypert.com/pexels-pixabay-349758_hu3d03a01dcc18bc5be0e67db3d8d209a6_295907_0x600_resize_q75_h2_box.webp')
-              ),
+              child: CircleAvatar(
+                  radius: 15,
+                  // backgroundImage:,
+                  backgroundImage: NetworkImage(
+                      'https://www.bradcypert.com/pexels-pixabay-349758_hu3d03a01dcc18bc5be0e67db3d8d209a6_295907_0x600_resize_q75_h2_box.webp')),
             ),
             Positioned(
                 bottom: 12,
@@ -62,8 +61,7 @@ class MyHeaderDrawer extends StatelessWidget {
                 ))
           ]),
           Text(
-            
-            '${FirebaseAuth.instance.currentUser!.displayName}',
+            username(),
             // 'Anubhahv0',
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
@@ -73,5 +71,13 @@ class MyHeaderDrawer extends StatelessWidget {
             style: TextStyle(color: Colors.grey[200], fontSize: 14),
           ),
         ]));
+  }
+
+  String username() {
+    if (FirebaseAuth.instance.currentUser!.displayName != null) {
+      return '${FirebaseAuth.instance.currentUser!.displayName}';
+    } else {
+      return 'User';
+    }
   }
 }
