@@ -30,7 +30,6 @@ class GoogleSignInProvider extends ChangeNotifier {
     } catch (e) {
       print(e.toString());
     }
-
     if (_user != null) {
       Gphoto = user.photoUrl;
       Gemail = user.email;
@@ -43,7 +42,7 @@ class GoogleSignInProvider extends ChangeNotifier {
   }
 
   Future googleLogout() async {
-    await googleSignIn.signOut();
+    await googleSignIn.disconnect();
     FirebaseAuth.instance.signOut();
 
     Gemail = null;

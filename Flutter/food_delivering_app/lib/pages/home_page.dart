@@ -24,17 +24,11 @@ class HomePage extends StatefulWidget {
   // {
   //   return _btmNavState();
   // }
-  
 }
 
 class _HomePageState extends State<HomePage> {
   int current_index = 0;
-  final screen = [
-    HomePage(),
-    CategoriesPage(),
-    About_Us(),
-    My_Order()
-  ] ;
+  final screen = [HomePage(), CategoriesPage(), About_Us(), My_Order()];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -55,7 +49,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-        
       ),
     );
   }
@@ -66,28 +59,28 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: bckGrndColor,
       actions: [
         Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Container(
-            margin: EdgeInsets.all(8),
-            width: 280,
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 10),
-                      blurRadius: 50,
-                      color: bckGrndColor.withOpacity(0.23))
-                ]),
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Container(
+              margin: EdgeInsets.all(8),
+              width: 280,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 50,
+                        color: bckGrndColor.withOpacity(0.23))
+                  ]),
               child: Row(
                 children: <Widget>[
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
                           icon: Padding(
-                            padding: const EdgeInsets.only(left: 25),
+                            padding: const EdgeInsets.only(left: 10),
                             child: Icon(
                               Icons.search,
                               color: bckGrndColor,
@@ -102,37 +95,37 @@ class _HomePageState extends State<HomePage> {
                           )),
                     ),
                   ),
-            // Mic
-            Padding(
-              padding: const EdgeInsets.only(right: 10),
-              child: InkWell(
-                  onTap: () {},
-                  child: Icon(
-                    Icons.mic,
-                    color: bckGrndColor,
-                  )),
-            )
+                  // Mic
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: InkWell(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.mic,
+                          color: bckGrndColor,
+                        )),
+                  )
+                ],
+              ),
+            ),
+            // CART PAGE/ ICON
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 10),
+            //   child: InkWell(
+            //     onTap: () {
+            //       Navigator.push(
+            //           context, MaterialPageRoute(builder: (context) => CartPage()));
+            //     },
+            //     child: CircleAvatar(
+            //         radius: 15,
+            //         backgroundColor: bckGrndColor,
+            //         child: Icon(
+            //           Icons.shopping_cart,
+            //           color: Colors.white,
+            //         )),
+            //   ),
+            // )
           ],
-          ),
-        ),
-        // CART PAGE/ ICON
-        // Padding(
-        //   padding: const EdgeInsets.symmetric(horizontal: 10),
-        //   child: InkWell(
-        //     onTap: () {
-        //       Navigator.push(
-        //           context, MaterialPageRoute(builder: (context) => CartPage()));
-        //     },
-        //     child: CircleAvatar(
-        //         radius: 15,
-        //         backgroundColor: bckGrndColor,
-        //         child: Icon(
-        //           Icons.shopping_cart,
-        //           color: Colors.white,
-        //         )),
-        //   ),
-        // )
-        ],
         ),
         // SEARCH BAR WITH MIC
         // Padding(
@@ -207,7 +200,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget MyDrawerList() {
     return Container(
-      height: MediaQuery.of(context).size.height*0.8,
+      height: MediaQuery.of(context).size.height * 0.8,
       padding: const EdgeInsets.only(top: 8),
       child: Column(children: [
         heading('Home'),
@@ -222,32 +215,32 @@ class _HomePageState extends State<HomePage> {
         menuList('Contact Us', Icons.contact_support, Contact_Us()),
         menuList('FAQs', Icons.help, FAQs()),
         menuList('About us', Icons.group, About_Us()),
-          ListTile(
-            leading: Icon(
-              Icons.logout,
-              size: 20,
-              color: bckGrndColor,
-            ),
-            title: Text(
-              'LogOut',
-              style: TextStyle(fontSize: 16),
-            ),
-            selectedTileColor: Colors.grey,
-            minLeadingWidth: 15,
-            minVerticalPadding: 10,
-            onTap: () async {
-              await GoogleSignInProvider().googleLogout();
-              // FirebaseAuth.instance.signOut();
-              // .then((value) {
-              //   print('SignOut Succesfully');
-                // Navigator.push(
-                //     context, MaterialPageRoute(builder: (context) => signNlog()));
-              // }
-              // );
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => signNlog()));
-            },
-          )
+        ListTile(
+          leading: Icon(
+            Icons.logout,
+            size: 20,
+            color: bckGrndColor,
+          ),
+          title: Text(
+            'LogOut',
+            style: TextStyle(fontSize: 16),
+          ),
+          selectedTileColor: Colors.grey,
+          minLeadingWidth: 15,
+          minVerticalPadding: 10,
+          onTap: () async {
+            await GoogleSignInProvider().googleLogout();
+            // FirebaseAuth.instance.signOut();
+            // .then((value) {
+            //   print('SignOut Succesfully');
+            // Navigator.push(
+            //     context, MaterialPageRoute(builder: (context) => signNlog()));
+            // }
+            // );
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => signNlog()));
+          },
+        )
       ]),
     );
   }
