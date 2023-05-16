@@ -64,7 +64,6 @@ class _FAQsState extends State<FAQs> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Address_widget(),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                 child: Column(

@@ -26,10 +26,10 @@ class MyApp extends StatelessWidget {
           create: (context) => GoogleSignInProvider(),
           child:
               // return
-              MaterialApp(
+          MaterialApp(
+                // scaffoldMessengerKey: Utils.messengerKey,
             debugShowCheckedModeBanner: false,
-            home:
-                SafeArea(minimum: EdgeInsets.all(5), child: sign_route_info()),
+            home:sign_route_info(),
             initialRoute: '/',
             routes: {
               '/home': (context) => HomePage(),

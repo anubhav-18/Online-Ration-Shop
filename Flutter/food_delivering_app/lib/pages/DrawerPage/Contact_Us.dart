@@ -64,7 +64,6 @@ class _Contact_UsState extends State<Contact_Us> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             Container(
               padding: EdgeInsets.only(bottom: 10,left: 10,right: 10,top: 10),
               margin: EdgeInsets.only(bottom: 10,left: 10,right: 10,top: 10),

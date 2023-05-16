@@ -29,7 +29,7 @@ class MyHeaderDrawer extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: Colors.white,
               ),
-              child:
+              child: 
               CircleAvatar(
                 radius: 15,
                 // backgroundImage:,

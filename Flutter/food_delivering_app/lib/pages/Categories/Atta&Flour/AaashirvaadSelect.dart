@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivering_app/pages/DrawerPage/About_Us.dart';
-import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
-import 'package:food_delivering_app/pages/cart/cartpage.dart';
-import 'package:food_delivering_app/pages/constants.dart';
+
 import 'package:food_delivering_app/pages/Categories/Product_Struct.dart';
 import 'package:food_delivering_app/pages/HomePage/appbar.dart';
 

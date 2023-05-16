@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivering_app/pages/Categories/CategoriesList/dairy&bakerycategories.dart';
+import 'package:food_delivering_app/pages/Categories/List/BeautyList.dart';
+import 'package:food_delivering_app/pages/Categories/List/babylist.dart';
+import 'package:food_delivering_app/pages/Categories/List/dallist.dart';
+import 'package:food_delivering_app/pages/Categories/List/drinklist.dart';
+import 'package:food_delivering_app/pages/Categories/List/flourlist.dart';
+import 'package:food_delivering_app/pages/Categories/List/petlist.dart';
+import 'package:food_delivering_app/pages/Categories/List/snacklist.dart';
 import 'package:food_delivering_app/pages/DrawerPage/About_Us.dart';
-import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
 import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/constants.dart';
 
@@ -60,7 +67,6 @@ class _CategoriesState extends State<CategoriesPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Address_widget(),
             Container(
               width: MediaQuery.of(context).size.width,
               padding: EdgeInsets.only(left: 8, right: 10, bottom: 10, top: 10),
@@ -73,6 +79,7 @@ class _CategoriesState extends State<CategoriesPage> {
                     tile(
                       text: 'Dairy & Bakery',
                       img: 'assets/images/categoriesimg/dairynbakery.png',
+                      nxtPage: DairyNBakeyCategories(),
                     ),
                     Divider(
                       thickness: 1,
@@ -83,6 +90,7 @@ class _CategoriesState extends State<CategoriesPage> {
                     tile(
                       text: 'Staples',
                       img: 'assets/images/categoriesimg/staples.jpg',
+                      nxtPage: DalList(),
                     ),
                     Divider(
                       thickness: 1,
@@ -93,6 +101,7 @@ class _CategoriesState extends State<CategoriesPage> {
                     tile(
                       text: 'Snacks & Branded Food',
                       img: 'assets/images/categoriesimg/snaacks.png',
+                      nxtPage: SnackList(),
                     ),
                     Divider(
                       thickness: 1,
@@ -103,6 +112,7 @@ class _CategoriesState extends State<CategoriesPage> {
                     tile(
                       text: 'Beverages',
                       img: 'assets/images/categoriesimg/beverages.png',
+                      nxtPage: DrinkList(),
                     ),
                     Divider(
                       thickness: 1,
@@ -113,6 +123,7 @@ class _CategoriesState extends State<CategoriesPage> {
                     tile(
                       text: 'Personal Care',
                       img: 'assets/images/categoriesimg/personalcare.png',
+                      nxtPage: BeautyList(),
                     ),
                     Divider(
                       thickness: 1,
@@ -120,19 +131,21 @@ class _CategoriesState extends State<CategoriesPage> {
                       indent: 10,
                       endIndent: 15,
                     ),
-                    tile(
-                      text: 'Home Care',
-                      img: 'assets/images/categoriesimg/homecare.png',
-                    ),
-                    Divider(
-                      thickness: 1,
-                      color: Colors.grey,
-                      indent: 10,
-                      endIndent: 15,
-                    ),
+                    // tile(
+                    //   text: 'Home Care',
+                    //   img: 'assets/images/categoriesimg/homecare.png',
+                    //   nxtPage: FlourList(),
+                    // ),
+                    // Divider(
+                    //   thickness: 1,
+                    //   color: Colors.grey,
+                    //   indent: 10,
+                    //   endIndent: 15,
+                    // ),
                     tile(
                       text: 'Mom n Baby Care',
                       img: 'assets/images/categoriesimg/momnbaby.png',
+                      nxtPage: BabyList(),
                     ),
                     Divider(
                       thickness: 1,
@@ -143,6 +156,7 @@ class _CategoriesState extends State<CategoriesPage> {
                     tile(
                       text: 'Pets Food',
                       img: 'assets/images/categoriesimg/petsfood.png',
+                      nxtPage: PetList(),
                     ),
                     Divider(
                       thickness: 1,
@@ -153,6 +167,7 @@ class _CategoriesState extends State<CategoriesPage> {
                     tile(
                       text: 'Beauty',
                       img: 'assets/images/categoriesimg/beauty.jpeg',
+                      nxtPage: BeautyList(),
                     ),
                     Divider(
                       thickness: 1,
@@ -257,9 +272,11 @@ class tile extends StatelessWidget {
     super.key,
     required this.img,
     required this.text,
+    required this.nxtPage
   });
 
   final String text, img;
+  final Widget nxtPage ; 
 
   @override
   Widget build(BuildContext context) {
@@ -276,7 +293,7 @@ class tile extends StatelessWidget {
         Icons.arrow_forward_ios,
         size: 17,
       ),
-      onTap: () {},
+      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => nxtPage )),
     );
   }
 }
