@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           MaterialApp(
                 // scaffoldMessengerKey: Utils.messengerKey,
             debugShowCheckedModeBanner: false,
-            home:sign_route_info(),
+            home:HomePage(),
             initialRoute: '/',
             routes: {
               '/home': (context) => HomePage(),

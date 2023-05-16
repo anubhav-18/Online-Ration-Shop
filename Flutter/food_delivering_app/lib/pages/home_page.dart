@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           Container(
             margin: EdgeInsets.all(8),
-            width: 300,
+            width: 280,
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                     child: TextField(
                       decoration: InputDecoration(
                           icon: Padding(
-                            padding: const EdgeInsets.only(left: 10),
+                            padding: const EdgeInsets.only(left: 25),
                             child: Icon(
                               Icons.search,
                               color: bckGrndColor,
