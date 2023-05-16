@@ -7,7 +7,6 @@ import 'package:food_delivering_app/pages/Categories/Product_Struct.dart';
 import 'package:food_delivering_app/pages/HomePage/appbar.dart';
 
 class AashirvaadSelect extends StatelessWidget {
-  const AashirvaadSelect({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -77,9 +76,6 @@ class AashirvaadSelect extends StatelessWidget {
           price: 269),
     );
   }
-<<<<<<< HEAD
-=======
 
   
->>>>>>> 21a438eecc50b132d0a9594c63c18f94d78011d1
 }

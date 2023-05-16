@@ -5,5 +5,6 @@
         "string": "cpp",
         "iostream": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "D:/onlineShop/PROGRAM/Flutter/food_delivering_app/linux"
 }

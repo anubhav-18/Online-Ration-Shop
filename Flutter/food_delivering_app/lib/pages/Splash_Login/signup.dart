@@ -151,7 +151,6 @@ class _SignupPageState extends State<SignupPage> {
                       child: MaterialButton(
                         minWidth: double.infinity,
                         height: 60,
-<<<<<<< HEAD
                         onPressed: () {
                           try {
                             final newuser =
@@ -175,7 +174,6 @@ class _SignupPageState extends State<SignupPage> {
                           //       MaterialPageRoute(
                           //           builder: (context) => HomePage()));
                           // }).onError((error, stackTrace) {
-=======
                         onPressed: () async {
                           try {
                             await FirebaseAuth.instance
@@ -200,18 +198,17 @@ class _SignupPageState extends State<SignupPage> {
                             });
                           }
                           // .onError((error, stackTrace) {
->>>>>>> 21a438eecc50b132d0a9594c63c18f94d78011d1
                           //   print('Error ${error.toString()}');
                           // });
 
                           addUserDetails(_userNameTextController.text,
                               _emailTextController.text);
-                        },
-                        color: Colors.amber[400],
-                        elevation: 0,
+                        };
+                        color: Colors.amber[400];
+                        elevation: 0;
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50),
-                        ),
+                        );
                         child: Text(
                           "Sign In",
                           style: TextStyle(
@@ -219,7 +216,7 @@ class _SignupPageState extends State<SignupPage> {
                             fontSize: 18,
                             color: Colors.white,
                           ),
-                        ),
+                        );}
                       ),
                     ),
                   ),

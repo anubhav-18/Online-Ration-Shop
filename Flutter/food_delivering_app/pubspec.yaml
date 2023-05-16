@@ -48,11 +48,7 @@ dependencies:
   geocoding: ^2.1.0
   permission_handler: ^10.2.0
   geolocator: ^8.2.0
-<<<<<<< HEAD
-  get: ^4.6.5
-=======
   flutter_easyloading: ^3.0.5
->>>>>>> 21a438eecc50b132d0a9594c63c18f94d78011d1
   
 dev_dependencies:
   flutter_test:

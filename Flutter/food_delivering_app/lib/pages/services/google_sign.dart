@@ -30,7 +30,6 @@ class GoogleSignInProvider extends ChangeNotifier {
     } catch (e) {
       print(e.toString());
     }
-
     if (_user != null) {
       Gphoto = user.photoUrl;
       Gemail = user.email;
