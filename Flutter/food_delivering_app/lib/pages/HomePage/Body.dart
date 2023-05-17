@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelect.dart';
 import 'package:food_delivering_app/pages/Categories/Chocolates%20and%20sweets/choclairs.dart';
@@ -24,6 +25,10 @@ import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
 import 'package:food_delivering_app/pages/constants.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import '../Categories/widgets/grid_view_widgets.dart';
+
+Size? size;
+
 class Body extends StatefulWidget {
   @override
   State<Body> createState() => _BodyState();
@@ -38,25 +43,42 @@ class _BodyState extends State<Body> {
           children: <Widget>[
             // Address
             Address_widget(),
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             // Carousel Slider: height 180
             CarouselSlider(
                 items: [
                   InkWell(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DrinkList())),
-                    child: carouselItems(img: 'assets/images/banner1.jpg',)),
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => DrinkList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner1.jpg',
+                      )),
                   InkWell(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => OilList())),
-                    child: carouselItems(img: 'assets/images/banner2.jpg',)),
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => OilList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner2.jpg',
+                      )),
                   InkWell(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SnackList())),
-                    child: carouselItems(img: 'assets/images/banner3.jpg',)),
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SnackList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner3.jpg',
+                      )),
                   InkWell(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FlourList())),
-                    child: carouselItems(img: 'assets/images/banner5.jpg',)),
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => FlourList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner5.jpg',
+                      )),
                   InkWell(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => CleanList())),
-                    child: carouselItems(img: 'assets/images/banner6.jpg',)),
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => CleanList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner6.jpg',
+                      )),
                 ],
                 options: CarouselOptions(
                     height: 180,
@@ -64,35 +86,45 @@ class _BodyState extends State<Body> {
                     autoPlay: true,
                     autoPlayInterval: Duration(seconds: 10),
                     enableInfiniteScroll: true,
-                    viewportFraction: 1.1
-                  )
-            ),
+                    viewportFraction: 1.1)),
             // Carousel Slider: height 110
-            SizedBox(height: 5,),
+            SizedBox(
+              height: 5,
+            ),
             CarouselSlider(
-              items: [
-                InkWell(
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DalList())),
-                  child: carouselItems(img: 'assets/images/banner4.jpg',)),
-                InkWell(
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => BabyList())),
-                  child: carouselItems(img: 'assets/images/banner8.jpg',)),
-                InkWell(
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => SugarList())),
-                  child: carouselItems(img: 'assets/images/banner9.jpg',)),
-              ], 
-              options: CarouselOptions(
-                height: 110,
-                viewportFraction: 1,
-                initialPage: 0,
-                autoPlay: true,
-                autoPlayInterval: Duration(seconds: 10),
-                reverse: true,
-              )),
+                items: [
+                  InkWell(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => DalList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner4.jpg',
+                      )),
+                  InkWell(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => BabyList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner8.jpg',
+                      )),
+                  InkWell(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SugarList())),
+                      child: carouselItems(
+                        img: 'assets/images/banner9.jpg',
+                      )),
+                ],
+                options: CarouselOptions(
+                  height: 110,
+                  viewportFraction: 1,
+                  initialPage: 0,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 10),
+                  reverse: true,
+                )),
             // Shop by Category txt & Grid Layout
             SizedBox(
               child: Padding(
-                padding: const EdgeInsets.only(top: 10 , left: 10 , right: 10 , bottom: 6),
+                padding: const EdgeInsets.only(
+                    top: 10, left: 10, right: 10, bottom: 6),
                 child: Text('SHOP BY CATEGORY',
                     style: TextStyle(
                         fontSize: 23,
@@ -100,74 +132,120 @@ class _BodyState extends State<Body> {
                         fontWeight: FontWeight.bold)),
               ),
             ),
+
             Container(
-              margin: EdgeInsets.only(left: 1 , right: 1 , top: 10 , bottom: 13),
-              // decoration: BoxDecoration(
-              //   border: Border.all(color: Colors.grey, width: 1),
-              // ),
-              height: 870,
-              width: MediaQuery.of(context).size.width,
-              child: GridView.count(
-                // shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                crossAxisCount: 3,
-                childAspectRatio: 0.8,
-                mainAxisSpacing: 4,
-                crossAxisSpacing: 0,
-                children: [
-                  gridBorder(
-                    image: 'assets/images/categoriesimg/atta&flourOut.jpg',
-                    category: FlourList(),),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/staplesOut.jpg',
-                      category: DalList()),
-                  gridBorder(
-                    image: 'assets/images/categoriesimg/spicesOut.jpg',
-                    category: AashirvaadSelect(),),
-                    // category: SpiceList(),),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/dryfruitOut.jpg',
-                      category: NutList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/edibleoilOut.jpg',
-                      category: OilList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/saltsugarOut.jpg',
-                      category: SugarList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/beveragesOut.jpg',
-                      category: DrinkList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/snacksOut.jpg',
-                      category: SnackList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/noodles&pastaOut.jpg',
-                      category: PastaList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/teacoffeeOut.jpg',
-                      category: TeaList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/chocolatesOut.jpg',
-                      category: ChocoList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/momnbabyOut.jpg',
-                      category: BabyList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/beautyOut.jpg',
-                      category: BeautyList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/petcareOut.jpg',
-                      category: PetList()),
-                  gridBorder(
-                      image: 'assets/images/categoriesimg/cleaningOut.jpg',
-                      category: CleanList()),
-                ],
-              ),
-            ),
-            // Ads
+                height: 840,
+                child: StreamBuilder(
+                    stream: FirebaseFirestore.instance
+                        .collection("Categories")
+                        .snapshots(),
+                    builder: (context,
+                        AsyncSnapshot<QuerySnapshot> streamSnapshort) {
+                      if (!streamSnapshort.hasData) {
+                        return Center(
+                          child: CircularProgressIndicator(),
+                        );
+                      } else {
+                        return GridView.builder(
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                          scrollDirection: Axis.vertical,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: streamSnapshort.data!.docs.length,
+                          itemBuilder: ((ctx, index) {
+                            return Categories(
+                              onTap: () {
+                                print('Print');
+                                Navigator.push(context, MaterialPageRoute(builder: ((context) => GridViewWidget(
+                                  id: streamSnapshort.data!.docs[index].id,
+                                  collection: streamSnapshort.data!.docs[index]['categoryName'],
+                                  // subCollection: streamSnapshort.data!.docs[index]['categoryName'],
+                                ) )));                              },
+                              categoryName: streamSnapshort.data!.docs[index]
+                                  ["categoryName"],
+                              image:
+                                  // "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" ,
+                                  streamSnapshort.data!.docs[index]
+                                      ["categoryImage"],
+                              // onTap: () {},
+                            );
+                          }),
+                        );
+                      }
+                    })),
+
+            // Container(
+            //   margin: EdgeInsets.only(left: 1, right: 1, top: 10, bottom: 13),
+            //   // decoration: BoxDecoration(
+            //   //   border: Border.all(color: Colors.grey, width: 1),
+            //   // ),
+            //   height: 870,
+            //   width: MediaQuery.of(context).size.width,
+            //   child: GridView.count(
+            //     // shrinkWrap: true,
+            //     physics: NeverScrollableScrollPhysics(),
+            //     crossAxisCount: 3,
+            //     childAspectRatio: 0.8,
+            //     mainAxisSpacing: 4,
+            //     crossAxisSpacing: 0,
+            //     children: [
+            //       gridBorder(
+            //         image: 'assets/images/categoriesimg/atta&flourOut.jpg',
+            //         category: FlourList(),
+            //       ),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/staplesOut.jpg',
+            //           category: DalList()),
+            //       gridBorder(
+            //         image: 'assets/images/categoriesimg/spicesOut.jpg',
+            //         category: AashirvaadSelect(),
+            //       ),
+            //       // category: SpiceList(),),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/dryfruitOut.jpg',
+            //           category: NutList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/edibleoilOut.jpg',
+            //           category: OilList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/saltsugarOut.jpg',
+            //           category: SugarList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/beveragesOut.jpg',
+            //           category: DrinkList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/snacksOut.jpg',
+            //           category: SnackList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/noodles&pastaOut.jpg',
+            //           category: PastaList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/teacoffeeOut.jpg',
+            //           category: TeaList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/chocolatesOut.jpg',
+            //           category: ChocoList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/momnbabyOut.jpg',
+            //           category: BabyList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/beautyOut.jpg',
+            //           category: BeautyList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/petcareOut.jpg',
+            //           category: PetList()),
+            //       gridBorder(
+            //           image: 'assets/images/categoriesimg/cleaningOut.jpg',
+            //           category: CleanList()),
+            //     ],
+            //   ),
+            // ),
+            // // Ads
             InkWell(
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => NutList())),
-              child: Banner(image: 'assets/images/banner7.jpg',)),          
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NutList())),
+                child: Banner(
+                  image: 'assets/images/banner7.jpg',
+                )),
             // Text - Bestseller and Button - see all
             Titlewithbtn(
               title: 'Bestseller',
@@ -177,7 +255,7 @@ class _BodyState extends State<Body> {
             Bestseller(),
             SizedBox(
               height: 5,
-            ),          
+            ),
           ],
         ),
       ),
@@ -208,6 +286,7 @@ class carouselItems extends StatelessWidget {
     );
   }
 }
+
 // Categories GridLayout
 class gridBorder extends StatelessWidget {
   const gridBorder({super.key, required this.image, required this.category});
@@ -231,6 +310,7 @@ class gridBorder extends StatelessWidget {
     );
   }
 }
+
 //Banner Struct: height 150 with padding
 class Banner extends StatelessWidget {
   const Banner({
@@ -243,7 +323,7 @@ class Banner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10,bottom: 10,left: 5,right: 5),
+      padding: const EdgeInsets.only(top: 10, bottom: 10, left: 5, right: 5),
       child: Container(
         height: 150,
         decoration: BoxDecoration(
@@ -253,6 +333,7 @@ class Banner extends StatelessWidget {
     );
   }
 }
+
 //Banner2 Struct: height 110 with no padding
 class Banner2 extends StatelessWidget {
   const Banner2({
@@ -265,7 +346,10 @@ class Banner2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10 ,bottom: 10 ,),
+      padding: const EdgeInsets.only(
+        top: 10,
+        bottom: 10,
+      ),
       child: Container(
         height: 110,
         decoration: BoxDecoration(
@@ -275,6 +359,7 @@ class Banner2 extends StatelessWidget {
     );
   }
 }
+
 //Title With Button
 class Titlewithbtn extends StatelessWidget {
   const Titlewithbtn({
@@ -288,7 +373,7 @@ class Titlewithbtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 12 , top: 10 , bottom: 10 , right: 10),
+      padding: const EdgeInsets.only(left: 12, top: 10, bottom: 10, right: 10),
       child: Row(children: <Widget>[
         Text(
           title,
@@ -303,12 +388,13 @@ class Titlewithbtn extends StatelessWidget {
             },
             child: Text(
               buttonName,
-              style: TextStyle(color: bckGrndColor,fontSize: 15),
+              style: TextStyle(color: bckGrndColor, fontSize: 15),
             ))
       ]),
     );
   }
 }
+
 //Bestseller Category
 class Bestseller extends StatelessWidget {
   const Bestseller({
@@ -361,6 +447,7 @@ class Bestseller extends StatelessWidget {
     );
   }
 }
+
 //Card Making of Bestseller Category
 class cardCreation extends StatelessWidget {
   const cardCreation({
@@ -373,13 +460,14 @@ class cardCreation extends StatelessWidget {
   });
 
   final String image, title, quantity;
-  final int  price;
+  final int price;
   final Widget page;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => page )),
+      onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => page)),
       child: Container(
         margin: EdgeInsets.only(left: 10, bottom: 20, right: 10),
         width: 150,
@@ -407,23 +495,22 @@ class cardCreation extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   RichText(
-                    softWrap: true,
-                    overflow:TextOverflow.clip,
-    
+                      softWrap: true,
+                      overflow: TextOverflow.clip,
                       text: TextSpan(children: [
-                    TextSpan(
-                      text: "$title\n",
-                      style: Theme.of(context).textTheme.labelLarge,
-                    ),
-                    TextSpan(
-                      text: "$quantity \n",
-                      style: Theme.of(context).textTheme.labelLarge,
-                    ),
-                    TextSpan(
-                      text: "\u{20B9}${price}",
-                      style: Theme.of(context).textTheme.labelLarge,
-                    )
-                  ])),
+                        TextSpan(
+                          text: "$title\n",
+                          style: Theme.of(context).textTheme.labelLarge,
+                        ),
+                        TextSpan(
+                          text: "$quantity \n",
+                          style: Theme.of(context).textTheme.labelLarge,
+                        ),
+                        TextSpan(
+                          text: "\u{20B9}${price}",
+                          style: Theme.of(context).textTheme.labelLarge,
+                        )
+                      ])),
                   Spacer(),
                   TextButton(
                       onPressed: () {},
@@ -435,6 +522,54 @@ class cardCreation extends StatelessWidget {
               ),
             )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class Categories extends StatelessWidget {
+  final String image;
+  final String categoryName;
+  final Function()? onTap;
+  const Categories({
+    Key? key,
+    required this.onTap,
+    required this.categoryName,
+    required this.image,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        margin: EdgeInsets.all(12.0),
+        width: 150,
+        height: 500,
+        // size!.width / 2 - 20,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: NetworkImage(
+              image,
+            ),
+          ),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.black.withOpacity(0.7),
+          ),
+          child: Center(
+            child: Text(
+              categoryName,
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ),
       ),
     );

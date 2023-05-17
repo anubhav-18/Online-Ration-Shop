@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
-
 
 class productdescp extends StatelessWidget {
   const productdescp({
     super.key,
+    // required this.productId ,
+    // required this.categoryId ,
     required this.title,
     required this.fdtitle,
     required this.description,
@@ -26,6 +26,7 @@ class productdescp extends StatelessWidget {
 
   final String title , fdtitle , description , brand_name, manu , address, m_email,m_website,net_quantity, img1 , img2 , img3 , img4 ;
   final int price ;
+  // productId , categoryId ;
   @override
   Widget build(BuildContext context) {
     return ListView(
