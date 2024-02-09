@@ -88,18 +88,17 @@ class _GridViewWidgetState extends State<GridViewWidget> {
           }
 
           return SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            // physics: NeverScrollableScrollPhysics(),
+            physics: NeverScrollableScrollPhysics(),
             child: Column(
               children: [
                 GridView.builder(
                     shrinkWrap: true,
                     itemCount: snapshort.data!.docs.length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      childAspectRatio: 0.65,
+                      childAspectRatio: 0.55,
                       crossAxisCount: 2,
                       crossAxisSpacing: 20,
-                      mainAxisSpacing: 20,
+                      mainAxisSpacing: 30,
                     ),
                     itemBuilder: (context, Index) {
                       var data = snapshort.data!.docs[Index];

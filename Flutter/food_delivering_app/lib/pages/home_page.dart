@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget MyDrawerList() {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.8,
+      height: MediaQuery.of(context).size.height * 0.78,
       padding: const EdgeInsets.only(top: 8),
       child: Column(children: [
         heading('Home'),
@@ -144,7 +144,6 @@ class _HomePageState extends State<HomePage> {
         menuList('My Orders', Icons.shopping_bag, My_Order()),
         menuList(
             'My Notifications', Icons.notification_add, My_Notifications()),
-        menuList('My List', Icons.format_list_bulleted, My_List()),
         heading('Help & Support'),
         menuList('Contact Us', Icons.contact_support, Contact_Us()),
         menuList('FAQs', Icons.help, FAQs()),
@@ -184,7 +183,7 @@ class _HomePageState extends State<HomePage> {
         child: Row(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
           child: Text(
             Title,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -202,13 +201,16 @@ class _HomePageState extends State<HomePage> {
           size: 20,
           color: bckGrndColor,
         ),
-        title: Text(
-          Title,
-          style: TextStyle(fontSize: 16),
+        title: Padding(
+          padding: EdgeInsets.all(0),
+          child: Text(
+            Title,
+            style: TextStyle(fontSize: 16),
+          ),
         ),
         selectedTileColor: Colors.grey,
         minLeadingWidth: 15,
-        minVerticalPadding: .8,
+        minVerticalPadding: 0,
         onTap: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => title));

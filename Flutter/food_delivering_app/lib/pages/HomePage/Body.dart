@@ -4,22 +4,16 @@ import 'package:food_delivering_app/pages/Categories/Atta&Flour/AaashirvaadSelec
 import 'package:food_delivering_app/pages/Categories/Chocolates%20and%20sweets/choclairs.dart';
 import 'package:food_delivering_app/pages/Categories/Cold%20drinks%20and%20juices/pepsi.dart';
 import 'package:food_delivering_app/pages/Categories/Diary%20product/AmulButter.dart';
-import 'package:food_delivering_app/pages/Categories/List/BeautyList.dart';
 import 'package:food_delivering_app/pages/Categories/List/babylist.dart';
-import 'package:food_delivering_app/pages/Categories/List/chocolist.dart';
 import 'package:food_delivering_app/pages/Categories/List/cleanlist.dart';
 import 'package:food_delivering_app/pages/Categories/List/dallist.dart';
 import 'package:food_delivering_app/pages/Categories/List/drinklist.dart';
 import 'package:food_delivering_app/pages/Categories/List/flourlist.dart';
 import 'package:food_delivering_app/pages/Categories/List/nutlist.dart';
 import 'package:food_delivering_app/pages/Categories/List/oillist.dart';
-import 'package:food_delivering_app/pages/Categories/List/pastalist.dart';
-import 'package:food_delivering_app/pages/Categories/List/petlist.dart';
 import 'package:food_delivering_app/pages/Categories/List/snacklist.dart';
 import 'package:food_delivering_app/pages/Categories/List/sugarlist.dart';
-import 'package:food_delivering_app/pages/Categories/List/tealist.dart';
 import 'package:food_delivering_app/pages/Categories/biscuits%20and%20snacks/bourbon.dart';
-// import 'package:food_delivering_app/pages/Categories/Spices/3.dart';
 import 'package:food_delivering_app/pages/HomePage/See_All.dart';
 import 'package:food_delivering_app/pages/HomePage/address_widget.dart';
 import 'package:food_delivering_app/pages/constants.dart';
@@ -134,44 +128,57 @@ class _BodyState extends State<Body> {
             ),
 
             Container(
-                height: 840,
-                child: StreamBuilder(
-                    stream: FirebaseFirestore.instance
-                        .collection("Categories")
-                        .snapshots(),
-                    builder: (context,
-                        AsyncSnapshot<QuerySnapshot> streamSnapshort) {
-                      if (!streamSnapshort.hasData) {
-                        return Center(
-                          child: CircularProgressIndicator(),
-                        );
-                      } else {
-                        return GridView.builder(
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-                          scrollDirection: Axis.vertical,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemCount: streamSnapshort.data!.docs.length,
-                          itemBuilder: ((ctx, index) {
-                            return Categories(
-                              onTap: () {
-                                print('Print');
-                                Navigator.push(context, MaterialPageRoute(builder: ((context) => GridViewWidget(
-                                  id: streamSnapshort.data!.docs[index].id,
-                                  collection: streamSnapshort.data!.docs[index]['categoryName'],
-                                  // subCollection: streamSnapshort.data!.docs[index]['categoryName'],
-                                ) )));                              },
-                              categoryName: streamSnapshort.data!.docs[index]
-                                  ["categoryName"],
-                              image:
-                                  // "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" ,
-                                  streamSnapshort.data!.docs[index]
-                                      ["categoryImage"],
-                              // onTap: () {},
+              height: 840,
+              child: FutureBuilder<QuerySnapshot>(
+                future:
+                    FirebaseFirestore.instance.collection("Categories").get(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  } else if (snapshot.hasError) {
+                    return Center(
+                      child: Text('Error: ${snapshot.error}'),
+                    );
+                  }
+                  // if (!streamSnapshort.hasData) {
+                  //   return Center(
+                  //     child: CircularProgressIndicator(),
+                  //   );
+                  // }
+                  else {
+                    return GridView.builder(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2),
+                      scrollDirection: Axis.vertical,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: snapshot.data!.docs.length,
+                      itemBuilder: ((ctx, index) {
+                        return Categories(
+                          onTap: () {
+                            print('Print');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: ((context) => GridViewWidget(
+                                      id: snapshot.data!.docs[index].id,
+                                      collection: snapshot.data!.docs[index]
+                                          ['categoryName'],
+                                    )),
+                              ),
                             );
-                          }),
+                          },
+                          categoryName: snapshot.data!.docs[index]
+                              ["categoryName"],
+                          image: snapshot.data!.docs[index]["categoryImage"],
                         );
-                      }
-                    })),
+                      }),
+                    );
+                  }
+                },
+              ),
+            ),
 
             // Container(
             //   margin: EdgeInsets.only(left: 1, right: 1, top: 10, bottom: 13),

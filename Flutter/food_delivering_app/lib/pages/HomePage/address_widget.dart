@@ -82,7 +82,7 @@ class _Address_widgetState extends State<Address_widget> {
               context: context,
               builder: (BuildContext) {
                 return Container(
-                  height: MediaQuery.of(context).size.height * 0.5,
+                  height: MediaQuery.of(context).size.height * 0.55,
                   // 368,
                   padding: EdgeInsets.all(10),
                   margin: EdgeInsets.all(20),

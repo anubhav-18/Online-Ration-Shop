@@ -3,6 +3,7 @@ import 'package:food_delivering_app/firebase_options.dart';
 import 'package:food_delivering_app/pages/Cart/CartWidgets/cart_provider.dart';
 import 'package:food_delivering_app/pages/DrawerPage/Categories.dart';
 import 'package:food_delivering_app/pages/DrawerPage/My_Order.dart';
+import 'package:food_delivering_app/pages/Splash_Login/splash_screen.dart';
 import 'package:food_delivering_app/pages/cart/cartpage.dart';
 import 'package:food_delivering_app/pages/services/google_sign.dart';
 import 'package:provider/provider.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         ],
         child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              home:HomePage(),
+              home:SplashScreen(),
               initialRoute: '/',
               routes: {
                 '/home': (context) => HomePage(),

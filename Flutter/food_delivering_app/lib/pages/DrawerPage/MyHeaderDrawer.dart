@@ -13,12 +13,10 @@ class MyHeaderDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser!;
-
     return Container(
         color: bckGrndColor,
         width: double.infinity,
-        height: MediaQuery.of(context).size.height * 0.20,
+        height: MediaQuery.of(context).size.height * 0.22,
         padding: EdgeInsets.only(top: 20),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Stack(children: [

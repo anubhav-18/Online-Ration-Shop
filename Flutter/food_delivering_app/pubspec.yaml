@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   expandable_search_bar: ^0.0.1
   flutter_dash: ^1.0.0
-  flushbar: ^1.10.4
+  # flushbar: ^1.10.4
   firebase_core: ^2.11.0
   flutter_layout_grid: ^1.0.3
   carousel_slider: ^4.2.1
